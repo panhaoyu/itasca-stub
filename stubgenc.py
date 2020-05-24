@@ -20,7 +20,8 @@ from mypy.stubdoc import (
 def generate_stub_for_c_module(module: ModuleType,
                                target: str,
                                sigs: Optional[Dict[str, str]] = None,
-                               class_sigs: Optional[Dict[str, str]] = None) -> None:
+                               class_sigs: Optional[Dict[str, str]] = None,
+                               other_import: List[str] = None) -> None:
     """Generate stub for C module.
     This combines simple runtime introspection (looking for docstrings and attributes
     with simple builtin types) and signatures inferred from .rst documentation (if given).
@@ -57,6 +58,8 @@ def generate_stub_for_c_module(module: ModuleType,
                 type_str = 'Any'
             variables.append('%s: %s' % (name, type_str))
     output = []
+    for other_module in other_import:
+        output.append('from . import {}'.format(other_module))
     for line in sorted(set(imports)):
         output.append(line)
     for line in variables:
@@ -180,8 +183,12 @@ def generate_c_function_stub(module: ModuleType,
                 args=", ".join(sig),
                 ret=strip_or_import(signature.ret_type, module, imports)
             ))
-            output.append('    """{}"""'.format(getattr(obj, '__doc__')))
+            output.append('    """')
+            for line in getattr(obj, '__doc__').split('. '):
+                output.append('    {}.'.format(line).replace('..', '.'))
+            output.append('    """')
             output.append('    pass')
+            output.append('')
 
 
 def strip_or_import(typ: str, module: ModuleType, imports: List[str]) -> str:
