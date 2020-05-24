@@ -33,7 +33,7 @@ class PackageGenerator(object):
         self.all_packages['itasca'] = self.package
         self.find_package('itasca', self.package)
         for name, package in self.all_packages.items():
-            path = '{}/__init__.py'.format(name)
+            path = '{}/__init__.pyi'.format(name)
             other_imports = [key.replace(name + '/', '')
                              for key in self.all_packages.keys()
                              if key.startswith(name + '/')]
