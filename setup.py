@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name='itasca-stub',
     packages=setuptools.find_packages(),
-    version='1.0.3',
+    version='1.0.4',
     license='MIT',
     description='Itasca PFC python stub',
     long_description=long_description,
