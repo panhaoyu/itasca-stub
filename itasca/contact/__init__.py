@@ -1,5 +1,5 @@
 from typing import Any, Iterable, Tuple, List, Union
-import itasca
+from itasca import types
 
 
 def count(*args, **kwargs) -> int:
@@ -33,15 +33,7 @@ def find(*args, **kwargs) -> 'Contact':
     pass
 
 
-# This function perhaps provide other contacts, however, currently, I only use the following two contacts.
-# You can artificially specify contact types by the following code:
-# ```
-# for contact in itasca.contact.list():
-#     contact: Union[itasca.BallFacetContact, itasca.BallBallContact]
-# ```
-def list(process_name="Mechanical", type=None, all=False) -> Iterable[Union[
-    itasca.BallBallContact, itasca.BallFacetContact
-]]:
+def list(process_name="Mechanical", type=None, all=False) -> types.Contacts:
     """
     (process_name="Mechanical", type=None, all=False) -> Contact iterator object.
     Get a contact iterator object.

@@ -1,4 +1,5 @@
 from typing import Any, List, Union, Tuple, Iterator
+from itasca import types
 
 from . import facet
 from . import thermal
@@ -95,7 +96,7 @@ class Wall:
         """
         pass
 
-    def contacts(self, *args, **kwargs) -> Any:
+    def contacts(self, *args, **kwargs) -> types.Contacts:
         """
         ([piece: object], all=False, type=None) -> tuple of Contact objects.
         Get a tuple of contacts associated with this Wall.
