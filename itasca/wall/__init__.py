@@ -96,7 +96,7 @@ class Wall:
         """
         pass
 
-    def contacts(self, *args, **kwargs) -> types.Contacts:
+    def contacts(self, *args, **kwargs) -> Tuple[types.Contacts]:
         """
         ([piece: object], all=False, type=None) -> tuple of Contact objects.
         Get a tuple of contacts associated with this Wall.

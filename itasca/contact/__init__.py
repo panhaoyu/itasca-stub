@@ -1,4 +1,4 @@
-from typing import Any, Iterable, Tuple, List, Union
+from typing import Any, Iterable, Tuple, List, Union, Iterator
 from itasca import types
 
 
@@ -33,7 +33,7 @@ def find(*args, **kwargs) -> 'Contact':
     pass
 
 
-def list(process_name="Mechanical", type=None, all=False) -> types.Contacts:
+def list(process_name="Mechanical", type=None, all=False) -> Iterator[types.Contacts]:
     """
     (process_name="Mechanical", type=None, all=False) -> Contact iterator object.
     Get a contact iterator object.
