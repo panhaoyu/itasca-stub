@@ -1,6 +1,7 @@
-from typing import Any
+from typing import Any, Iterable, Tuple, List
 
-def count(*args, **kwargs) -> Any:
+
+def count(*args, **kwargs) -> int:
     """
     (<process: str>, <type: TypeObject>, <all=False>) -> int.
     Get the number of contacts.
@@ -12,7 +13,8 @@ def count(*args, **kwargs) -> Any:
     """
     pass
 
-def energy(*args, **kwargs) -> Any:
+
+def energy(*args, **kwargs) -> float:
     """
     (energy_name: str, process="mechanical", type=TypeObject) -> float.
     Get energy values accumulated over contacts.
@@ -21,14 +23,16 @@ def energy(*args, **kwargs) -> Any:
     """
     pass
 
-def find(*args, **kwargs) -> Any:
+
+def find(*args, **kwargs) -> 'Contact':
     """
     (type: TypeObject, id: int or (object1, object2)) -> Contact object.
     Get the contact of the given type, the second argument is either an integer ID or a length two tuple containing two objects (for example a wall object and a ball object).
     """
     pass
 
-def list(*args, **kwargs) -> Any:
+
+def list(process_name="Mechanical", type=None, all=False) -> Iterable['Contact']:
     """
     (process_name="Mechanical", type=None, all=False) -> Contact iterator object.
     Get a contact iterator object.
@@ -39,8 +43,10 @@ def list(*args, **kwargs) -> Any:
     """
     pass
 
+
 class Contact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -48,43 +54,43 @@ class Contact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class ContactIter:
     @classmethod
@@ -94,16 +100,15 @@ class ContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
