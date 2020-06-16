@@ -1,18 +1,24 @@
-from typing import Any
+from typing import Any, Dict
+from numpy import ndarray
 
-def create(*args, **kwargs) -> Any:
+
+def create(radii: ndarray, centroids: ndarray,
+           props: Dict[str, Any] = None,
+           extra: Dict[str, Any] = None,
+           ) -> ndarray:
     """
-    (radii: array float{ball}, centroids: array float{ball,dim}, **kwds) -> array int{ball} IDs of the newly created balls.
     Create balls from two arrays.
-    The first array must contain the radii, and the second array the positions.
-    The arrays must be the correct shape.
-    Additional keyword arguments can be specified which will set the newly created ball attributes.
+    Keyword arguments can be specified which will set the newly created ball attributes.
     The keyword arguments values can be scalars, vecs or arrays of 1 or two dimensions.
-    The keyword argument props can be used to set ball properties, the value should be a dict of type {str: value}.
-    The keyword argument extra can be used to set extra variables, the value should be a dict of type {int: value}.
     The props or extra dictionary values can be a 1 or 2 dimensional array of doubles, a number, a vec or a string.
+    :param radii: array float{ball}
+    :param centroids: array float{ball,dim}
+    :param props: used to set ball properties, the value should be a dict of type {str: value}
+    :param extra: used to set extra variables, the value should be a dict of type {int: value}
+    :return: array int{ball} IDs of the newly created balls
     """
     pass
+
 
 def damp(*args, **kwargs) -> Any:
     """
@@ -21,6 +27,7 @@ def damp(*args, **kwargs) -> Any:
     """
     pass
 
+
 def density(*args, **kwargs) -> Any:
     """
     () -> array float{ball}.
@@ -28,12 +35,14 @@ def density(*args, **kwargs) -> Any:
     """
     pass
 
+
 def disp(*args, **kwargs) -> Any:
     """
     () -> array float{ball,2}.
     Get a numpy array of the ball displacement.
     """
     pass
+
 
 def extra(*args, **kwargs) -> Any:
     """
@@ -43,6 +52,7 @@ def extra(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_damp(*args, **kwargs) -> Any:
     """
     (data: array float{ball}) -> None.
@@ -50,6 +60,7 @@ def fill_damp(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_density(*args, **kwargs) -> Any:
     """
@@ -59,6 +70,7 @@ def fill_density(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_disp(*args, **kwargs) -> Any:
     """
     (data: array float{ball,2}) -> None.
@@ -66,6 +78,7 @@ def fill_disp(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_force_app(*args, **kwargs) -> Any:
     """
@@ -75,6 +88,7 @@ def fill_force_app(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_force_contact(*args, **kwargs) -> Any:
     """
     (data: array float{ball,2}) -> None.
@@ -82,6 +96,7 @@ def fill_force_contact(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_force_unbal(*args, **kwargs) -> Any:
     """
@@ -91,6 +106,7 @@ def fill_force_unbal(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_mass(*args, **kwargs) -> Any:
     """
     (data: array float{ball}) -> None.
@@ -98,6 +114,7 @@ def fill_mass(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_mass_real(*args, **kwargs) -> Any:
     """
@@ -107,6 +124,7 @@ def fill_mass_real(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_moment_app(*args, **kwargs) -> Any:
     """
     (data: array float{ball}) -> None.
@@ -114,6 +132,7 @@ def fill_moment_app(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_moment_contact(*args, **kwargs) -> Any:
     """
@@ -123,6 +142,7 @@ def fill_moment_contact(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_moment_unbal(*args, **kwargs) -> Any:
     """
     (data: array float{ball}) -> None.
@@ -130,6 +150,7 @@ def fill_moment_unbal(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_pos(*args, **kwargs) -> Any:
     """
@@ -139,6 +160,7 @@ def fill_pos(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_radius(*args, **kwargs) -> Any:
     """
     (data: array float{ball}) -> None.
@@ -146,6 +168,7 @@ def fill_radius(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_rotation(*args, **kwargs) -> Any:
     """
@@ -155,6 +178,7 @@ def fill_rotation(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_spin(*args, **kwargs) -> Any:
     """
     (data: array float{ball}) -> None.
@@ -162,6 +186,7 @@ def fill_spin(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_vel(*args, **kwargs) -> Any:
     """
@@ -171,12 +196,14 @@ def fill_vel(*args, **kwargs) -> Any:
     """
     pass
 
+
 def force_app(*args, **kwargs) -> Any:
     """
     () -> array float{ball,2}.
     Get a numpy array of the ball applied force.
     """
     pass
+
 
 def force_contact(*args, **kwargs) -> Any:
     """
@@ -185,12 +212,14 @@ def force_contact(*args, **kwargs) -> Any:
     """
     pass
 
+
 def force_unbal(*args, **kwargs) -> Any:
     """
     () -> array float{ball,2}.
     Get a numpy array of the ball unbalanced force.
     """
     pass
+
 
 def ids(*args, **kwargs) -> Any:
     """
@@ -199,12 +228,14 @@ def ids(*args, **kwargs) -> Any:
     """
     pass
 
+
 def in_group(*args, **kwargs) -> Any:
     """
     (group_name: str, slot=1) -> array bool{ball}.
     Return ball group membership as a Boolean array.
     """
     pass
+
 
 def mass(*args, **kwargs) -> Any:
     """
@@ -213,12 +244,14 @@ def mass(*args, **kwargs) -> Any:
     """
     pass
 
+
 def mass_real(*args, **kwargs) -> Any:
     """
     () -> array float{ball}.
     Get a numpy array of the real (gravitational) ball mass.
     """
     pass
+
 
 def moment_app(*args, **kwargs) -> Any:
     """
@@ -227,12 +260,14 @@ def moment_app(*args, **kwargs) -> Any:
     """
     pass
 
+
 def moment_contact(*args, **kwargs) -> Any:
     """
     () -> array float{ball}.
     Get a numpy array of the ball contact moment.
     """
     pass
+
 
 def moment_unbal(*args, **kwargs) -> Any:
     """
@@ -241,12 +276,14 @@ def moment_unbal(*args, **kwargs) -> Any:
     """
     pass
 
+
 def pos(*args, **kwargs) -> Any:
     """
     () -> array float{ball,2}.
     Get a numpy array of the ball centroid location.
     """
     pass
+
 
 def radius(*args, **kwargs) -> Any:
     """
@@ -255,12 +292,14 @@ def radius(*args, **kwargs) -> Any:
     """
     pass
 
+
 def rotation(*args, **kwargs) -> Any:
     """
     () -> array float{ball}.
     Get a numpy array of the ball orientation.
     """
     pass
+
 
 def set_damp(*args, **kwargs) -> Any:
     """
@@ -269,6 +308,7 @@ def set_damp(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_density(*args, **kwargs) -> Any:
     """
     (data: array float{ball}) -> None.
@@ -276,12 +316,14 @@ def set_density(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_disp(*args, **kwargs) -> Any:
     """
     (data: array float{ball,2}) -> None.
     Set the ball displacement from an array.
     """
     pass
+
 
 def set_extra(*args, **kwargs) -> Any:
     """
@@ -291,6 +333,7 @@ def set_extra(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_force_app(*args, **kwargs) -> Any:
     """
     (data: array float{ball,2}) -> None.
@@ -298,12 +341,14 @@ def set_force_app(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_force_contact(*args, **kwargs) -> Any:
     """
     (data: array float{ball,2}) -> None.
     Set the ball contact force from an array.
     """
     pass
+
 
 def set_group(*args, **kwargs) -> Any:
     """
@@ -313,12 +358,14 @@ def set_group(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_moment_app(*args, **kwargs) -> Any:
     """
     (data: array float{ball}) -> None.
     Set the ball applied moment from an array.
     """
     pass
+
 
 def set_moment_contact(*args, **kwargs) -> Any:
     """
@@ -327,12 +374,14 @@ def set_moment_contact(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_pos(*args, **kwargs) -> Any:
     """
     (data: array float{ball,2}) -> None.
     Set the ball centroid location from an array.
     """
     pass
+
 
 def set_radius(*args, **kwargs) -> Any:
     """
@@ -341,12 +390,14 @@ def set_radius(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_rotation(*args, **kwargs) -> Any:
     """
     (data: array float{ball}) -> None.
     Set the ball orientation from an array.
     """
     pass
+
 
 def set_spin(*args, **kwargs) -> Any:
     """
@@ -355,12 +406,14 @@ def set_spin(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_vel(*args, **kwargs) -> Any:
     """
     (data: array float{ball,2}) -> None.
     Set the ball velocity from an array.
     """
     pass
+
 
 def spin(*args, **kwargs) -> Any:
     """
@@ -369,10 +422,10 @@ def spin(*args, **kwargs) -> Any:
     """
     pass
 
+
 def vel(*args, **kwargs) -> Any:
     """
     () -> array float{ball,2}.
     Get a numpy array of the ball velocity.
     """
     pass
-
