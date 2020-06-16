@@ -25,6 +25,7 @@ from . import pebblerblockarray
 from . import rblockfacetarray
 from . import rblock
 
+
 def _add_control_action(*args, **kwargs) -> Any:
     """
     (QDockWidget Pointer created by dockWidget method, QAction Pointer) -> None.
@@ -33,12 +34,14 @@ def _add_control_action(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _add_execute_button(*args, **kwargs) -> Any:
     """
     (QDockWidget Pointer created by dockWidget method, Boolean) -> None.
     Add/remove the execute/stop button.
     """
     pass
+
 
 def _add_polling(*args, **kwargs) -> Any:
     """
@@ -47,12 +50,14 @@ def _add_polling(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _ballball_plist(*args, **kwargs) -> Any:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid objects.
     This function is used for internal testing and is not needed for general PFC use.
     """
     pass
+
 
 def _ballballthermal_plist(*args, **kwargs) -> Any:
     """
@@ -61,12 +66,14 @@ def _ballballthermal_plist(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _ballfacet_plist(*args, **kwargs) -> Any:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid objects.
     This function is used for internal testing and is not needed for general PFC use.
     """
     pass
+
 
 def _ballfacetthermal_plist(*args, **kwargs) -> Any:
     """
@@ -75,12 +82,14 @@ def _ballfacetthermal_plist(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _ballpebble_plist(*args, **kwargs) -> Any:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid objects.
     This function is used for internal testing and is not needed for general PFC use.
     """
     pass
+
 
 def _ballpebblethermal_plist(*args, **kwargs) -> Any:
     """
@@ -89,12 +98,14 @@ def _ballpebblethermal_plist(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _ballrblock_plist(*args, **kwargs) -> Any:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid objects.
     This function is used for internal testing and is not needed for general PFC use.
     """
     pass
+
 
 def _busy(*args, **kwargs) -> Any:
     """
@@ -103,12 +114,14 @@ def _busy(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _cycling(*args, **kwargs) -> Any:
     """
     () -> Bool.
     Returns the cycling state.
     """
     pass
+
 
 def _exception(*args, **kwargs) -> Any:
     """
@@ -117,12 +130,14 @@ def _exception(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _exit(*args, **kwargs) -> Any:
     """
     () -> None.
     Quit the application.
     """
     pass
+
 
 def _finish_execution(*args, **kwargs) -> Any:
     """
@@ -131,12 +146,14 @@ def _finish_execution(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _freelist_stack_pointer(*args, **kwargs) -> Any:
     """
     () -> int.
     Return the Itasca Python object freelist stack pointer.
     """
     pass
+
 
 def _interrupt_action(*args, **kwargs) -> Any:
     """
@@ -145,12 +162,14 @@ def _interrupt_action(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _options_dialog(*args, **kwargs) -> Any:
     """
     (QDockWidget Pointer created by dockWidget method) -> QDialog Pointer.
     Create an options dialog.
     """
     pass
+
 
 def _options_dialog_toolbox(*args, **kwargs) -> Any:
     """
@@ -159,12 +178,14 @@ def _options_dialog_toolbox(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _pebblefacet_plist(*args, **kwargs) -> Any:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid objects.
     This function is used for internal testing and is not needed for general PFC use.
     """
     pass
+
 
 def _pebblefacetthermal_plist(*args, **kwargs) -> Any:
     """
@@ -173,12 +194,14 @@ def _pebblefacetthermal_plist(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _pebblepebble_plist(*args, **kwargs) -> Any:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid objects.
     This function is used for internal testing and is not needed for general PFC use.
     """
     pass
+
 
 def _pebblepebblethermal_plist(*args, **kwargs) -> Any:
     """
@@ -187,12 +210,14 @@ def _pebblepebblethermal_plist(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _pebblerblock_plist(*args, **kwargs) -> Any:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid objects.
     This function is used for internal testing and is not needed for general PFC use.
     """
     pass
+
 
 def _rblockfacet_plist(*args, **kwargs) -> Any:
     """
@@ -201,12 +226,14 @@ def _rblockfacet_plist(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _rblockrblock_plist(*args, **kwargs) -> Any:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid objects.
     This function is used for internal testing and is not needed for general PFC use.
     """
     pass
+
 
 def _record_error(*args, **kwargs) -> Any:
     """
@@ -215,12 +242,14 @@ def _record_error(*args, **kwargs) -> Any:
     """
     pass
 
+
 def _remove_polling(*args, **kwargs) -> Any:
     """
     () -> None.
     Deactivate polling.
     """
     pass
+
 
 def _to_record(*args, **kwargs) -> Any:
     """
@@ -229,6 +258,7 @@ def _to_record(*args, **kwargs) -> Any:
     """
     pass
 
+
 def command(*args, **kwargs) -> Any:
     """
     (command: string) -> None.
@@ -236,12 +266,14 @@ def command(*args, **kwargs) -> Any:
     """
     pass
 
+
 def cycle(*args, **kwargs) -> Any:
     """
     () -> int.
     Get the cycle number.
     """
     pass
+
 
 def deterministic(*args, **kwargs) -> Any:
     """
@@ -253,12 +285,14 @@ def deterministic(*args, **kwargs) -> Any:
     """
     pass
 
+
 def dim(*args, **kwargs) -> Any:
     """
     () -> int.
     Get the code dimensionality.
     """
     pass
+
 
 def dockWidget(*args, **kwargs) -> Any:
     """
@@ -268,6 +302,7 @@ def dockWidget(*args, **kwargs) -> Any:
     """
     pass
 
+
 def domain_condition(*args, **kwargs) -> Any:
     """
     (value: string) -> string.
@@ -276,12 +311,14 @@ def domain_condition(*args, **kwargs) -> Any:
     """
     pass
 
+
 def domain_max(*args, **kwargs) -> Any:
     """
     () -> vec.
     Get domain upper bound (vector).
     """
     pass
+
 
 def domain_max_x(*args, **kwargs) -> Any:
     """
@@ -290,12 +327,14 @@ def domain_max_x(*args, **kwargs) -> Any:
     """
     pass
 
+
 def domain_max_y(*args, **kwargs) -> Any:
     """
     () -> float.
     Get the y-component of domain upper bound.
     """
     pass
+
 
 def domain_min(*args, **kwargs) -> Any:
     """
@@ -304,12 +343,14 @@ def domain_min(*args, **kwargs) -> Any:
     """
     pass
 
+
 def domain_min_x(*args, **kwargs) -> Any:
     """
     () -> float.
     Get the x-component of domain lower bound.
     """
     pass
+
 
 def domain_min_y(*args, **kwargs) -> Any:
     """
@@ -318,12 +359,14 @@ def domain_min_y(*args, **kwargs) -> Any:
     """
     pass
 
+
 def domain_strain_rate(*args, **kwargs) -> Any:
     """
     () -> tens3.
     Get the domain strain-rate tensor.
     """
     pass
+
 
 def fos(*args, **kwargs) -> Any:
     """
@@ -332,12 +375,14 @@ def fos(*args, **kwargs) -> Any:
     """
     pass
 
+
 def gravity(*args, **kwargs) -> Any:
     """
     () -> vec.
     Get the gravity (vector).
     """
     pass
+
 
 def gravity_x(*args, **kwargs) -> Any:
     """
@@ -346,12 +391,14 @@ def gravity_x(*args, **kwargs) -> Any:
     """
     pass
 
+
 def gravity_y(*args, **kwargs) -> Any:
     """
     () -> float.
     Get the y-component of the gravity.
     """
     pass
+
 
 def mainWindow(*args, **kwargs) -> Any:
     """
@@ -360,12 +407,14 @@ def mainWindow(*args, **kwargs) -> Any:
     """
     pass
 
+
 def mech_age(*args, **kwargs) -> Any:
     """
     () -> float.
     Return the accumulated mechanical time.
     """
     pass
+
 
 def remove_callback(*args, **kwargs) -> Any:
     """
@@ -375,6 +424,7 @@ def remove_callback(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_callback(*args, **kwargs) -> Any:
     """
     (function_name: str, call_point: float or str) -> None.
@@ -383,6 +433,7 @@ def set_callback(*args, **kwargs) -> Any:
     A function of the given name should exist in the __main__ python namespace and should be callable with any number of arguments.
     """
     pass
+
 
 def set_deterministic(*args, **kwargs) -> Any:
     """
@@ -394,6 +445,7 @@ def set_deterministic(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_domain_condition(*args, **kwargs) -> Any:
     """
     (direction: string, condition: string) -> None.
@@ -403,12 +455,14 @@ def set_domain_condition(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_domain_max(*args, **kwargs) -> Any:
     """
     (value: vec) -> None.
     Set domain upper bound (vector).
     """
     pass
+
 
 def set_domain_max_x(*args, **kwargs) -> Any:
     """
@@ -417,12 +471,14 @@ def set_domain_max_x(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_domain_max_y(*args, **kwargs) -> Any:
     """
     (value: float) -> None.
     Set the y-component of domain upper bound.
     """
     pass
+
 
 def set_domain_min(*args, **kwargs) -> Any:
     """
@@ -431,12 +487,14 @@ def set_domain_min(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_domain_min_x(*args, **kwargs) -> Any:
     """
     (value: float) -> None.
     Set the x-component of domain lower bound.
     """
     pass
+
 
 def set_domain_min_y(*args, **kwargs) -> Any:
     """
@@ -445,12 +503,14 @@ def set_domain_min_y(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_domain_strain_rate(*args, **kwargs) -> Any:
     """
     (stress: tens3) -> None.
     Set the domain strain-rate tensor.
     """
     pass
+
 
 def set_gravity(*args, **kwargs) -> Any:
     """
@@ -459,12 +519,14 @@ def set_gravity(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_gravity_x(*args, **kwargs) -> Any:
     """
     (value: float) -> None.
     Set the x-component of the gravity.
     """
     pass
+
 
 def set_gravity_y(*args, **kwargs) -> Any:
     """
@@ -473,12 +535,14 @@ def set_gravity_y(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_threads(*args, **kwargs) -> Any:
     """
     (value: int) -> None.
     Set the number of threads.
     """
     pass
+
 
 def state_callbacks(*args, **kwargs) -> Any:
     """
@@ -488,12 +552,14 @@ def state_callbacks(*args, **kwargs) -> Any:
     """
     pass
 
+
 def threads(*args, **kwargs) -> Any:
     """
     () -> int.
     Get the number of threads.
     """
     pass
+
 
 def timestep(*args, **kwargs) -> Any:
     """
@@ -502,8 +568,10 @@ def timestep(*args, **kwargs) -> Any:
     """
     pass
 
+
 class BallBallContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -511,7 +579,7 @@ class BallBallContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -519,7 +587,7 @@ class BallBallContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -527,154 +595,154 @@ class BallBallContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def branch(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: str]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -683,7 +751,7 @@ class BallBallContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> {slot: group_name}.
@@ -691,7 +759,7 @@ class BallBallContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -699,14 +767,14 @@ class BallBallContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> bool.
@@ -715,226 +783,225 @@ class BallBallContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
+
     def method(self, *args, **kwargs) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -942,7 +1009,7 @@ class BallBallContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -950,50 +1017,50 @@ class BallBallContact:
         (vector).
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallBallContactIter:
     @classmethod
@@ -1003,22 +1070,23 @@ class BallBallContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallBallThermalContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -1026,7 +1094,7 @@ class BallBallThermalContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -1034,7 +1102,7 @@ class BallBallThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -1042,49 +1110,49 @@ class BallBallThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str ) -> int.
@@ -1093,14 +1161,14 @@ class BallBallThermalContact:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this contact.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -1108,14 +1176,14 @@ class BallBallThermalContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -1123,259 +1191,259 @@ class BallBallThermalContact:
         All group slots are searched.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def method(self, *args, **kwargs) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def power(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact power.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_power(self, *args, **kwargs) -> Any:
         """
         (value: float) -> None.
         Set the contact power.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallBallThermalContactIter:
     @classmethod
-    def __init__(self, *args, **kwargs) -> None:
+    def __init__(cls, *args, **kwargs) -> None:
         """
         Create and return a new object.
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallFacetContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -1383,7 +1451,7 @@ class BallFacetContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -1391,7 +1459,7 @@ class BallFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -1399,154 +1467,154 @@ class BallFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def branch(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: str]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -1555,7 +1623,7 @@ class BallFacetContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> {slot: group_name}.
@@ -1563,7 +1631,7 @@ class BallFacetContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -1571,14 +1639,14 @@ class BallFacetContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> bool.
@@ -1587,226 +1655,225 @@ class BallFacetContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -1814,7 +1881,7 @@ class BallFacetContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -1822,50 +1889,50 @@ class BallFacetContact:
         (vector).
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallFacetContactIter:
     @classmethod
@@ -1875,22 +1942,23 @@ class BallFacetContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallFacetThermalContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -1898,7 +1966,7 @@ class BallFacetThermalContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -1906,7 +1974,7 @@ class BallFacetThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -1914,49 +1982,49 @@ class BallFacetThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str ) -> int.
@@ -1965,14 +2033,14 @@ class BallFacetThermalContact:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this contact.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -1980,14 +2048,14 @@ class BallFacetThermalContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -1995,234 +2063,233 @@ class BallFacetThermalContact:
         All group slots are searched.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def power(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact power.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_power(self, *args, **kwargs) -> Any:
         """
         (value: float) -> None.
         Set the contact power.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallFacetThermalContactIter:
     @classmethod
@@ -2232,22 +2299,23 @@ class BallFacetThermalContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallPebbleContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -2255,7 +2323,7 @@ class BallPebbleContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -2263,7 +2331,7 @@ class BallPebbleContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -2271,154 +2339,154 @@ class BallPebbleContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def branch(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: str]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -2427,7 +2495,7 @@ class BallPebbleContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> {slot: group_name}.
@@ -2435,7 +2503,7 @@ class BallPebbleContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -2443,14 +2511,14 @@ class BallPebbleContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> bool.
@@ -2459,226 +2527,225 @@ class BallPebbleContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -2686,7 +2753,7 @@ class BallPebbleContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -2694,50 +2761,50 @@ class BallPebbleContact:
         (vector).
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallPebbleContactIter:
     @classmethod
@@ -2747,22 +2814,23 @@ class BallPebbleContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallPebbleThermalContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -2770,7 +2838,7 @@ class BallPebbleThermalContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -2778,7 +2846,7 @@ class BallPebbleThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -2786,49 +2854,49 @@ class BallPebbleThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str ) -> int.
@@ -2837,14 +2905,14 @@ class BallPebbleThermalContact:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this contact.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -2852,14 +2920,14 @@ class BallPebbleThermalContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -2867,234 +2935,233 @@ class BallPebbleThermalContact:
         All group slots are searched.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def power(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact power.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_power(self, *args, **kwargs) -> Any:
         """
         (value: float) -> None.
         Set the contact power.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallPebbleThermalContactIter:
     @classmethod
@@ -3104,22 +3171,23 @@ class BallPebbleThermalContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallRBlockContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -3127,7 +3195,7 @@ class BallRBlockContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -3135,7 +3203,7 @@ class BallRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -3143,154 +3211,154 @@ class BallRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def branch(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: str]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -3299,7 +3367,7 @@ class BallRBlockContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> {slot: group_name}.
@@ -3307,7 +3375,7 @@ class BallRBlockContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -3315,14 +3383,14 @@ class BallRBlockContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> bool.
@@ -3331,226 +3399,225 @@ class BallRBlockContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -3558,7 +3625,7 @@ class BallRBlockContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -3566,50 +3633,50 @@ class BallRBlockContact:
         (vector).
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallRBlockContactIter:
     @classmethod
@@ -3619,22 +3686,23 @@ class BallRBlockContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class PebbleFacetContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -3642,7 +3710,7 @@ class PebbleFacetContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -3650,7 +3718,7 @@ class PebbleFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -3658,154 +3726,154 @@ class PebbleFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def branch(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: str]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -3814,7 +3882,7 @@ class PebbleFacetContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> {slot: group_name}.
@@ -3822,7 +3890,7 @@ class PebbleFacetContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -3830,14 +3898,14 @@ class PebbleFacetContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> bool.
@@ -3846,226 +3914,225 @@ class PebbleFacetContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -4073,7 +4140,7 @@ class PebbleFacetContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -4081,50 +4148,50 @@ class PebbleFacetContact:
         (vector).
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class PebbleFacetContactIter:
     @classmethod
@@ -4134,22 +4201,23 @@ class PebbleFacetContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class PebbleFacetThermalContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -4157,7 +4225,7 @@ class PebbleFacetThermalContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -4165,7 +4233,7 @@ class PebbleFacetThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -4173,49 +4241,49 @@ class PebbleFacetThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str ) -> int.
@@ -4224,14 +4292,14 @@ class PebbleFacetThermalContact:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this contact.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -4239,14 +4307,14 @@ class PebbleFacetThermalContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -4254,234 +4322,233 @@ class PebbleFacetThermalContact:
         All group slots are searched.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def power(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact power.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_power(self, *args, **kwargs) -> Any:
         """
         (value: float) -> None.
         Set the contact power.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class PebbleFacetThermalContactIter:
     @classmethod
@@ -4491,22 +4558,23 @@ class PebbleFacetThermalContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class PebblePebbleContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -4514,7 +4582,7 @@ class PebblePebbleContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -4522,7 +4590,7 @@ class PebblePebbleContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -4530,154 +4598,154 @@ class PebblePebbleContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def branch(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: str]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -4686,7 +4754,7 @@ class PebblePebbleContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> {slot: group_name}.
@@ -4694,7 +4762,7 @@ class PebblePebbleContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -4702,14 +4770,14 @@ class PebblePebbleContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> bool.
@@ -4718,226 +4786,225 @@ class PebblePebbleContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -4945,7 +5012,7 @@ class PebblePebbleContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -4953,50 +5020,50 @@ class PebblePebbleContact:
         (vector).
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class PebblePebbleContactIter:
     @classmethod
@@ -5006,22 +5073,23 @@ class PebblePebbleContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class PebblePebbleThermalContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -5029,7 +5097,7 @@ class PebblePebbleThermalContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -5037,7 +5105,7 @@ class PebblePebbleThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -5045,49 +5113,49 @@ class PebblePebbleThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str ) -> int.
@@ -5096,14 +5164,14 @@ class PebblePebbleThermalContact:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this contact.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -5111,14 +5179,14 @@ class PebblePebbleThermalContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -5126,234 +5194,233 @@ class PebblePebbleThermalContact:
         All group slots are searched.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def power(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact power.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_power(self, *args, **kwargs) -> Any:
         """
         (value: float) -> None.
         Set the contact power.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class PebblePebbleThermalContactIter:
     @classmethod
@@ -5363,22 +5430,23 @@ class PebblePebbleThermalContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class PebbleRBlockContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -5386,7 +5454,7 @@ class PebbleRBlockContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -5394,7 +5462,7 @@ class PebbleRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -5402,154 +5470,154 @@ class PebbleRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def branch(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: str]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -5558,7 +5626,7 @@ class PebbleRBlockContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> {slot: group_name}.
@@ -5566,7 +5634,7 @@ class PebbleRBlockContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -5574,14 +5642,14 @@ class PebbleRBlockContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> bool.
@@ -5590,226 +5658,225 @@ class PebbleRBlockContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -5817,7 +5884,7 @@ class PebbleRBlockContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -5825,50 +5892,50 @@ class PebbleRBlockContact:
         (vector).
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class PebbleRBlockContactIter:
     @classmethod
@@ -5878,22 +5945,23 @@ class PebbleRBlockContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class RBlockFacetContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -5901,7 +5969,7 @@ class RBlockFacetContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -5909,7 +5977,7 @@ class RBlockFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -5917,154 +5985,154 @@ class RBlockFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def branch(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: str]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -6073,7 +6141,7 @@ class RBlockFacetContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> {slot: group_name}.
@@ -6081,7 +6149,7 @@ class RBlockFacetContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -6089,14 +6157,14 @@ class RBlockFacetContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> bool.
@@ -6105,226 +6173,225 @@ class RBlockFacetContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -6332,7 +6399,7 @@ class RBlockFacetContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -6340,50 +6407,50 @@ class RBlockFacetContact:
         (vector).
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class RBlockFacetContactIter:
     @classmethod
@@ -6393,22 +6460,23 @@ class RBlockFacetContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class RBlockRBlockContact:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -6416,7 +6484,7 @@ class RBlockRBlockContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
@@ -6424,7 +6492,7 @@ class RBlockRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self, *args, **kwargs) -> Any:
         """
         () -> bool.
@@ -6432,154 +6500,154 @@ class RBlockRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def branch(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self, *args, **kwargs) -> Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: str]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -6588,7 +6656,7 @@ class RBlockRBlockContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> {slot: group_name}.
@@ -6596,7 +6664,7 @@ class RBlockRBlockContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
@@ -6604,14 +6672,14 @@ class RBlockRBlockContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> bool.
@@ -6620,226 +6688,225 @@ class RBlockRBlockContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, *args, **kwargs) -> Any:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
-    def method(self, *args, **kwargs) -> Any:
+
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
-        (method_name: str <, args: dict {str: any}>) -> None.
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self, *args, **kwargs) -> Any:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str[, slot: str]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, *args, **kwargs) -> Any:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, *args, **kwargs) -> Any:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, *args, **kwargs) -> Any:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -6847,7 +6914,7 @@ class RBlockRBlockContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> vec.
@@ -6855,50 +6922,50 @@ class RBlockRBlockContact:
         (vector).
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class RBlockRBlockContactIter:
     @classmethod
@@ -6908,16 +6975,15 @@ class RBlockRBlockContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
