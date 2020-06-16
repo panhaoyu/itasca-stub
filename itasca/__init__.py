@@ -805,7 +805,7 @@ class BallBallContact:
         """
         pass
 
-    def method(self, *args, **kwargs) -> Any:
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
@@ -1199,7 +1199,7 @@ class BallBallThermalContact:
         """
         pass
 
-    def method(self, *args, **kwargs) -> Any:
+    def method(self, method_name: str, args: dict = None) -> Any:
         """
         Execute a contact model method.
         The first argument must be a string identifying a method that exists in the contact model assigned to the contact.
