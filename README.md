@@ -9,6 +9,10 @@ So when I write PFC in Pycharm,
 the keyword `itasca` is always red,
 and there's no type hint.
 
+Here is a preview.
+
+![preview](https://raw.githubusercontent.com/panhaoyu/itasca-stub/master/doc/assets/preview.png)
+
 ## Installation
 
 ### Manual
