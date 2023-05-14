@@ -5,7 +5,7 @@ description = "Itasca PFC python stub"
 authors = ["panhaoyu <panhaoyu.china@outlook.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "itasca_stub" }]
+packages = [{ include = "itasca" }]
 homepage = "https://github.com/panhaoyu/itasca-stub"
 repository = "https://github.com/panhaoyu/itasca-stub"
 documentation = "https://github.com/panhaoyu/itasca-stub"
