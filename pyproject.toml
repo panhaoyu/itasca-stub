@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "itasca-stub"
-version = "1.0.13"
+version = "1.0.14"
 description = "Itasca PFC python stub"
 authors = ["panhaoyu <panhaoyu.china@outlook.com>"]
 license = "MIT"
