@@ -3,17 +3,16 @@
 The public interface is via the mypy.stubgen module.
 """
 
-import importlib
 import inspect
 import os.path
 import re
-from typing import List, Dict, Tuple, Optional, Mapping, Any, Set
 from types import ModuleType
+from typing import List, Dict, Tuple, Optional, Mapping, Any, Set
 
 from mypy.moduleinspect import is_c_module
 from mypy.stubdoc import (
     infer_sig_from_docstring, infer_prop_type_from_docstring, ArgSig,
-    infer_arg_sig_from_docstring, FunctionSig
+    infer_arg_sig_from_anon_docstring, FunctionSig
 )
 
 
@@ -142,7 +141,7 @@ def generate_c_function_stub(module: ModuleType,
     if (name in ('__new__', '__init__') and name not in sigs and class_name and
             class_name in class_sigs):
         inferred = [FunctionSig(name=name,
-                                args=infer_arg_sig_from_docstring(class_sigs[class_name]),
+                                args=infer_arg_sig_from_anon_docstring(class_sigs[class_name]),
                                 ret_type=ret_type)]  # type: Optional[List[FunctionSig]]
     else:
         docstr = getattr(obj, '__doc__', None)
@@ -151,7 +150,7 @@ def generate_c_function_stub(module: ModuleType,
             if class_name and name not in sigs:
                 inferred = [FunctionSig(name, args=infer_method_sig(name), ret_type=ret_type)]
             else:
-                args = infer_arg_sig_from_docstring(sigs.get(name, '(*args, **kwargs)'))
+                args = infer_arg_sig_from_anon_docstring(sigs.get(name, '(*args, **kwargs)'))
                 inferred = [FunctionSig(name=name, args=args, ret_type=ret_type)]
 
     is_overloaded = len(inferred) > 1 if inferred else False

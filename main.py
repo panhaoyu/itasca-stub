@@ -1,8 +1,8 @@
-import os
-import types
-import stubgenc
-import itasca
 import importlib
+import types
+
+import itasca
+import stubgenc
 
 importlib.reload(stubgenc)
 
