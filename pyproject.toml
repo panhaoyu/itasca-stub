@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "itasca-stub"
+version = "1.0.12"
+description = "Itasca PFC python stub"
+authors = ["panhaoyu <panhaoyu.china@outlook.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "itasca_stub" }]
+homepage = "https://github.com/panhaoyu/itasca-stub"
+repository = "https://github.com/panhaoyu/itasca-stub"
+documentation = "https://github.com/panhaoyu/itasca-stub"
+keywords = ['itasca', 'stub', 'pfc']
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
