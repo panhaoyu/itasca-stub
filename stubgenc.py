@@ -208,9 +208,35 @@ def get_type_str(type_str):
     elif type_str.startswith('array '):
         ret_type = 'numpy.ndarray'
     else:
-        print(f'Unknown type: {type_str}')
         return None
     return ret_type
+
+
+def infer_func_args_return_types_from_docstring(docstr):
+    match = re.match(r'^\((.*?)\) *-> *(.*?)\. (.*?)', docstr)
+    if not match:
+        return None
+    args_str, return_str, _ = match.groups()
+    args_str_list = args_str.split(', ')
+    args_list = []
+    for arg_str in args_str_list:
+        if ': ' in arg_str and '=' not in arg_str:
+            arg_name, arg_type = arg_str.split(': ', maxsplit=1)
+            arg_type = get_type_str(arg_type)
+            if arg_type is None:
+                return None
+            if '(' in arg_name:
+                return None
+            arg_name = arg_name.replace(' ', '_')
+            args_list.append(ArgSig(name=arg_name, type=arg_type))
+        else:
+            return None
+    if not args_str:
+        args_list = []
+    return_type = get_type_str(return_str)
+    if return_type is None:
+        return None
+    return args_list, return_type
 
 
 def generate_c_function_stub(module: ModuleType,
@@ -244,38 +270,24 @@ def generate_c_function_stub(module: ModuleType,
         docstr = getattr(obj, '__doc__', None)
         inferred = infer_sig_from_docstring(docstr, name)
         if not inferred:
+            inferred_from_docstr = infer_func_args_return_types_from_docstring(docstr)
+            if inferred_from_docstr is None:
+                print(docstr.split('.')[0])
             if class_name and name not in sigs:
-                inferred = [FunctionSig(name, args=infer_method_sig(name), ret_type=ret_type)]
+                class_args = infer_method_sig(name)
+                if inferred_from_docstr is not None:
+                    inferred_args, inferred_return_type = inferred_from_docstr
+                    if inferred_args[0].name == 'self':
+                        inferred_args = inferred_args[1:]
+                    class_args[1:] = inferred_args
+                    ret_type = inferred_return_type
+                inferred = [FunctionSig(name, args=class_args, ret_type=ret_type)]
             else:
                 args = infer_arg_sig_from_anon_docstring(sigs.get(name, '(*args, **kwargs)'))
-                match = re.match(r'^\((.*?)\) *-> *(.*?)\. (.*?)', docstr)
-                if match:
-                    args_str, return_str, _ = match.groups()
-                    args_str_list = args_str.split(', ')
-                    args_list = []
-                    all_known = True
-                    for arg_str in args_str_list:
-                        if ': ' in arg_str and '=' not in arg_str:
-                            arg_name, arg_type = arg_str.split(': ', maxsplit=1)
-                            arg_type = get_type_str(arg_type)
-                            if arg_type is None:
-                                all_known = False
-                                break
-                            if '(' in arg_name:
-                                all_known = False
-                                break
-                            arg_name = arg_name.replace(' ', '_')
-                            args_list.append(ArgSig(name=arg_name, type=arg_type))
-                        else:
-                            all_known = False
-                    if all_known is True:
-                        args = args_list
-                    if not args_str:
-                        args = []
-                    parsed_return_type = get_type_str(return_str)
-                    if parsed_return_type is not None:
-                        ret_type = parsed_return_type
-                inferred = [FunctionSig(name=name, args=args, ret_type=ret_type)]
+                if inferred_from_docstr is None:
+                    inferred = [FunctionSig(name=name, args=args, ret_type=ret_type)]
+                else:
+                    inferred = [FunctionSig(name=name, args=inferred_from_docstr[0], ret_type=inferred_from_docstr[1])]
 
     is_overloaded = len(inferred) > 1 if inferred else False
     if is_overloaded:
