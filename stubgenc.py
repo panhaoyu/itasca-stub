@@ -149,7 +149,7 @@ def get_type_str(type_str):
         'thermal ball iterator object': 'itasca.ball.thermal.ThermalBallIter',
         'clump object': 'itasca.clump.Clump',
         'clump object iterator': 'itasca.clump.ClumpIter',
-        'template object': 'itasca.template.Template',
+        'template object': 'typing.Union[itasca.rblock.template.Template, itasca.clump.template.Template]',
         'pebble object': 'itasca.clump.pebble.Pebble',
         'pebble iterator object': 'itasca.clump.pebble.PebbleIter',
         'thermal clump object': 'itasca.clump.thermal.ThermalClump',
@@ -200,7 +200,7 @@ def get_type_str(type_str):
         'tuple of pyobject pointers for the currenly in-scope and valid measure objects': 'typing.Tuple[itasca.measure.Measure, ...]',
         'tuple of pyobject pointers for the currenly in-scope and valid rblock objects': 'typing.Tuple[itasca.rblock.RBlock, ...]',
         'tuple of rblock objects': 'typing.Tuple[itasca.rblock.RBlock, ...]',
-        'tuple of strings': 'typing.Tuple[string, ...]',
+        'tuple of strings': 'typing.Tuple[str, ...]',
     }
     type_str = type_str.lower().strip()
     if type_str in return_type_dict:
@@ -221,14 +221,18 @@ def infer_func_args_return_types_from_docstring(docstr):
     if args_str.startswith('(') and args_str.count('(') == 1 and args_str.count(')') == 0:
         args_str = args_str[1:]
     args_str = re.sub(r'\{[a-z,:0-9 ]+}', '', args_str)
-    optional_args_str = ''
     args_list = []
     if (args_str.count('[') == args_str.count(']') == 1) or (args_str.count('<') == args_str.count('>') == 1):
         optional_str_match = re.match(r'^(.*?)[\[<](.*?)[]>]$', args_str)
         if not optional_str_match:
             return None
-        args_str, optional_args_str = optional_str_match.groups()
-    for args_str_2, is_optional in ((args_str, False), (optional_args_str, True)):
+        positional_args_str, optional_args_str = optional_str_match.groups()
+    elif len(set(args_str).intersection(set('[]<>'))) == 0:
+        positional_args_str, optional_args_str = args_str, ''
+    else:
+        print((args_str, return_str))
+        return None
+    for args_str_2, is_optional in ((positional_args_str, False), (optional_args_str, True)):
         for arg_str in args_str_2.strip().split(','):
             arg_str = arg_str.strip()
             if not arg_str:
@@ -251,8 +255,11 @@ def infer_func_args_return_types_from_docstring(docstr):
         args_list = []
     return_type = get_type_str(return_str)
     if return_type is None:
-        print(4, return_str, '/', args_str)
-        return None
+        if return_str == '{slot: group_name}':
+            return_type = 'typing.Dict[typing.Union[str, int], str]'
+        else:
+            print(4, return_str, '/', args_str)
+            return None
     return args_list, return_type
 
 
@@ -361,7 +368,7 @@ def strip_or_import(typ: str, module: ModuleType, imports: List[str]) -> str:
                 stripped_type = sub_typ[len('builtins') + 1:]
             else:
                 imports.append('import %s' % (arg_module,))
-    return stripped_type
+    return typ
 
 
 def generate_c_property_stub(name: str, obj: object, output: List[str], readonly: bool) -> None:
