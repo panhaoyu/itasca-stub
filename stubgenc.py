@@ -172,11 +172,8 @@ def get_type_str(type_str):
         'rblock template iterator object': 'itasca.rblock.template.RBlockTemplateIter',
         'tuple of pyobject pointers for the currenly in-scope and valid objects': 'typing.Tuple[object, ...]',
         'tuple of str': 'typing.Tuple[str, ...]',
-        'str>': 'str',
         'int or (object1': 'typing.Union[int, object]',
-        'any)]': 'typing.Any',
         'tuple of pyobject pointers for the currenly in-scope and valid ball objects': 'typing.Tuple[itasca.ball.Ball, ...]',
-        'vec [,id: int]': 'typing.Tuple[vec.vec, int]',
         'tuple of ball objects': 'typing.Tuple[itasca.ball.Ball, ...]',
         'tuple of pyobject pointers for the currenly in-scope and valid thermal ball objects': 'typing.Tuple[itasca.ball.thermal.ThermalBall, ...]',
         'tuple of thermal ball objects': 'typing.Tuple[itasca.ball.thermal.ThermalBall, ...]',
@@ -213,15 +210,16 @@ def get_type_str(type_str):
 
 
 def infer_func_args_return_types_from_docstring(docstr):
-    match = re.match(r'^\((.*?)\) *-> *(.*?)\. (.*?)', docstr)
+    match = re.match(r'^\((.*?)\) *-> *(.*?)(?:\.|$)', docstr)
     if not match:
         return None
-    args_str, return_str, _ = match.groups()
-    args_str_list = args_str.split(', ')
+    args_str, return_str = match.groups()
     args_list = []
-    for arg_str in args_str_list:
-        if ': ' in arg_str and '=' not in arg_str:
-            arg_name, arg_type = arg_str.split(': ', maxsplit=1)
+    for arg_str in args_str.strip().split(','):
+        arg_str = arg_str.strip()
+        if ':' in arg_str and '=' not in arg_str:
+            arg_name, arg_type = arg_str.split(':', maxsplit=1)
+            arg_name = arg_name.strip()
             arg_type = get_type_str(arg_type)
             if arg_type is None:
                 return None
@@ -271,8 +269,8 @@ def generate_c_function_stub(module: ModuleType,
         inferred = infer_sig_from_docstring(docstr, name)
         if not inferred:
             inferred_from_docstr = infer_func_args_return_types_from_docstring(docstr)
-            if inferred_from_docstr is None:
-                print(docstr.split('.')[0])
+            if docstr is not None and inferred_from_docstr is None:
+                print(docstr)
             if class_name and name not in sigs:
                 class_args = infer_method_sig(name)
                 if inferred_from_docstr is not None:
