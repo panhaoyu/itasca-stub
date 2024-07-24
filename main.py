@@ -1,14 +1,11 @@
-import importlib
 import types
 from typing import Dict
 
-import mypy.stubgen
+from mypy.stubgen import generate_stub_for_c_module
 
 import itasca
 
 itasca.command(r'program directory custom "F:/projects/itasca-stub"')
-
-importlib.reload(mypy.stubgen)
 
 
 class PackageGenerator:
@@ -43,7 +40,7 @@ class PackageGenerator:
                              if key.startswith(f'{name}/')]
             other_imports = [other_import for other_import in other_imports if other_import and '/' not in other_import]
             try:
-                mypy.stubgen.generate_stub_for_c_module(package, path)
+                generate_stub_for_c_module(package, path)
             except (AssertionError, TypeError):
                 print('Error', name)
 
