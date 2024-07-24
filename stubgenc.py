@@ -11,7 +11,7 @@ from typing import List, Dict, Tuple, Optional, Mapping, Any, Set
 
 from mypy.moduleinspect import is_c_module
 from mypy.stubdoc import (
-    infer_sig_from_docstring, infer_prop_type_from_docstring, ArgSig,
+    infer_prop_type_from_docstring, ArgSig,
     infer_arg_sig_from_anon_docstring, FunctionSig
 )
 
@@ -266,26 +266,24 @@ def generate_c_function_stub(module: ModuleType,
                                 ret_type=ret_type)]  # type: Optional[List[FunctionSig]]
     else:
         docstr = getattr(obj, '__doc__', None)
-        inferred = infer_sig_from_docstring(docstr, name)
-        if not inferred:
-            inferred_from_docstr = infer_func_args_return_types_from_docstring(docstr)
-            if docstr is not None and inferred_from_docstr is None:
-                print(docstr)
-            if class_name and name not in sigs:
-                class_args = infer_method_sig(name)
-                if inferred_from_docstr is not None:
-                    inferred_args, inferred_return_type = inferred_from_docstr
-                    if inferred_args[0].name == 'self':
-                        inferred_args = inferred_args[1:]
-                    class_args[1:] = inferred_args
-                    ret_type = inferred_return_type
-                inferred = [FunctionSig(name, args=class_args, ret_type=ret_type)]
+        inferred_from_docstr = infer_func_args_return_types_from_docstring(docstr)
+        if docstr is not None and inferred_from_docstr is None:
+            print(docstr)
+        if class_name and name not in sigs:
+            class_args = infer_method_sig(name)
+            if inferred_from_docstr is not None:
+                inferred_args, inferred_return_type = inferred_from_docstr
+                if inferred_args[0].name == 'self':
+                    inferred_args = inferred_args[1:]
+                class_args[1:] = inferred_args
+                ret_type = inferred_return_type
+            inferred = [FunctionSig(name, args=class_args, ret_type=ret_type)]
+        else:
+            args = infer_arg_sig_from_anon_docstring(sigs.get(name, '(*args, **kwargs)'))
+            if inferred_from_docstr is None:
+                inferred = [FunctionSig(name=name, args=args, ret_type=ret_type)]
             else:
-                args = infer_arg_sig_from_anon_docstring(sigs.get(name, '(*args, **kwargs)'))
-                if inferred_from_docstr is None:
-                    inferred = [FunctionSig(name=name, args=args, ret_type=ret_type)]
-                else:
-                    inferred = [FunctionSig(name=name, args=inferred_from_docstr[0], ret_type=inferred_from_docstr[1])]
+                inferred = [FunctionSig(name=name, args=inferred_from_docstr[0], ret_type=inferred_from_docstr[1])]
 
     is_overloaded = len(inferred) > 1 if inferred else False
     if is_overloaded:
