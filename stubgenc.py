@@ -323,6 +323,7 @@ def strip_or_import(typ: str, module: ModuleType, imports: List[str]) -> str:
         module: in which this type is used
         imports: list of import statements (may be modified during the call)
     """
+    stripped_type = typ
     for sub_typ in re.findall(r'\b[a-zA-Z0-9_.]+', typ):
         if sub_typ in ('...', ''):
             continue
