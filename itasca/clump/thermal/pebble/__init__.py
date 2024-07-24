@@ -1,11 +1,13 @@
 from typing import Any, Tuple
 
+
 def _plist(*args, **kwargs) -> Any:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid thermal pebble objects.
     This function is used for internal testing and is not needed for general PFC use.
     """
     pass
+
 
 def count(*args, **kwargs) -> Any:
     """
@@ -14,12 +16,14 @@ def count(*args, **kwargs) -> Any:
     """
     pass
 
+
 def find(*args, **kwargs) -> Any:
     """
     (id: int) -> Thermal pebble object.
     Get the thermal pebble object with the given ID number.
     """
     pass
+
 
 def inbox(*args, **kwargs) -> Any:
     """
@@ -30,6 +34,7 @@ def inbox(*args, **kwargs) -> Any:
     """
     pass
 
+
 def list(*args, **kwargs) -> Any:
     """
     () -> Thermal pebble iterator object.
@@ -37,12 +42,14 @@ def list(*args, **kwargs) -> Any:
     """
     pass
 
+
 def maxid(*args, **kwargs) -> Any:
     """
     () -> int.
     Get the maximum thermal pebble ID.
     """
     pass
+
 
 def near(*args, **kwargs) -> Any:
     """
@@ -52,8 +59,10 @@ def near(*args, **kwargs) -> Any:
     """
     pass
 
+
 class ThermalPebble:
     __hash__: Any = ...
+
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -61,14 +70,14 @@ class ThermalPebble:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def clump(self, *args, **kwargs) -> Any:
         """
         () -> Thermal clump object.
         Get the thermal clump corresponding to this pebble.
         """
         pass
-    
+
     def contact_count(self, *args, **kwargs) -> Any:
         """
         (all=False, type=None) -> int.
@@ -78,7 +87,7 @@ class ThermalPebble:
         If the optional keyword argument all is True the count includes virtual contacts.
         """
         pass
-    
+
     def contacts(self, *args, **kwargs) -> Any:
         """
         ([piece], all=False, type=None) -> tuple of Contact objects.
@@ -89,21 +98,21 @@ class ThermalPebble:
         If the (optional) keyword argument all is True the returned list includes virtual contacts.
         """
         pass
-    
+
     def extra(self, *args, **kwargs) -> Any:
         """
         (slot: int) -> any.
         Get the thermal pebble extra data in the given slot.
         """
         pass
-    
+
     def group(self, *args, **kwargs) -> Any:
         """
         ([slot: int]) -> str.
         Get the thermal pebble group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, *args, **kwargs) -> Any:
         """
         (group_name: str ) -> int.
@@ -112,28 +121,28 @@ class ThermalPebble:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self, *args, **kwargs) -> Any:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this thermal pebble.
         """
         pass
-    
+
     def has_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> bool.
         Returns True if the thermal pebble has the given surface property.
         """
         pass
-    
+
     def id(self, *args, **kwargs) -> Any:
         """
         () -> int.
         Get the thermal pebble id.
         """
         pass
-    
+
     def in_group(self, *args, **kwargs) -> Any:
         """
         (group_name: str) -> bool.
@@ -141,134 +150,134 @@ class ThermalPebble:
         All group slots are searched.
         """
         pass
-    
+
     def pebble(self, *args, **kwargs) -> Any:
         """
         () -> Pebble object.
         Get the pebble corresponding to this thermal pebble.
         """
         pass
-    
+
     def pos(self, *args, **kwargs) -> Any:
         """
         () -> vec.
         Get the thermal pebble location (vector).
         """
         pass
-    
+
     def pos_x(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the x-component of the thermal pebble location.
         """
         pass
-    
+
     def pos_y(self, *args, **kwargs) -> Any:
         """
         () -> float.
         Get the y-component of the thermal pebble location.
         """
         pass
-    
+
     def prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str) -> any.
         Get a surface property value of this thermal pebble.
         """
         pass
-    
+
     def props(self, *args, **kwargs) -> Any:
         """
         () -> dict {str: any}.
         Get a dictionary of all the surface properties of this thermal pebble.
         """
         pass
-    
+
     def set_extra(self, *args, **kwargs) -> Any:
         """
         (slot: int, value: any) -> None.
         Set the thermal pebble extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, *args, **kwargs) -> Any:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the thermal pebble group name in a given slot.
         """
         pass
-    
+
     def set_pos(self, *args, **kwargs) -> Any:
         """
         (value: vec) -> None.
         Set the thermal pebble location (vector).
         """
         pass
-    
+
     def set_pos_x(self, *args, **kwargs) -> Any:
         """
         (value: float) -> None.
         Set the x-component of the thermal pebble location.
         """
         pass
-    
+
     def set_pos_y(self, *args, **kwargs) -> Any:
         """
         (value: float) -> None.
         Set the y-component of the thermal pebble location.
         """
         pass
-    
+
     def set_prop(self, *args, **kwargs) -> Any:
         """
         (property_name: str, value: any) -> None.
         Set a surface property of this thermal pebble.
         """
         pass
-    
+
     def valid(self, *args, **kwargs) -> Any:
         """
         () -> bool.
         Returns True if this thermal pebble is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class ThermalPebbleIter:
     @classmethod
@@ -278,16 +287,15 @@ class ThermalPebbleIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    

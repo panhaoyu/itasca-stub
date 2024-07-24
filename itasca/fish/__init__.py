@@ -1,11 +1,13 @@
 from typing import Any
 
+
 def call_function(*args, **kwargs) -> Any:
     """
     (func: string, [(tuple: any)]) -> Any.
     Call FISH function func return result.
     """
     pass
+
 
 def get(*args, **kwargs) -> Any:
     """
@@ -14,12 +16,14 @@ def get(*args, **kwargs) -> Any:
     """
     pass
 
+
 def has(*args, **kwargs) -> Any:
     """
     (var: string) -> Boolean.
     Return True if the FISH variable var is defined, False otherwise.
     """
     pass
+
 
 def is_function(*args, **kwargs) -> Any:
     """
@@ -28,6 +32,7 @@ def is_function(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set(*args, **kwargs) -> Any:
     """
     (var: string, value:any) -> None.
@@ -35,4 +40,3 @@ def set(*args, **kwargs) -> Any:
     If no FISH variable with name var exists, then it is created.
     """
     pass
-

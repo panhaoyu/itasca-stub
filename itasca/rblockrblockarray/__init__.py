@@ -1,11 +1,13 @@
 from typing import Any
 
+
 def branch(*args, **kwargs) -> Any:
     """
     () -> array float{contact,2}.
     Get a numpy array of the contact branch vectors in the global coordinate system.
     """
     pass
+
 
 def extra(*args, **kwargs) -> Any:
     """
@@ -15,6 +17,7 @@ def extra(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_branch(*args, **kwargs) -> Any:
     """
     (data: array float{contact,2}) -> None.
@@ -22,6 +25,7 @@ def fill_branch(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_force_global(*args, **kwargs) -> Any:
     """
@@ -31,6 +35,7 @@ def fill_force_global(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_force_local(*args, **kwargs) -> Any:
     """
     (data: array float{contact,2}) -> None.
@@ -38,6 +43,7 @@ def fill_force_local(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_force_normal(*args, **kwargs) -> Any:
     """
@@ -47,6 +53,7 @@ def fill_force_normal(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_force_shear(*args, **kwargs) -> Any:
     """
     (data: array float{contact}) -> None.
@@ -54,6 +61,7 @@ def fill_force_shear(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_gap(*args, **kwargs) -> Any:
     """
@@ -63,6 +71,7 @@ def fill_gap(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_moment1_global(*args, **kwargs) -> Any:
     """
     (data: array float{contact}) -> None.
@@ -70,6 +79,7 @@ def fill_moment1_global(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_moment1_local(*args, **kwargs) -> Any:
     """
@@ -79,6 +89,7 @@ def fill_moment1_local(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_moment2_global(*args, **kwargs) -> Any:
     """
     (data: array float{contact}) -> None.
@@ -86,6 +97,7 @@ def fill_moment2_global(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_moment2_local(*args, **kwargs) -> Any:
     """
@@ -95,6 +107,7 @@ def fill_moment2_local(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_normal(*args, **kwargs) -> Any:
     """
     (data: array float{contact,2}) -> None.
@@ -102,6 +115,7 @@ def fill_normal(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_offset(*args, **kwargs) -> Any:
     """
@@ -111,6 +125,7 @@ def fill_offset(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_pos(*args, **kwargs) -> Any:
     """
     (data: array float{contact,2}) -> None.
@@ -119,12 +134,14 @@ def fill_pos(*args, **kwargs) -> Any:
     """
     pass
 
+
 def force_global(*args, **kwargs) -> Any:
     """
     () -> array float{contact,2}.
     Get a numpy array of the contact force in the global coordinate system.
     """
     pass
+
 
 def force_local(*args, **kwargs) -> Any:
     """
@@ -133,12 +150,14 @@ def force_local(*args, **kwargs) -> Any:
     """
     pass
 
+
 def force_normal(*args, **kwargs) -> Any:
     """
     () -> array float{contact}.
     Get a numpy array of the contact normal force.
     """
     pass
+
 
 def force_shear(*args, **kwargs) -> Any:
     """
@@ -147,12 +166,14 @@ def force_shear(*args, **kwargs) -> Any:
     """
     pass
 
+
 def gap(*args, **kwargs) -> Any:
     """
     () -> array float{contact}.
     Get a numpy array of the contact gap.
     """
     pass
+
 
 def ids(*args, **kwargs) -> Any:
     """
@@ -161,12 +182,14 @@ def ids(*args, **kwargs) -> Any:
     """
     pass
 
+
 def in_group(*args, **kwargs) -> Any:
     """
     (group_name: str, slot=1) -> array bool{contact}.
     Return contact group membership as a Boolean array.
     """
     pass
+
 
 def indices(*args, **kwargs) -> Any:
     """
@@ -176,12 +199,14 @@ def indices(*args, **kwargs) -> Any:
     """
     pass
 
+
 def moment1_global(*args, **kwargs) -> Any:
     """
     () -> array float{contact}.
     Get a numpy array of the contact moment acting on end 1 in the global coordinate system.
     """
     pass
+
 
 def moment1_local(*args, **kwargs) -> Any:
     """
@@ -190,12 +215,14 @@ def moment1_local(*args, **kwargs) -> Any:
     """
     pass
 
+
 def moment2_global(*args, **kwargs) -> Any:
     """
     () -> array float{contact}.
     Get a numpy array of the contact moment acting on end 2 in the global coordinate system.
     """
     pass
+
 
 def moment2_local(*args, **kwargs) -> Any:
     """
@@ -204,12 +231,14 @@ def moment2_local(*args, **kwargs) -> Any:
     """
     pass
 
+
 def normal(*args, **kwargs) -> Any:
     """
     () -> array float{contact,2}.
     Get a numpy array of the contact normal.
     """
     pass
+
 
 def offset(*args, **kwargs) -> Any:
     """
@@ -218,12 +247,14 @@ def offset(*args, **kwargs) -> Any:
     """
     pass
 
+
 def pos(*args, **kwargs) -> Any:
     """
     () -> array float{contact,2}.
     Get a numpy array of the contact position.
     """
     pass
+
 
 def set_extra(*args, **kwargs) -> Any:
     """
@@ -233,6 +264,7 @@ def set_extra(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_group(*args, **kwargs) -> Any:
     """
     (membership: array bool{contact}, group_name: str, slot=1) -> None.
@@ -240,4 +272,3 @@ def set_group(*args, **kwargs) -> Any:
     Where membership True set the corresponding contact to be a member of group group_name in the given slot.
     """
     pass
-

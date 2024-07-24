@@ -1,5 +1,6 @@
 from typing import Any
 
+
 def cutoff(*args, **kwargs) -> Any:
     """
     () -> array float{wall}.
@@ -7,12 +8,14 @@ def cutoff(*args, **kwargs) -> Any:
     """
     pass
 
+
 def disp(*args, **kwargs) -> Any:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall displacement.
     """
     pass
+
 
 def extra(*args, **kwargs) -> Any:
     """
@@ -22,6 +25,7 @@ def extra(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_cutoff(*args, **kwargs) -> Any:
     """
     (data: array float{wall}) -> None.
@@ -29,6 +33,7 @@ def fill_cutoff(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_disp(*args, **kwargs) -> Any:
     """
@@ -38,6 +43,7 @@ def fill_disp(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_force_contact(*args, **kwargs) -> Any:
     """
     (data: array float{wall,2}) -> None.
@@ -45,6 +51,7 @@ def fill_force_contact(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_moment_contact(*args, **kwargs) -> Any:
     """
@@ -54,6 +61,7 @@ def fill_moment_contact(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_pos(*args, **kwargs) -> Any:
     """
     (data: array float{wall,2}) -> None.
@@ -61,6 +69,7 @@ def fill_pos(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_rotation(*args, **kwargs) -> Any:
     """
@@ -70,6 +79,7 @@ def fill_rotation(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_rotation_center(*args, **kwargs) -> Any:
     """
     (data: array float{wall,dim}) -> None.
@@ -77,6 +87,7 @@ def fill_rotation_center(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_spin(*args, **kwargs) -> Any:
     """
@@ -86,6 +97,7 @@ def fill_spin(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_vel(*args, **kwargs) -> Any:
     """
     (data: array float{wall,2}) -> None.
@@ -94,12 +106,14 @@ def fill_vel(*args, **kwargs) -> Any:
     """
     pass
 
+
 def force_contact(*args, **kwargs) -> Any:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall contact force.
     """
     pass
+
 
 def ids(*args, **kwargs) -> Any:
     """
@@ -108,12 +122,14 @@ def ids(*args, **kwargs) -> Any:
     """
     pass
 
+
 def in_group(*args, **kwargs) -> Any:
     """
     (group_name: str, slot=1) -> array bool{wall}.
     Return wall group membership as a Boolean array.
     """
     pass
+
 
 def moment_contact(*args, **kwargs) -> Any:
     """
@@ -122,12 +138,14 @@ def moment_contact(*args, **kwargs) -> Any:
     """
     pass
 
+
 def pos(*args, **kwargs) -> Any:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall location.
     """
     pass
+
 
 def rotation(*args, **kwargs) -> Any:
     """
@@ -136,12 +154,14 @@ def rotation(*args, **kwargs) -> Any:
     """
     pass
 
+
 def rotation_center(*args, **kwargs) -> Any:
     """
     () -> array float{wall,dim}.
     Get a numpy array of the wall center of rotation.
     """
     pass
+
 
 def set_cutoff(*args, **kwargs) -> Any:
     """
@@ -150,12 +170,14 @@ def set_cutoff(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_disp(*args, **kwargs) -> Any:
     """
     (data: array float{wall,2}) -> None.
     Set the wall displacement from an array.
     """
     pass
+
 
 def set_extra(*args, **kwargs) -> Any:
     """
@@ -165,12 +187,14 @@ def set_extra(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_force_contact(*args, **kwargs) -> Any:
     """
     (data: array float{wall,2}) -> None.
     Set the wall contact force from an array.
     """
     pass
+
 
 def set_group(*args, **kwargs) -> Any:
     """
@@ -180,12 +204,14 @@ def set_group(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_moment_contact(*args, **kwargs) -> Any:
     """
     (data: array float{wall}) -> None.
     Set the wall contact moment from an array.
     """
     pass
+
 
 def set_pos(*args, **kwargs) -> Any:
     """
@@ -194,12 +220,14 @@ def set_pos(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_rotation(*args, **kwargs) -> Any:
     """
     (data: array float{wall}) -> None.
     Set the wall orientation from an array.
     """
     pass
+
 
 def set_rotation_center(*args, **kwargs) -> Any:
     """
@@ -208,12 +236,14 @@ def set_rotation_center(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_spin(*args, **kwargs) -> Any:
     """
     (data: array float{wall}) -> None.
     Set the wall angular velocity from an array.
     """
     pass
+
 
 def set_vel(*args, **kwargs) -> Any:
     """
@@ -222,6 +252,7 @@ def set_vel(*args, **kwargs) -> Any:
     """
     pass
 
+
 def spin(*args, **kwargs) -> Any:
     """
     () -> array float{wall}.
@@ -229,10 +260,10 @@ def spin(*args, **kwargs) -> Any:
     """
     pass
 
+
 def vel(*args, **kwargs) -> Any:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall velocity.
     """
     pass
-

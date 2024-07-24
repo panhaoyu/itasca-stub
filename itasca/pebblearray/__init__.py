@@ -1,5 +1,6 @@
 from typing import Any
 
+
 def extra(*args, **kwargs) -> Any:
     """
     (slot: int) -> array float{pebble} or float{pebble}.
@@ -7,6 +8,7 @@ def extra(*args, **kwargs) -> Any:
     Extra variables accessed by array must be of type float or vec.
     """
     pass
+
 
 def fill_pos(*args, **kwargs) -> Any:
     """
@@ -16,6 +18,7 @@ def fill_pos(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_radius(*args, **kwargs) -> Any:
     """
     (data: array float{ball}) -> None.
@@ -23,6 +26,7 @@ def fill_radius(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_vel(*args, **kwargs) -> Any:
     """
@@ -32,12 +36,14 @@ def fill_vel(*args, **kwargs) -> Any:
     """
     pass
 
+
 def ids(*args, **kwargs) -> Any:
     """
     () -> array int{pebble}.
     Get the pebble ids as an array.
     """
     pass
+
 
 def in_group(*args, **kwargs) -> Any:
     """
@@ -46,6 +52,7 @@ def in_group(*args, **kwargs) -> Any:
     """
     pass
 
+
 def pos(*args, **kwargs) -> Any:
     """
     () -> array float{pebble,2}.
@@ -53,12 +60,14 @@ def pos(*args, **kwargs) -> Any:
     """
     pass
 
+
 def radius(*args, **kwargs) -> Any:
     """
     () -> array float{ball}.
     Get a numpy array of the pebble radii.
     """
     pass
+
 
 def set_extra(*args, **kwargs) -> Any:
     """
@@ -68,6 +77,7 @@ def set_extra(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_group(*args, **kwargs) -> Any:
     """
     (membership: array bool{pebble}, group_name: str, slot=1) -> None.
@@ -76,12 +86,14 @@ def set_group(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_pos(*args, **kwargs) -> Any:
     """
     (data: array float{pebble,2}) -> None.
     Set the pebble location from an array.
     """
     pass
+
 
 def set_radius(*args, **kwargs) -> Any:
     """
@@ -90,10 +102,10 @@ def set_radius(*args, **kwargs) -> Any:
     """
     pass
 
+
 def vel(*args, **kwargs) -> Any:
     """
     () -> array float{pebble,2}.
     Get a numpy array of the pebble velocity.
     """
     pass
-

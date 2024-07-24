@@ -1,5 +1,6 @@
 from typing import Any
 
+
 def fill_pos(*args, **kwargs) -> Any:
     """
     (data: array float{vertex,2}) -> None.
@@ -7,6 +8,7 @@ def fill_pos(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_vel(*args, **kwargs) -> Any:
     """
@@ -16,12 +18,14 @@ def fill_vel(*args, **kwargs) -> Any:
     """
     pass
 
+
 def ids(*args, **kwargs) -> Any:
     """
     () -> array int{vertex}.
     Get the vertex ids as an array.
     """
     pass
+
 
 def pos(*args, **kwargs) -> Any:
     """
@@ -30,12 +34,14 @@ def pos(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_pos(*args, **kwargs) -> Any:
     """
     (data: array float{vertex,2}) -> None.
     Set the vertex location from an array.
     """
     pass
+
 
 def set_vel(*args, **kwargs) -> Any:
     """
@@ -44,10 +50,10 @@ def set_vel(*args, **kwargs) -> Any:
     """
     pass
 
+
 def vel(*args, **kwargs) -> Any:
     """
     () -> array float{vertex,2}.
     Get a numpy array of the vertex velocity.
     """
     pass
-

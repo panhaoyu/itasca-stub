@@ -1,11 +1,13 @@
 from typing import Any
 
+
 def damp(*args, **kwargs) -> Any:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock local damping.
     """
     pass
+
 
 def density(*args, **kwargs) -> Any:
     """
@@ -14,12 +16,14 @@ def density(*args, **kwargs) -> Any:
     """
     pass
 
+
 def disp(*args, **kwargs) -> Any:
     """
     () -> array float{rblock,2}.
     Get a numpy array of the rblock displacement.
     """
     pass
+
 
 def extra(*args, **kwargs) -> Any:
     """
@@ -29,6 +33,7 @@ def extra(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_damp(*args, **kwargs) -> Any:
     """
     (data: array float{rblock}) -> None.
@@ -36,6 +41,7 @@ def fill_damp(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_density(*args, **kwargs) -> Any:
     """
@@ -45,6 +51,7 @@ def fill_density(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_disp(*args, **kwargs) -> Any:
     """
     (data: array float{rblock,2}) -> None.
@@ -52,6 +59,7 @@ def fill_disp(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_force_app(*args, **kwargs) -> Any:
     """
@@ -61,6 +69,7 @@ def fill_force_app(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_force_contact(*args, **kwargs) -> Any:
     """
     (data: array float{rblock,2}) -> None.
@@ -68,6 +77,7 @@ def fill_force_contact(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_force_unbal(*args, **kwargs) -> Any:
     """
@@ -77,6 +87,7 @@ def fill_force_unbal(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_mass(*args, **kwargs) -> Any:
     """
     (data: array float{rblock}) -> None.
@@ -84,6 +95,7 @@ def fill_mass(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_mass_real(*args, **kwargs) -> Any:
     """
@@ -93,6 +105,7 @@ def fill_mass_real(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_moi_prin_real(*args, **kwargs) -> Any:
     """
     (data: array float{rblock,dim}) -> None.
@@ -100,6 +113,7 @@ def fill_moi_prin_real(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_moment_app(*args, **kwargs) -> Any:
     """
@@ -109,6 +123,7 @@ def fill_moment_app(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_moment_contact(*args, **kwargs) -> Any:
     """
     (data: array float{rblock}) -> None.
@@ -116,6 +131,7 @@ def fill_moment_contact(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_moment_unbal(*args, **kwargs) -> Any:
     """
@@ -125,6 +141,7 @@ def fill_moment_unbal(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_pos(*args, **kwargs) -> Any:
     """
     (data: array float{rblock,2}) -> None.
@@ -132,6 +149,7 @@ def fill_pos(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_rotation(*args, **kwargs) -> Any:
     """
@@ -141,6 +159,7 @@ def fill_rotation(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_spin(*args, **kwargs) -> Any:
     """
     (data: array float{rblock}) -> None.
@@ -148,6 +167,7 @@ def fill_spin(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_vel(*args, **kwargs) -> Any:
     """
@@ -157,6 +177,7 @@ def fill_vel(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_vol(*args, **kwargs) -> Any:
     """
     (data: array float{rblock}) -> None.
@@ -165,12 +186,14 @@ def fill_vol(*args, **kwargs) -> Any:
     """
     pass
 
+
 def force_app(*args, **kwargs) -> Any:
     """
     () -> array float{rblock,2}.
     Get a numpy array of the rblock applied force.
     """
     pass
+
 
 def force_contact(*args, **kwargs) -> Any:
     """
@@ -179,12 +202,14 @@ def force_contact(*args, **kwargs) -> Any:
     """
     pass
 
+
 def force_unbal(*args, **kwargs) -> Any:
     """
     () -> array float{rblock,2}.
     Get a numpy array of the rblock unbalanced force.
     """
     pass
+
 
 def ids(*args, **kwargs) -> Any:
     """
@@ -193,12 +218,14 @@ def ids(*args, **kwargs) -> Any:
     """
     pass
 
+
 def in_group(*args, **kwargs) -> Any:
     """
     (group_name: str, slot=1) -> array bool{rblock}.
     Return rblock group membership as a Boolean array.
     """
     pass
+
 
 def mass(*args, **kwargs) -> Any:
     """
@@ -207,12 +234,14 @@ def mass(*args, **kwargs) -> Any:
     """
     pass
 
+
 def mass_real(*args, **kwargs) -> Any:
     """
     () -> array float{rblock}.
     Get a numpy array of the real (gravitational) rblock mass.
     """
     pass
+
 
 def moi_prin_real(*args, **kwargs) -> Any:
     """
@@ -221,12 +250,14 @@ def moi_prin_real(*args, **kwargs) -> Any:
     """
     pass
 
+
 def moment_app(*args, **kwargs) -> Any:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock applied moment.
     """
     pass
+
 
 def moment_contact(*args, **kwargs) -> Any:
     """
@@ -235,12 +266,14 @@ def moment_contact(*args, **kwargs) -> Any:
     """
     pass
 
+
 def moment_unbal(*args, **kwargs) -> Any:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock unbalanced moment.
     """
     pass
+
 
 def pos(*args, **kwargs) -> Any:
     """
@@ -249,12 +282,14 @@ def pos(*args, **kwargs) -> Any:
     """
     pass
 
+
 def rotation(*args, **kwargs) -> Any:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock orientation.
     """
     pass
+
 
 def set_damp(*args, **kwargs) -> Any:
     """
@@ -263,6 +298,7 @@ def set_damp(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_density(*args, **kwargs) -> Any:
     """
     (data: array float{rblock}) -> None.
@@ -270,12 +306,14 @@ def set_density(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_disp(*args, **kwargs) -> Any:
     """
     (data: array float{rblock,2}) -> None.
     Set the rblock displacement from an array.
     """
     pass
+
 
 def set_extra(*args, **kwargs) -> Any:
     """
@@ -285,12 +323,14 @@ def set_extra(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_force_app(*args, **kwargs) -> Any:
     """
     (data: array float{rblock,2}) -> None.
     Set the rblock applied force from an array.
     """
     pass
+
 
 def set_force_contact(*args, **kwargs) -> Any:
     """
@@ -299,6 +339,7 @@ def set_force_contact(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_group(*args, **kwargs) -> Any:
     """
     (membership: array bool{rblock}, group_name: str, slot=1) -> None.
@@ -306,6 +347,7 @@ def set_group(*args, **kwargs) -> Any:
     Where membership True set the corresponding rblock to be a member of group group_name in the given slot.
     """
     pass
+
 
 def set_moi_prin_real(*args, **kwargs) -> Any:
     """
@@ -316,12 +358,14 @@ def set_moi_prin_real(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_moment_app(*args, **kwargs) -> Any:
     """
     (data: array float{rblock}) -> None.
     Set the rblock applied moment from an array.
     """
     pass
+
 
 def set_moment_contact(*args, **kwargs) -> Any:
     """
@@ -330,12 +374,14 @@ def set_moment_contact(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_pos(*args, **kwargs) -> Any:
     """
     (data: array float{rblock,2}) -> None.
     Set the rblock centroid location from an array.
     """
     pass
+
 
 def set_rotation(*args, **kwargs) -> Any:
     """
@@ -344,6 +390,7 @@ def set_rotation(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_spin(*args, **kwargs) -> Any:
     """
     (data: array float{rblock}) -> None.
@@ -351,12 +398,14 @@ def set_spin(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_vel(*args, **kwargs) -> Any:
     """
     (data: array float{rblock,2}) -> None.
     Set the rblock velocity from an array.
     """
     pass
+
 
 def set_vol(*args, **kwargs) -> Any:
     """
@@ -368,12 +417,14 @@ def set_vol(*args, **kwargs) -> Any:
     """
     pass
 
+
 def spin(*args, **kwargs) -> Any:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock angular velocity.
     """
     pass
+
 
 def vel(*args, **kwargs) -> Any:
     """
@@ -382,10 +433,10 @@ def vel(*args, **kwargs) -> Any:
     """
     pass
 
+
 def vol(*args, **kwargs) -> Any:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock volume.
     """
     pass
-

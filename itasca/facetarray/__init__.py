@@ -1,11 +1,13 @@
 from typing import Any
 
+
 def conveyor(*args, **kwargs) -> Any:
     """
     () -> array float{facet,dim}.
     Get a numpy array of the facet conveyor velocity.
     """
     pass
+
 
 def extra(*args, **kwargs) -> Any:
     """
@@ -15,6 +17,7 @@ def extra(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_conveyor(*args, **kwargs) -> Any:
     """
     (data: array float{facet,dim}) -> None.
@@ -22,6 +25,7 @@ def fill_conveyor(*args, **kwargs) -> Any:
     The array must be the correct shape.
     """
     pass
+
 
 def fill_normal(*args, **kwargs) -> Any:
     """
@@ -31,6 +35,7 @@ def fill_normal(*args, **kwargs) -> Any:
     """
     pass
 
+
 def fill_pos(*args, **kwargs) -> Any:
     """
     (data: array float{facet,2}) -> None.
@@ -39,12 +44,14 @@ def fill_pos(*args, **kwargs) -> Any:
     """
     pass
 
+
 def ids(*args, **kwargs) -> Any:
     """
     () -> array int{facet}.
     Get the facet ids as an array.
     """
     pass
+
 
 def in_group(*args, **kwargs) -> Any:
     """
@@ -53,12 +60,14 @@ def in_group(*args, **kwargs) -> Any:
     """
     pass
 
+
 def normal(*args, **kwargs) -> Any:
     """
     () -> array float{facet,dim}.
     Get a numpy array of the facet normal.
     """
     pass
+
 
 def pos(*args, **kwargs) -> Any:
     """
@@ -67,12 +76,14 @@ def pos(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_conveyor(*args, **kwargs) -> Any:
     """
     ((data: array float{facet,dim}) -> None.
     Set the facet conveyor velocity from an array.
     """
     pass
+
 
 def set_extra(*args, **kwargs) -> Any:
     """
@@ -82,6 +93,7 @@ def set_extra(*args, **kwargs) -> Any:
     """
     pass
 
+
 def set_group(*args, **kwargs) -> Any:
     """
     (membership: array bool{facet}, group_name: str, slot=1) -> None.
@@ -89,4 +101,3 @@ def set_group(*args, **kwargs) -> Any:
     Where membership True set the corresponding facet to be a member of group group_name in the given slot.
     """
     pass
-

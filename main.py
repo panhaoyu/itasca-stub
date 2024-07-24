@@ -2,6 +2,8 @@ import importlib
 import types
 
 import itasca
+
+itasca.command(r'program directory custom "F:/projects/itasca-stub"')
 import stubgenc
 
 importlib.reload(stubgenc)
