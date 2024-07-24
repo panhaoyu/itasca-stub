@@ -131,6 +131,7 @@ def get_type_str(type_str):
         'str': 'str',
         'vec': 'vec.vec',
         'tens3': 'vec.tens3',
+        'tensor': 'vec.tens3',
         'float or str': 'typing.Union[float, str]',
         'int or str': 'typing.Union[int, str]',
         'facet object': 'itasca.wall.facet.Facet',
@@ -179,6 +180,7 @@ def get_type_str(type_str):
         'tuple of thermal ball objects': 'typing.Tuple[itasca.ball.thermal.ThermalBall, ...]',
         'tuple of pyobject pointers for the currenly in-scope and valid clump objects': 'typing.Tuple[itasca.clump.Clump, ...]',
         'dict {str: float}': 'typing.Dict[str, float]',
+        'dict {str: any}': 'typing.Dict[str, typing.Any]',
         'tuple of clump objects': 'typing.Tuple[itasca.clump.Clump, ...]',
         'clump template pebble object': 'itasca.rblock.template.RBlockTemplatePebble',
         'clump template iterator object': 'itasca.rblock.template.RBlockTemplateIter',
@@ -198,6 +200,7 @@ def get_type_str(type_str):
         'tuple of pyobject pointers for the currenly in-scope and valid measure objects': 'typing.Tuple[itasca.measure.Measure, ...]',
         'tuple of pyobject pointers for the currenly in-scope and valid rblock objects': 'typing.Tuple[itasca.rblock.RBlock, ...]',
         'tuple of rblock objects': 'typing.Tuple[itasca.rblock.RBlock, ...]',
+        'tuple of strings': 'typing.Tuple[string, ...]',
     }
     type_str = type_str.lower().strip()
     if type_str in return_type_dict:
@@ -214,25 +217,41 @@ def infer_func_args_return_types_from_docstring(docstr):
     if not match:
         return None
     args_str, return_str = match.groups()
+    args_str = args_str.replace('name2="step": string', 'name2:string="step"')
+    if args_str.startswith('(') and args_str.count('(') == 1 and args_str.count(')') == 0:
+        args_str = args_str[1:]
+    args_str = re.sub(r'\{[a-z,:0-9 ]+}', '', args_str)
+    optional_args_str = ''
     args_list = []
-    for arg_str in args_str.strip().split(','):
-        arg_str = arg_str.strip()
-        if ':' in arg_str and '=' not in arg_str:
-            arg_name, arg_type = arg_str.split(':', maxsplit=1)
-            arg_name = arg_name.strip()
-            arg_type = get_type_str(arg_type)
-            if arg_type is None:
-                return None
-            if '(' in arg_name:
-                return None
-            arg_name = arg_name.replace(' ', '_')
-            args_list.append(ArgSig(name=arg_name, type=arg_type))
-        else:
+    if (args_str.count('[') == args_str.count(']') == 1) or (args_str.count('<') == args_str.count('>') == 1):
+        optional_str_match = re.match(r'^(.*?)[\[<](.*?)[]>]$', args_str)
+        if not optional_str_match:
             return None
+        args_str, optional_args_str = optional_str_match.groups()
+    for args_str_2, is_optional in ((args_str, False), (optional_args_str, True)):
+        for arg_str in args_str_2.strip().split(','):
+            arg_str = arg_str.strip()
+            if not arg_str:
+                continue
+            assert arg_str.count('=') < 2 and arg_str.count(':') < 2, (arg_str, args_str_2)
+            if '=' in arg_str:
+                assert arg_str.count('=') == 1
+                is_optional = True
+                arg_str, default_value = arg_str.split('=')
+                assert ':' not in default_value, (arg_str, args_str_2)
+            if ':' in arg_str:
+                arg_name, arg_type = arg_str.split(':', maxsplit=1)
+                arg_type = get_type_str(arg_type)
+            else:
+                arg_name = arg_str
+                arg_type = None
+            arg_name = arg_name.strip().replace(' ', '_')
+            args_list.append(ArgSig(name=arg_name, type=arg_type, default=is_optional))
     if not args_str:
         args_list = []
     return_type = get_type_str(return_str)
     if return_type is None:
+        print(4, return_str, '/', args_str)
         return None
     return args_list, return_type
 
@@ -267,13 +286,11 @@ def generate_c_function_stub(module: ModuleType,
     else:
         docstr = getattr(obj, '__doc__', None)
         inferred_from_docstr = infer_func_args_return_types_from_docstring(docstr)
-        if docstr is not None and inferred_from_docstr is None:
-            print(docstr)
         if class_name and name not in sigs:
             class_args = infer_method_sig(name)
             if inferred_from_docstr is not None:
                 inferred_args, inferred_return_type = inferred_from_docstr
-                if inferred_args[0].name == 'self':
+                if inferred_args and inferred_args[0].name == 'self':
                     inferred_args = inferred_args[1:]
                 class_args[1:] = inferred_args
                 ret_type = inferred_return_type
