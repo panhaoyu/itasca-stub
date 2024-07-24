@@ -154,8 +154,8 @@ def get_type_str(type_str):
         'pebble iterator object': 'itasca.clump.pebble.PebbleIter',
         'thermal clump object': 'itasca.clump.thermal.ThermalClump',
         'thermal clump iterator object': 'itasca.clump.thermal.ThermalClumpIter',
-        'thermal pebble object': 'itasca.clump.pebble.thermal.ThermalPebble',
-        'thermal pebble iterator object': 'itasca.clump.pebble.thermal.ThermalPebbleIter',
+        'thermal pebble object': 'itasca.clump.thermal.ThermalPebble',
+        'thermal pebble iterator object': 'itasca.clump.thermal.ThermalPebbleIter',
         'wall object': 'itasca.wall.Wall',
         'wall object iterator': 'itasca.wall.WallIter',
         'facet iterator object': 'itasca.wall.facet.FacetIter',
@@ -188,8 +188,8 @@ def get_type_str(type_str):
         'tuple of pebble objects': 'typing.Tuple[itasca.clump.pebble.Pebble, ...]',
         'tuple of pyobject pointers for the currenly in-scope and valid thermal clump objects': 'typing.Tuple[itasca.clump.thermal.ThermalClump, ...]',
         'tuple of thermal clump objects': 'typing.Tuple[itasca.clump.thermal.ThermalClump, ...]',
-        'tuple of pyobject pointers for the currenly in-scope and valid thermal pebble objects': 'typing.Tuple[itasca.clump.pebble.thermal.ThermalPebble, ...]',
-        'tuple of thermal pebble objects': 'typing.Tuple[itasca.clump.pebble.thermal.ThermalPebble, ...]',
+        'tuple of pyobject pointers for the currenly in-scope and valid thermal pebble objects': 'typing.Tuple[itasca.clump.thermal.ThermalPebble, ...]',
+        'tuple of thermal pebble objects': 'typing.Tuple[itasca.clump.thermal.ThermalPebble, ...]',
         'tuple of wall objects': 'typing.Tuple[itasca.wall.Wall, ...]',
         'tuple of facet objects': 'typing.Tuple[itasca.wall.facet.Facet, ...]',
         'tuple of wallvertex objects': 'typing.Tuple[itasca.wall.WallVertex, ...]',
@@ -217,6 +217,27 @@ def infer_func_args_return_types_from_docstring(docstr):
     if not match:
         return None
     args_str, return_str = match.groups()
+    mapping0 = {
+        ('[group_name: str[, slot: int]]', 'None'): (
+            [ArgSig('group_name', 'str', default=True),
+             ArgSig('slot', 'int', default=True)],
+            'None'),
+        ('[group_name:  str or int[, slot: str or int]]', 'None'): (
+            [ArgSig('group_name', 'typing.Union[str, int]', default=True),
+             ArgSig('slot', 'typing.Union[str, int]', default=True)],
+            'None'),
+        ('func: string, [(tuple: any)]', 'Any'): (
+            [ArgSig('func', 'str'),
+             ArgSig('args', 'typing.Tuple')],
+            'typing.Any'),
+        ('<process: str>, <type: TypeObject>, <all=False>', 'int'): (
+            [ArgSig('process', 'str'),
+             ArgSig('type_class', 'type'),
+             ArgSig('all', 'bool')],
+            'typing.Any'),
+    }
+    if (args_str, return_str) in mapping0:
+        return mapping0[(args_str, return_str)]
     args_str = args_str.replace('name2="step": string', 'name2:string="step"')
     if args_str.startswith('(') and args_str.count('(') == 1 and args_str.count(')') == 0:
         args_str = args_str[1:]
@@ -233,24 +254,33 @@ def infer_func_args_return_types_from_docstring(docstr):
         print((args_str, return_str))
         return None
     for args_str_2, is_optional in ((positional_args_str, False), (optional_args_str, True)):
-        for arg_str in args_str_2.strip().split(','):
-            arg_str = arg_str.strip()
-            if not arg_str:
-                continue
-            assert arg_str.count('=') < 2 and arg_str.count(':') < 2, (arg_str, args_str_2)
-            if '=' in arg_str:
-                assert arg_str.count('=') == 1
-                is_optional = True
-                arg_str, default_value = arg_str.split('=')
-                assert ':' not in default_value, (arg_str, args_str_2)
-            if ':' in arg_str:
-                arg_name, arg_type = arg_str.split(':', maxsplit=1)
-                arg_type = get_type_str(arg_type)
-            else:
-                arg_name = arg_str
-                arg_type = None
-            arg_name = arg_name.strip().replace(' ', '_')
-            args_list.append(ArgSig(name=arg_name, type=arg_type, default=is_optional))
+        mapping = {
+            'type: TypeObject, id: int or (object1, object2)': [
+                ArgSig('type', 'Any'),
+                ArgSig('id', 'typing.Union[int, typing.Tuple[typing.Any, typing.Any]]'),
+            ]
+        }
+        if args_str_2 in mapping:
+            args_list.extend(mapping[args_str_2])
+        else:
+            for arg_str in args_str_2.strip().split(','):
+                arg_str = arg_str.strip()
+                if not arg_str:
+                    continue
+                assert arg_str.count('=') < 2 and arg_str.count(':') < 2, (arg_str, args_str_2)
+                if '=' in arg_str:
+                    assert arg_str.count('=') == 1
+                    is_optional = True
+                    arg_str, default_value = arg_str.split('=')
+                    assert ':' not in default_value, (arg_str, args_str_2)
+                if ':' in arg_str:
+                    arg_name, arg_type = arg_str.split(':', maxsplit=1)
+                    arg_type = get_type_str(arg_type)
+                else:
+                    arg_name = arg_str
+                    arg_type = None
+                arg_name = arg_name.strip().replace(' ', '_')
+                args_list.append(ArgSig(name=arg_name, type=arg_type, default=is_optional))
     if not args_str:
         args_list = []
     return_type = get_type_str(return_str)
