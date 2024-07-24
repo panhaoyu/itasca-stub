@@ -1,7 +1,7 @@
-from typing import Any
+import typing
 
 
-def call_function(*args, **kwargs) -> Any:
+def call_function(func: str, args: typing.Tuple) -> typing.Any:
     """
     (func: string, [(tuple: any)]) -> Any.
     Call FISH function func return result.
@@ -9,7 +9,7 @@ def call_function(*args, **kwargs) -> Any:
     pass
 
 
-def get(*args, **kwargs) -> Any:
+def get(var: str) -> typing.Any:
     """
     (var: string) -> any.
     Return value of the FISH variable var.
@@ -17,7 +17,7 @@ def get(*args, **kwargs) -> Any:
     pass
 
 
-def has(*args, **kwargs) -> Any:
+def has(var: str) -> bool:
     """
     (var: string) -> Boolean.
     Return True if the FISH variable var is defined, False otherwise.
@@ -25,7 +25,7 @@ def has(*args, **kwargs) -> Any:
     pass
 
 
-def is_function(*args, **kwargs) -> Any:
+def is_function(var: str) -> bool:
     """
     (var: string) -> Boolean.
     Return True if the FISH variable var is defined and is a function, False otherwise.
@@ -33,7 +33,7 @@ def is_function(*args, **kwargs) -> Any:
     pass
 
 
-def set(*args, **kwargs) -> Any:
+def set(var: str, value: typing.Any) -> None:
     """
     (var: string, value:any) -> None.
     Set the FISH variable var to value.

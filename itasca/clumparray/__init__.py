@@ -1,7 +1,7 @@
-from typing import Any
+import numpy
 
 
-def damp(*args, **kwargs) -> Any:
+def damp() -> numpy.ndarray:
     """
     () -> array float{clump}.
     Get a numpy array of the clump local damping.
@@ -9,7 +9,7 @@ def damp(*args, **kwargs) -> Any:
     pass
 
 
-def density(*args, **kwargs) -> Any:
+def density() -> numpy.ndarray:
     """
     () -> array float{clump}.
     Get a numpy array of the clump density.
@@ -17,7 +17,7 @@ def density(*args, **kwargs) -> Any:
     pass
 
 
-def disp(*args, **kwargs) -> Any:
+def disp() -> numpy.ndarray:
     """
     () -> array float{clump,2}.
     Get a numpy array of the clump displacement.
@@ -25,7 +25,7 @@ def disp(*args, **kwargs) -> Any:
     pass
 
 
-def extra(*args, **kwargs) -> Any:
+def extra(slot: int) -> numpy.ndarray:
     """
     (slot: int) -> array float{clump} or float{clump}.
     Get the clump extra data in the given slot as an array.
@@ -34,7 +34,7 @@ def extra(*args, **kwargs) -> Any:
     pass
 
 
-def fill_damp(*args, **kwargs) -> Any:
+def fill_damp(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Fill an existing array with the clump local damping.
@@ -43,7 +43,7 @@ def fill_damp(*args, **kwargs) -> Any:
     pass
 
 
-def fill_density(*args, **kwargs) -> Any:
+def fill_density(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Fill an existing array with the clump density.
@@ -52,7 +52,7 @@ def fill_density(*args, **kwargs) -> Any:
     pass
 
 
-def fill_disp(*args, **kwargs) -> Any:
+def fill_disp(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,2}) -> None.
     Fill an existing array with the clump displacement.
@@ -61,7 +61,7 @@ def fill_disp(*args, **kwargs) -> Any:
     pass
 
 
-def fill_force_app(*args, **kwargs) -> Any:
+def fill_force_app(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,2}) -> None.
     Fill an existing array with the clump applied force.
@@ -70,7 +70,7 @@ def fill_force_app(*args, **kwargs) -> Any:
     pass
 
 
-def fill_force_contact(*args, **kwargs) -> Any:
+def fill_force_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,2}) -> None.
     Fill an existing array with the clump contact force.
@@ -79,7 +79,7 @@ def fill_force_contact(*args, **kwargs) -> Any:
     pass
 
 
-def fill_force_unbal(*args, **kwargs) -> Any:
+def fill_force_unbal(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,2}) -> None.
     Fill an existing array with the clump unbalanced force.
@@ -88,7 +88,7 @@ def fill_force_unbal(*args, **kwargs) -> Any:
     pass
 
 
-def fill_mass(*args, **kwargs) -> Any:
+def fill_mass(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Fill an existing array with the inertial clump mass.
@@ -97,7 +97,7 @@ def fill_mass(*args, **kwargs) -> Any:
     pass
 
 
-def fill_mass_real(*args, **kwargs) -> Any:
+def fill_mass_real(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Fill an existing array with the real (gravitational) clump mass.
@@ -106,7 +106,7 @@ def fill_mass_real(*args, **kwargs) -> Any:
     pass
 
 
-def fill_moi_prin_real(*args, **kwargs) -> Any:
+def fill_moi_prin_real(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,dim}) -> None.
     Fill an existing array with the clump principal moments of inertia.
@@ -115,7 +115,7 @@ def fill_moi_prin_real(*args, **kwargs) -> Any:
     pass
 
 
-def fill_moment_app(*args, **kwargs) -> Any:
+def fill_moment_app(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Fill an existing array with the clump applied moment.
@@ -124,7 +124,7 @@ def fill_moment_app(*args, **kwargs) -> Any:
     pass
 
 
-def fill_moment_contact(*args, **kwargs) -> Any:
+def fill_moment_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Fill an existing array with the clump contact moment.
@@ -133,7 +133,7 @@ def fill_moment_contact(*args, **kwargs) -> Any:
     pass
 
 
-def fill_moment_unbal(*args, **kwargs) -> Any:
+def fill_moment_unbal(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Fill an existing array with the clump unbalanced moment.
@@ -142,7 +142,7 @@ def fill_moment_unbal(*args, **kwargs) -> Any:
     pass
 
 
-def fill_pos(*args, **kwargs) -> Any:
+def fill_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,2}) -> None.
     Fill an existing array with the clump centroid location.
@@ -151,7 +151,7 @@ def fill_pos(*args, **kwargs) -> Any:
     pass
 
 
-def fill_rotation(*args, **kwargs) -> Any:
+def fill_rotation(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Fill an existing array with the clump orientation.
@@ -160,7 +160,7 @@ def fill_rotation(*args, **kwargs) -> Any:
     pass
 
 
-def fill_spin(*args, **kwargs) -> Any:
+def fill_spin(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Fill an existing array with the clump angular velocity.
@@ -169,7 +169,7 @@ def fill_spin(*args, **kwargs) -> Any:
     pass
 
 
-def fill_vel(*args, **kwargs) -> Any:
+def fill_vel(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,2}) -> None.
     Fill an existing array with the clump velocity.
@@ -178,7 +178,7 @@ def fill_vel(*args, **kwargs) -> Any:
     pass
 
 
-def fill_vol(*args, **kwargs) -> Any:
+def fill_vol(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Fill an existing array with the clump volume.
@@ -187,7 +187,7 @@ def fill_vol(*args, **kwargs) -> Any:
     pass
 
 
-def force_app(*args, **kwargs) -> Any:
+def force_app() -> numpy.ndarray:
     """
     () -> array float{clump,2}.
     Get a numpy array of the clump applied force.
@@ -195,7 +195,7 @@ def force_app(*args, **kwargs) -> Any:
     pass
 
 
-def force_contact(*args, **kwargs) -> Any:
+def force_contact() -> numpy.ndarray:
     """
     () -> array float{clump,2}.
     Get a numpy array of the clump contact force.
@@ -203,7 +203,7 @@ def force_contact(*args, **kwargs) -> Any:
     pass
 
 
-def force_unbal(*args, **kwargs) -> Any:
+def force_unbal() -> numpy.ndarray:
     """
     () -> array float{clump,2}.
     Get a numpy array of the clump unbalanced force.
@@ -211,7 +211,7 @@ def force_unbal(*args, **kwargs) -> Any:
     pass
 
 
-def ids(*args, **kwargs) -> Any:
+def ids() -> numpy.ndarray:
     """
     () -> array int{clump}.
     Get the clump ids as an array.
@@ -219,7 +219,7 @@ def ids(*args, **kwargs) -> Any:
     pass
 
 
-def in_group(*args, **kwargs) -> Any:
+def in_group(group_name: str, slot=...) -> numpy.ndarray:
     """
     (group_name: str, slot=1) -> array bool{clump}.
     Return clump group membership as a Boolean array.
@@ -227,7 +227,7 @@ def in_group(*args, **kwargs) -> Any:
     pass
 
 
-def mass(*args, **kwargs) -> Any:
+def mass() -> numpy.ndarray:
     """
     () -> array float{clump}.
     Get a numpy array of the inertial clump mass.
@@ -235,7 +235,7 @@ def mass(*args, **kwargs) -> Any:
     pass
 
 
-def mass_real(*args, **kwargs) -> Any:
+def mass_real() -> numpy.ndarray:
     """
     () -> array float{clump}.
     Get a numpy array of the real (gravitational) clump mass.
@@ -243,7 +243,7 @@ def mass_real(*args, **kwargs) -> Any:
     pass
 
 
-def moi_prin_real(*args, **kwargs) -> Any:
+def moi_prin_real() -> numpy.ndarray:
     """
     () -> array float{clump,dim}.
     Get a numpy array of the clump principal moments of inertia.
@@ -251,7 +251,7 @@ def moi_prin_real(*args, **kwargs) -> Any:
     pass
 
 
-def moment_app(*args, **kwargs) -> Any:
+def moment_app() -> numpy.ndarray:
     """
     () -> array float{clump}.
     Get a numpy array of the clump applied moment.
@@ -259,7 +259,7 @@ def moment_app(*args, **kwargs) -> Any:
     pass
 
 
-def moment_contact(*args, **kwargs) -> Any:
+def moment_contact() -> numpy.ndarray:
     """
     () -> array float{clump}.
     Get a numpy array of the clump contact moment.
@@ -267,7 +267,7 @@ def moment_contact(*args, **kwargs) -> Any:
     pass
 
 
-def moment_unbal(*args, **kwargs) -> Any:
+def moment_unbal() -> numpy.ndarray:
     """
     () -> array float{clump}.
     Get a numpy array of the clump unbalanced moment.
@@ -275,7 +275,7 @@ def moment_unbal(*args, **kwargs) -> Any:
     pass
 
 
-def pos(*args, **kwargs) -> Any:
+def pos() -> numpy.ndarray:
     """
     () -> array float{clump,2}.
     Get a numpy array of the clump centroid location.
@@ -283,7 +283,7 @@ def pos(*args, **kwargs) -> Any:
     pass
 
 
-def rotation(*args, **kwargs) -> Any:
+def rotation() -> numpy.ndarray:
     """
     () -> array float{clump}.
     Get a numpy array of the clump orientation.
@@ -291,7 +291,7 @@ def rotation(*args, **kwargs) -> Any:
     pass
 
 
-def set_damp(*args, **kwargs) -> Any:
+def set_damp(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Set the clump local damping from an array.
@@ -299,7 +299,7 @@ def set_damp(*args, **kwargs) -> Any:
     pass
 
 
-def set_density(*args, **kwargs) -> Any:
+def set_density(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Set the clump density from an array.
@@ -307,7 +307,7 @@ def set_density(*args, **kwargs) -> Any:
     pass
 
 
-def set_disp(*args, **kwargs) -> Any:
+def set_disp(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,2}) -> None.
     Set the clump displacement from an array.
@@ -315,7 +315,7 @@ def set_disp(*args, **kwargs) -> Any:
     pass
 
 
-def set_extra(*args, **kwargs) -> Any:
+def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
     (slot: int, data: array float{clump} or float{clump}) -> None.
     Set the clump extra data in the given slot with an array.
@@ -324,7 +324,7 @@ def set_extra(*args, **kwargs) -> Any:
     pass
 
 
-def set_force_app(*args, **kwargs) -> Any:
+def set_force_app(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,2}) -> None.
     Set the clump applied force from an array.
@@ -332,7 +332,7 @@ def set_force_app(*args, **kwargs) -> Any:
     pass
 
 
-def set_force_contact(*args, **kwargs) -> Any:
+def set_force_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,2}) -> None.
     Set the clump contact force from an array.
@@ -340,7 +340,7 @@ def set_force_contact(*args, **kwargs) -> Any:
     pass
 
 
-def set_group(*args, **kwargs) -> Any:
+def set_group(membership: numpy.ndarray, group_name: str, slot=...) -> None:
     """
     (membership: array bool{clump}, group_name: str, slot=1) -> None.
     Set clump group from an array.
@@ -349,7 +349,7 @@ def set_group(*args, **kwargs) -> Any:
     pass
 
 
-def set_moi_prin_real(*args, **kwargs) -> Any:
+def set_moi_prin_real(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,dim}) -> None.
     Set the clump principal moments of inertia from an array.
@@ -359,7 +359,7 @@ def set_moi_prin_real(*args, **kwargs) -> Any:
     pass
 
 
-def set_moment_app(*args, **kwargs) -> Any:
+def set_moment_app(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Set the clump applied moment from an array.
@@ -367,7 +367,7 @@ def set_moment_app(*args, **kwargs) -> Any:
     pass
 
 
-def set_moment_contact(*args, **kwargs) -> Any:
+def set_moment_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Set the clump contact moment from an array.
@@ -375,7 +375,7 @@ def set_moment_contact(*args, **kwargs) -> Any:
     pass
 
 
-def set_pos(*args, **kwargs) -> Any:
+def set_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,2}) -> None.
     Set the clump centroid location from an array.
@@ -383,7 +383,7 @@ def set_pos(*args, **kwargs) -> Any:
     pass
 
 
-def set_rotation(*args, **kwargs) -> Any:
+def set_rotation(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Set the clump orientation from an array.
@@ -391,7 +391,7 @@ def set_rotation(*args, **kwargs) -> Any:
     pass
 
 
-def set_spin(*args, **kwargs) -> Any:
+def set_spin(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Set the clump angular velocity from an array.
@@ -399,7 +399,7 @@ def set_spin(*args, **kwargs) -> Any:
     pass
 
 
-def set_vel(*args, **kwargs) -> Any:
+def set_vel(data: numpy.ndarray) -> None:
     """
     (data: array float{clump,2}) -> None.
     Set the clump velocity from an array.
@@ -407,7 +407,7 @@ def set_vel(*args, **kwargs) -> Any:
     pass
 
 
-def set_vol(*args, **kwargs) -> Any:
+def set_vol(data: numpy.ndarray) -> None:
     """
     (data: array float{clump}) -> None.
     Set the clump volume from an array.
@@ -418,7 +418,7 @@ def set_vol(*args, **kwargs) -> Any:
     pass
 
 
-def spin(*args, **kwargs) -> Any:
+def spin() -> numpy.ndarray:
     """
     () -> array float{clump}.
     Get a numpy array of the clump angular velocity.
@@ -426,7 +426,7 @@ def spin(*args, **kwargs) -> Any:
     pass
 
 
-def vel(*args, **kwargs) -> Any:
+def vel() -> numpy.ndarray:
     """
     () -> array float{clump,2}.
     Get a numpy array of the clump velocity.
@@ -434,7 +434,7 @@ def vel(*args, **kwargs) -> Any:
     pass
 
 
-def vol(*args, **kwargs) -> Any:
+def vol() -> numpy.ndarray:
     """
     () -> array float{clump}.
     Get a numpy array of the clump volume.

@@ -1,7 +1,7 @@
-from typing import Any
+import numpy
 
 
-def fill_pos(*args, **kwargs) -> Any:
+def fill_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{vertex,2}) -> None.
     Fill an existing array with the vertex location.
@@ -10,7 +10,7 @@ def fill_pos(*args, **kwargs) -> Any:
     pass
 
 
-def fill_vel(*args, **kwargs) -> Any:
+def fill_vel(data: numpy.ndarray) -> None:
     """
     (data: array float{vertex,2}) -> None.
     Fill an existing array with the vertex velocity.
@@ -19,7 +19,7 @@ def fill_vel(*args, **kwargs) -> Any:
     pass
 
 
-def ids(*args, **kwargs) -> Any:
+def ids() -> numpy.ndarray:
     """
     () -> array int{vertex}.
     Get the vertex ids as an array.
@@ -27,7 +27,7 @@ def ids(*args, **kwargs) -> Any:
     pass
 
 
-def pos(*args, **kwargs) -> Any:
+def pos() -> numpy.ndarray:
     """
     () -> array float{vertex,2}.
     Get a numpy array of the vertex location.
@@ -35,7 +35,7 @@ def pos(*args, **kwargs) -> Any:
     pass
 
 
-def set_pos(*args, **kwargs) -> Any:
+def set_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{vertex,2}) -> None.
     Set the vertex location from an array.
@@ -43,7 +43,7 @@ def set_pos(*args, **kwargs) -> Any:
     pass
 
 
-def set_vel(*args, **kwargs) -> Any:
+def set_vel(data: numpy.ndarray) -> None:
     """
     (data: array float{vertex,2}) -> None.
     Set the vertex velocity from an array.
@@ -51,7 +51,7 @@ def set_vel(*args, **kwargs) -> Any:
     pass
 
 
-def vel(*args, **kwargs) -> Any:
+def vel() -> numpy.ndarray:
     """
     () -> array float{vertex,2}.
     Get a numpy array of the vertex velocity.

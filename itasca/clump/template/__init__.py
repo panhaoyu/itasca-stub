@@ -1,7 +1,13 @@
+import typing
 from typing import Any
 
+import vec
 
-def _plist(*args, **kwargs) -> Any:
+import itasca.clump.template
+import itasca.rblock.template
+
+
+def _plist() -> typing.Tuple[object, ...]:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid objects.
     This function is used for internal testing and is not needed for general PFC use.
@@ -9,7 +15,7 @@ def _plist(*args, **kwargs) -> Any:
     pass
 
 
-def count(*args, **kwargs) -> Any:
+def count() -> int:
     """
     () -> int.
     Get the number of clump templates.
@@ -17,7 +23,7 @@ def count(*args, **kwargs) -> Any:
     pass
 
 
-def find(*args, **kwargs) -> Any:
+def find(template_name: str) -> typing.Union[itasca.rblock.template.Template, itasca.clump.template.Template]:
     """
     (template_name: str) -> Template object.
     Find a clump template by name.
@@ -25,7 +31,7 @@ def find(*args, **kwargs) -> Any:
     pass
 
 
-def findpebble(*args, **kwargs) -> Any:
+def findpebble(pebble_id: int) -> itasca.rblock.template.RBlockTemplatePebble:
     """
     (pebble_id: int) -> Clump Template Pebble object.
     Find the clump template pebble with the given ID, in the clump template.
@@ -33,7 +39,7 @@ def findpebble(*args, **kwargs) -> Any:
     pass
 
 
-def list(*args, **kwargs) -> Any:
+def list() -> itasca.rblock.template.RBlockTemplateIter:
     """
     () -> Clump template iterator object.
     Get a clump template iterator object.
@@ -41,7 +47,8 @@ def list(*args, **kwargs) -> Any:
     pass
 
 
-def make(*args, **kwargs) -> Any:
+def make(clump_template: itasca.rblock.template.RBlockTemplate, template_name: str) -> typing.Union[
+    itasca.rblock.template.Template, itasca.clump.template.Template]:
     """
     (clump template: Clump template object, template_name: str) -> Template object.
     Make a clump template from a clump.
@@ -50,7 +57,7 @@ def make(*args, **kwargs) -> Any:
     pass
 
 
-def maxid(*args, **kwargs) -> Any:
+def maxid() -> int:
     """
     () -> int.
     Get the maximum clump templates ID.
@@ -78,7 +85,8 @@ class Template:
         """
         pass
 
-    def clone(self, *args, **kwargs) -> Any:
+    def clone(self, new_template_name: str) -> typing.Union[
+        itasca.rblock.template.Template, itasca.clump.template.Template]:
         """
         (new_template_name: str) -> Template object.
         Clone this clump template.
@@ -86,7 +94,7 @@ class Template:
         """
         pass
 
-    def delete(self, *args, **kwargs) -> Any:
+    def delete(self) -> None:
         """
         () -> None.
         Delete this clump template.
@@ -94,7 +102,7 @@ class Template:
         """
         pass
 
-    def delete_pebble(self, *args, **kwargs) -> Any:
+    def delete_pebble(self, pebble) -> None:
         """
         (pebble: TemplatePebbel object) -> None.
         Delete a TemplatePebble from this clump.
@@ -104,14 +112,14 @@ class Template:
         """
         pass
 
-    def id(self, *args, **kwargs) -> Any:
+    def id(self) -> int:
         """
         () -> int.
         Get the clump template id.
         """
         pass
 
-    def moi(self, *args, **kwargs) -> Any:
+    def moi(self) -> vec.tens3:
         """
         () -> tensor.
         Get the clump template moment of intertia.
@@ -119,49 +127,49 @@ class Template:
         """
         pass
 
-    def moi_prin(self, *args, **kwargs) -> Any:
+    def moi_prin(self) -> vec.vec:
         """
         () -> vec.
         Get the clump template principal moment of inertia (vector).
         """
         pass
 
-    def moi_prin_x(self, *args, **kwargs) -> Any:
+    def moi_prin_x(self) -> float:
         """
         () -> float.
         Get the x-component of the clump template principal moment of inertia.
         """
         pass
 
-    def moi_prin_y(self, *args, **kwargs) -> Any:
+    def moi_prin_y(self) -> float:
         """
         () -> float.
         Get the y-component of the clump template principal moment of inertia.
         """
         pass
 
-    def name(self, *args, **kwargs) -> Any:
+    def name(self) -> str:
         """
         () -> str.
         Get the clump template name.
         """
         pass
 
-    def orig_pos(self, *args, **kwargs) -> Any:
+    def orig_pos(self) -> vec.vec:
         """
         () -> vec.
         Get the clump template original position (vector).
         """
         pass
 
-    def orig_pos_x(self, *args, **kwargs) -> Any:
+    def orig_pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the clump template original position.
         """
         pass
 
-    def orig_pos_y(self, *args, **kwargs) -> Any:
+    def orig_pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the clump template original position.
@@ -175,7 +183,7 @@ class Template:
         """
         pass
 
-    def set_moi(self, *args, **kwargs) -> Any:
+    def set_moi(self) -> vec.tens3:
         """
         () -> tensor.
         Get the clump template moment of intertia.
@@ -185,49 +193,49 @@ class Template:
         """
         pass
 
-    def set_moi_prin(self, *args, **kwargs) -> Any:
+    def set_moi_prin(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the clump template principal moment of inertia (vector).
         """
         pass
 
-    def set_moi_prin_x(self, *args, **kwargs) -> Any:
+    def set_moi_prin_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the clump template principal moment of inertia.
         """
         pass
 
-    def set_moi_prin_y(self, *args, **kwargs) -> Any:
+    def set_moi_prin_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the clump template principal moment of inertia.
         """
         pass
 
-    def set_orig_pos(self, *args, **kwargs) -> Any:
+    def set_orig_pos(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the clump template original position (vector).
         """
         pass
 
-    def set_orig_pos_x(self, *args, **kwargs) -> Any:
+    def set_orig_pos_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the clump template original position.
         """
         pass
 
-    def set_orig_pos_y(self, *args, **kwargs) -> Any:
+    def set_orig_pos_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the clump template original position.
         """
         pass
 
-    def set_vol(self, *args, **kwargs) -> Any:
+    def set_vol(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the clump template volume.
@@ -235,14 +243,14 @@ class Template:
         """
         pass
 
-    def valid(self, *args, **kwargs) -> Any:
+    def valid(self) -> bool:
         """
         () -> bool.
         Returns True of this object is a live clump template.
         """
         pass
 
-    def vol(self, *args, **kwargs) -> Any:
+    def vol(self) -> float:
         """
         () -> float.
         Get the clump template volume.

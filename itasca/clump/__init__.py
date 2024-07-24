@@ -1,11 +1,16 @@
-from typing import Any, Tuple
+import typing
+from typing import Any
 
-from . import template
+import vec
+
+import itasca.clump
+import itasca.clump.pebble
 from . import pebble
+from . import template
 from . import thermal
 
 
-def _plist(*args, **kwargs) -> Any:
+def _plist() -> typing.Tuple[itasca.clump.Clump, ...]:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid Clump objects.
     This function is used for internal testing and is not needed for general PFC use.
@@ -13,7 +18,15 @@ def _plist(*args, **kwargs) -> Any:
     pass
 
 
-def count(*args, **kwargs) -> Any:
+def containing(point: vec.vec) -> itasca.clump.Clump:
+    """
+    (point: vec) -> Clump object.
+    Find the clump containing the point.
+    """
+    pass
+
+
+def count() -> int:
     """
     () -> int.
     Get the number of clumps.
@@ -21,7 +34,7 @@ def count(*args, **kwargs) -> Any:
     pass
 
 
-def energies(*args, **kwargs) -> Any:
+def energies() -> typing.Dict[str, float]:
     """
     () -> dict {str: float}.
     Get the clump total energy contribution as a dictionary with string keys and float values.
@@ -29,7 +42,7 @@ def energies(*args, **kwargs) -> Any:
     pass
 
 
-def energy(*args, **kwargs) -> Any:
+def energy(energy_name: str) -> float:
     """
     (energy_name: str) -> float.
     Get the clump total energy contribution.
@@ -39,7 +52,7 @@ def energy(*args, **kwargs) -> Any:
     pass
 
 
-def find(*args, **kwargs) -> Any:
+def find(id: int) -> itasca.clump.Clump:
     """
     (id: int) -> Clump object.
     Get the Clump object with the given ID number.
@@ -47,7 +60,7 @@ def find(*args, **kwargs) -> Any:
     pass
 
 
-def inbox(*args, **kwargs) -> Any:
+def inbox(lower_bound: vec.vec, upper_bound: vec.vec, intersect=...) -> typing.Tuple[itasca.clump.Clump, ...]:
     """
     (lower_bound: vec, upper_bound: vec, intersect=True) -> Tuple of Clump objects.
     Get a tuple of clumps with extents intersecting a box.
@@ -57,7 +70,7 @@ def inbox(*args, **kwargs) -> Any:
     pass
 
 
-def list(*args, **kwargs) -> Any:
+def list() -> itasca.clump.ClumpIter:
     """
     () -> Clump object iterator.
     Get a clump iterator object.
@@ -65,7 +78,7 @@ def list(*args, **kwargs) -> Any:
     pass
 
 
-def maxid(*args, **kwargs) -> Any:
+def maxid() -> int:
     """
     () -> int.
     Get the maximum clump ID.
@@ -73,7 +86,7 @@ def maxid(*args, **kwargs) -> Any:
     pass
 
 
-def near(*args, **kwargs) -> Any:
+def near(point: vec.vec, radius=...) -> itasca.clump.Clump:
     """
     (point: vec, radius=0.0) -> Clump object.
     Find the closest clump to a point.
@@ -93,7 +106,7 @@ class Clump:
         """
         pass
 
-    def add_pebble(self, *args, **kwargs) -> Any:
+    def add_pebble(self, pebble_radius: float, pebble_centroid: vec.vec, id: int = ...) -> itasca.clump.pebble.Pebble:
         """
         (pebble_radius: float, pebble_centroid: vec [,id: int]) -> Pebble object.
         Add a pebble to a clump.
@@ -103,7 +116,7 @@ class Clump:
         """
         pass
 
-    def calculate(self, *args, **kwargs) -> Any:
+    def calculate(self, error_percentage=...) -> None:
         """
         (error_percentage=0.01) -> None.
         Calculate the clump interial properties.
@@ -115,7 +128,7 @@ class Clump:
         """
         pass
 
-    def contact_count(self, *args, **kwargs) -> Any:
+    def contact_count(self, all=..., type=...) -> int:
         """
         (all=False, type=None) -> int.
         Get the number of contacts associated with this clump.
@@ -137,21 +150,21 @@ class Clump:
         """
         pass
 
-    def damp(self, *args, **kwargs) -> Any:
+    def damp(self) -> float:
         """
         () -> float.
         Get the clump local damping.
         """
         pass
 
-    def delete(self, *args, **kwargs) -> Any:
+    def delete(self) -> None:
         """
         () -> None.
         Delete this clump.
         """
         pass
 
-    def delete_pebble(self, *args, **kwargs) -> Any:
+    def delete_pebble(self, pebble: itasca.clump.pebble.Pebble) -> None:
         """
         (pebble: Pebble object) -> None.
         Delete a pebble from this clump.
@@ -160,42 +173,42 @@ class Clump:
         """
         pass
 
-    def density(self, *args, **kwargs) -> Any:
+    def density(self) -> float:
         """
         () -> float.
         Get the clump density.
         """
         pass
 
-    def disp(self, *args, **kwargs) -> Any:
+    def disp(self) -> vec.vec:
         """
         () -> vec.
         Get the clump displacement (vector).
         """
         pass
 
-    def disp_x(self, *args, **kwargs) -> Any:
+    def disp_x(self) -> float:
         """
         () -> float.
         Get the x-component of the clump displacement.
         """
         pass
 
-    def disp_y(self, *args, **kwargs) -> Any:
+    def disp_y(self) -> float:
         """
         () -> float.
         Get the y-component of the clump displacement.
         """
         pass
 
-    def extra(self, *args, **kwargs) -> Any:
+    def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the clump extra data in the given slot.
         """
         pass
 
-    def fix(self, *args, **kwargs) -> Any:
+    def fix(self, component: int) -> bool:
         """
         (component: int) -> bool.
         Get the clump fixity condition.
@@ -205,93 +218,93 @@ class Clump:
         """
         pass
 
-    def force_app(self, *args, **kwargs) -> Any:
+    def force_app(self) -> vec.vec:
         """
         () -> vec.
         Get the clump applied force (vector).
         """
         pass
 
-    def force_app_x(self, *args, **kwargs) -> Any:
+    def force_app_x(self) -> float:
         """
         () -> float.
         Get the x-component of the clump applied force.
         """
         pass
 
-    def force_app_y(self, *args, **kwargs) -> Any:
+    def force_app_y(self) -> float:
         """
         () -> float.
         Get the y-component of the clump applied force.
         """
         pass
 
-    def force_contact(self, *args, **kwargs) -> Any:
+    def force_contact(self) -> vec.vec:
         """
         () -> vec.
         Get the clump contact force (vector).
         """
         pass
 
-    def force_contact_x(self, *args, **kwargs) -> Any:
+    def force_contact_x(self) -> float:
         """
         () -> float.
         Get the x-component of the clump contact force.
         """
         pass
 
-    def force_contact_y(self, *args, **kwargs) -> Any:
+    def force_contact_y(self) -> float:
         """
         () -> float.
         Get the y-component of the clump contact force.
         """
         pass
 
-    def force_unbal(self, *args, **kwargs) -> Any:
+    def force_unbal(self) -> vec.vec:
         """
         () -> vec.
         Get the clump unbalanced force (vector).
         """
         pass
 
-    def force_unbal_x(self, *args, **kwargs) -> Any:
+    def force_unbal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the clump unbalanced force.
         """
         pass
 
-    def force_unbal_y(self, *args, **kwargs) -> Any:
+    def force_unbal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the clump unbalanced force.
         """
         pass
 
-    def fragment(self, *args, **kwargs) -> Any:
+    def fragment(self) -> int:
         """
         () -> int.
         Get the clump fragment ID.
         """
         pass
 
-    def group(self, *args, **kwargs) -> Any:
+    def group(self, slot=...) -> str:
         """
-        ([slot: str]) -> str.
+        ([slot: str or int]) -> str.
         Get the clump group name in a given slot.
         """
         pass
 
-    def group_remove(self, *args, **kwargs) -> Any:
+    def group_remove(self, group_name, slot=...) -> bool:
         """
-        (group_name: str) -> bool.
+        (group_name: str or int[, slot: str or int]) -> bool.
         Remove from the given group from all group slots of the clump.
         One argument of type string, giving the group name, is required.
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
 
-    def groups(self, *args, **kwargs) -> Any:
+    def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
         Get a dictionary describing which groups this clump is part of.
@@ -299,37 +312,44 @@ class Clump:
         """
         pass
 
-    def id(self, *args, **kwargs) -> Any:
+    def id(self) -> int:
         """
         () -> int.
         Get the clump id.
         """
         pass
 
-    def in_group(self, *args, **kwargs) -> Any:
+    def in_group(self, group_name, slot=...) -> bool:
         """
-        (group_name: str[, slot: str]) -> bool.
+        (group_name: str or int[, slot: str or int]) -> bool.
         Test if the clump is part of a given group.
         If the optional argument slot is given, only that slot is searched.
         Otherwise, all group slots are searched.
         """
         pass
 
-    def mass(self, *args, **kwargs) -> Any:
+    def inside(self, point: vec.vec) -> bool:
+        """
+        (point: vec) -> bool.
+        Test whether a point is inside a clump.
+        """
+        pass
+
+    def mass(self) -> float:
         """
         () -> float.
         Get the clump inertial mass.
         """
         pass
 
-    def mass_real(self, *args, **kwargs) -> Any:
+    def mass_real(self) -> float:
         """
         () -> float.
         Get the clump real (gravitational) mass.
         """
         pass
 
-    def moi(self, *args, **kwargs) -> Any:
+    def moi(self) -> vec.tens3:
         """
         () -> tensor.
         Get the clump moment of intertia.
@@ -337,7 +357,7 @@ class Clump:
         """
         pass
 
-    def moi_fix(self, *args, **kwargs) -> Any:
+    def moi_fix(self) -> bool:
         """
         () -> bool.
         Get the moment of intertia fixity state.
@@ -346,7 +366,7 @@ class Clump:
         """
         pass
 
-    def moi_prin_real(self, *args, **kwargs) -> Any:
+    def moi_prin_real(self) -> vec.vec:
         """
         () -> vec.
         Get the clump real principal moment of inertia.
@@ -355,7 +375,7 @@ class Clump:
         """
         pass
 
-    def moi_prin_real_x(self, *args, **kwargs) -> Any:
+    def moi_prin_real_x(self) -> float:
         """
         () -> float.
         Get the x-component of the clump real principal moment of inertia.
@@ -364,7 +384,7 @@ class Clump:
         """
         pass
 
-    def moi_prin_real_y(self, *args, **kwargs) -> Any:
+    def moi_prin_real_y(self) -> float:
         """
         () -> float.
         Get the y-component of the clump real principal moment of inertia.
@@ -373,7 +393,7 @@ class Clump:
         """
         pass
 
-    def moi_real(self, *args, **kwargs) -> Any:
+    def moi_real(self) -> vec.tens3:
         """
         () -> tensor.
         Get the clump real moment of intertia.
@@ -381,56 +401,56 @@ class Clump:
         """
         pass
 
-    def moment_app(self, *args, **kwargs) -> Any:
+    def moment_app(self) -> float:
         """
         () -> float.
         Get the clump applied moment.
         """
         pass
 
-    def moment_contact(self, *args, **kwargs) -> Any:
+    def moment_contact(self) -> float:
         """
         () -> float.
         Get the clump contact moment.
         """
         pass
 
-    def moment_unbal(self, *args, **kwargs) -> Any:
+    def moment_unbal(self) -> float:
         """
         () -> float.
         Get the clump unbalanced moment.
         """
         pass
 
-    def pebbles(self, *args, **kwargs) -> Any:
+    def pebbles(self) -> itasca.clump.pebble.PebbleIter:
         """
         () -> Pebble iterator object.
         Get the pebbles of this clump.
         """
         pass
 
-    def pos(self, *args, **kwargs) -> Any:
+    def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the clump centroid location (vector).
         """
         pass
 
-    def pos_x(self, *args, **kwargs) -> Any:
+    def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the clump centroid location.
         """
         pass
 
-    def pos_y(self, *args, **kwargs) -> Any:
+    def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the clump centroid location.
         """
         pass
 
-    def rotate(self, *args, **kwargs) -> Any:
+    def rotate(self, axis: vec.vec, rotation_angle: float) -> None:
         """
         (axis: vec, rotation_angle: float) -> None.
         Rotate a clump.
@@ -438,14 +458,14 @@ class Clump:
         """
         pass
 
-    def rotation(self, *args, **kwargs) -> Any:
+    def rotation(self) -> float:
         """
         () -> float.
         Get the clump orientation.
         """
         pass
 
-    def scale_sphere(self, *args, **kwargs) -> Any:
+    def scale_sphere(self, diameter: float) -> None:
         """
         (diameter: float) -> None.
         Scale the clump to an equivalent sphere.
@@ -457,7 +477,7 @@ class Clump:
         """
         pass
 
-    def scale_vol(self, *args, **kwargs) -> Any:
+    def scale_vol(self, volume: float) -> None:
         """
         (volume: float) -> None.
         Scale the clump.
@@ -469,49 +489,49 @@ class Clump:
         """
         pass
 
-    def set_damp(self, *args, **kwargs) -> Any:
+    def set_damp(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the clump local damping.
         """
         pass
 
-    def set_density(self, *args, **kwargs) -> Any:
+    def set_density(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the clump density.
         """
         pass
 
-    def set_disp(self, *args, **kwargs) -> Any:
+    def set_disp(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the clump displacement (vector).
         """
         pass
 
-    def set_disp_x(self, *args, **kwargs) -> Any:
+    def set_disp_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the clump displacement.
         """
         pass
 
-    def set_disp_y(self, *args, **kwargs) -> Any:
+    def set_disp_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the clump displacement.
         """
         pass
 
-    def set_extra(self, *args, **kwargs) -> Any:
+    def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the clump extra data in the given slot.
         """
         pass
 
-    def set_fix(self, *args, **kwargs) -> Any:
+    def set_fix(self, component: int, fixity: bool) -> None:
         """
         (component: int, fixity: bool) -> None.
         Get the clump fixity condition.
@@ -521,63 +541,63 @@ class Clump:
         """
         pass
 
-    def set_force_app(self, *args, **kwargs) -> Any:
+    def set_force_app(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the clump applied force (vector).
         """
         pass
 
-    def set_force_app_x(self, *args, **kwargs) -> Any:
+    def set_force_app_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the clump applied force.
         """
         pass
 
-    def set_force_app_y(self, *args, **kwargs) -> Any:
+    def set_force_app_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the clump applied force.
         """
         pass
 
-    def set_force_contact(self, *args, **kwargs) -> Any:
+    def set_force_contact(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the clump contact force (vector).
         """
         pass
 
-    def set_force_contact_x(self, *args, **kwargs) -> Any:
+    def set_force_contact_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the clump contact force.
         """
         pass
 
-    def set_force_contact_y(self, *args, **kwargs) -> Any:
+    def set_force_contact_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the clump contact force.
         """
         pass
 
-    def set_fragment(self, *args, **kwargs) -> Any:
+    def set_fragment(self, id: int) -> None:
         """
         (id: int) -> None.
         Set clump fragment ID.
         """
         pass
 
-    def set_group(self, *args, **kwargs) -> Any:
+    def set_group(self, group_name, slot=...) -> None:
         """
-        (group_name: str[, slot: str]) -> None.
+        (group_name: str or int[, slot: str or int]) -> None.
         Set the clump group name in a given slot.
         """
         pass
 
-    def set_moi_fix(self, *args, **kwargs) -> Any:
+    def set_moi_fix(self, fixity: bool) -> None:
         """
         (fixity: bool) -> None.
         Set the moment of intertia fixity state.
@@ -586,7 +606,7 @@ class Clump:
         """
         pass
 
-    def set_moi_prin_real(self, *args, **kwargs) -> Any:
+    def set_moi_prin_real(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the clump real principal moment of inertia.
@@ -595,7 +615,7 @@ class Clump:
         """
         pass
 
-    def set_moi_prin_real_x(self, *args, **kwargs) -> Any:
+    def set_moi_prin_real_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the clump real principal moment of inertia.
@@ -604,7 +624,7 @@ class Clump:
         """
         pass
 
-    def set_moi_prin_real_y(self, *args, **kwargs) -> Any:
+    def set_moi_prin_real_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the clump real principal moment of inertia.
@@ -613,7 +633,7 @@ class Clump:
         """
         pass
 
-    def set_moi_real(self, *args, **kwargs) -> Any:
+    def set_moi_real(self) -> vec.tens3:
         """
         () -> tensor.
         Get the clump real moment of intertia.
@@ -623,77 +643,77 @@ class Clump:
         """
         pass
 
-    def set_moment_app(self, *args, **kwargs) -> Any:
+    def set_moment_app(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the clump applied moment.
         """
         pass
 
-    def set_moment_contact(self, *args, **kwargs) -> Any:
+    def set_moment_contact(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the clump contact moment.
         """
         pass
 
-    def set_pos(self, *args, **kwargs) -> Any:
+    def set_pos(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the clump centroid location (vector).
         """
         pass
 
-    def set_pos_x(self, *args, **kwargs) -> Any:
+    def set_pos_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the clump centroid location.
         """
         pass
 
-    def set_pos_y(self, *args, **kwargs) -> Any:
+    def set_pos_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the clump centroid location.
         """
         pass
 
-    def set_rotation(self, *args, **kwargs) -> Any:
+    def set_rotation(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the clump orientation.
         """
         pass
 
-    def set_spin(self, *args, **kwargs) -> Any:
+    def set_spin(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the clump angular velocity.
         """
         pass
 
-    def set_vel(self, *args, **kwargs) -> Any:
+    def set_vel(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the clump velocity (vector).
         """
         pass
 
-    def set_vel_x(self, *args, **kwargs) -> Any:
+    def set_vel_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the clump velocity.
         """
         pass
 
-    def set_vel_y(self, *args, **kwargs) -> Any:
+    def set_vel_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the clump velocity.
         """
         pass
 
-    def set_vol(self, *args, **kwargs) -> Any:
+    def set_vol(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the clump volume.
@@ -701,7 +721,7 @@ class Clump:
         """
         pass
 
-    def spin(self, *args, **kwargs) -> Any:
+    def spin(self) -> float:
         """
         () -> float.
         Get the clump angular velocity.
@@ -716,21 +736,21 @@ class Clump:
         """
         pass
 
-    def template_rotation(self, *args, **kwargs) -> Any:
+    def template_rotation(self) -> float:
         """
         () -> float.
         Get the clump template relative orientation.
         """
         pass
 
-    def template_scale(self, *args, **kwargs) -> Any:
+    def template_scale(self) -> float:
         """
         () -> float.
         Get the clump template relative scaling factor.
         """
         pass
 
-    def to_global(self, *args, **kwargs) -> Any:
+    def to_global(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
         Rotate a vector from principal system.
@@ -738,42 +758,42 @@ class Clump:
         """
         pass
 
-    def to_prin(self, *args, **kwargs) -> Any:
+    def to_prin(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
         Rotate a vector to principal system.
         """
         pass
 
-    def valid(self, *args, **kwargs) -> Any:
+    def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this clump is live.
         """
         pass
 
-    def vel(self, *args, **kwargs) -> Any:
+    def vel(self) -> vec.vec:
         """
         () -> vec.
         Get the clump velocity (vector).
         """
         pass
 
-    def vel_x(self, *args, **kwargs) -> Any:
+    def vel_x(self) -> float:
         """
         () -> float.
         Get the x-component of the clump velocity.
         """
         pass
 
-    def vel_y(self, *args, **kwargs) -> Any:
+    def vel_y(self) -> float:
         """
         () -> float.
         Get the y-component of the clump velocity.
         """
         pass
 
-    def vol(self, *args, **kwargs) -> Any:
+    def vol(self) -> float:
         """
         () -> float.
         Get the clump volume.

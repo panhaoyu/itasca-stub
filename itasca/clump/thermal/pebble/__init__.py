@@ -1,7 +1,12 @@
-from typing import Any, Tuple
+import typing
+from typing import Any
+
+import vec
+
+import itasca.clump.thermal
 
 
-def _plist(*args, **kwargs) -> Any:
+def _plist() -> typing.Tuple[itasca.clump.thermal.ThermalPebble, ...]:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid thermal pebble objects.
     This function is used for internal testing and is not needed for general PFC use.
@@ -9,7 +14,7 @@ def _plist(*args, **kwargs) -> Any:
     pass
 
 
-def count(*args, **kwargs) -> Any:
+def count() -> int:
     """
     () -> int.
     Get the number of thermal pebbles.
@@ -17,7 +22,7 @@ def count(*args, **kwargs) -> Any:
     pass
 
 
-def find(*args, **kwargs) -> Any:
+def find(id: int) -> itasca.clump.thermal.ThermalPebble:
     """
     (id: int) -> Thermal pebble object.
     Get the thermal pebble object with the given ID number.
@@ -25,7 +30,8 @@ def find(*args, **kwargs) -> Any:
     pass
 
 
-def inbox(*args, **kwargs) -> Any:
+def inbox(lower_bound: vec.vec, upper_bound: vec.vec, intersect=...) -> typing.Tuple[
+    itasca.clump.thermal.ThermalPebble, ...]:
     """
     (lower_bound: vec, upper_bound: vec, intersect=True) -> Tuple of thermal pebble objects.
     Get a tuple of thermal pebbles with extents intersecting a box.
@@ -35,7 +41,7 @@ def inbox(*args, **kwargs) -> Any:
     pass
 
 
-def list(*args, **kwargs) -> Any:
+def list() -> itasca.clump.thermal.ThermalPebbleIter:
     """
     () -> Thermal pebble iterator object.
     Get a thermal pebble iterator object.
@@ -43,7 +49,7 @@ def list(*args, **kwargs) -> Any:
     pass
 
 
-def maxid(*args, **kwargs) -> Any:
+def maxid() -> int:
     """
     () -> int.
     Get the maximum thermal pebble ID.
@@ -51,7 +57,7 @@ def maxid(*args, **kwargs) -> Any:
     pass
 
 
-def near(*args, **kwargs) -> Any:
+def near(point: vec.vec, radius=...) -> itasca.clump.thermal.ThermalPebble:
     """
     (point: vec, radius=0.0) -> Thermal pebble object.
     Find the closest thermal pebble to a point.
@@ -71,14 +77,14 @@ class ThermalPebble:
         """
         pass
 
-    def clump(self, *args, **kwargs) -> Any:
+    def clump(self) -> itasca.clump.thermal.ThermalClump:
         """
         () -> Thermal clump object.
         Get the thermal clump corresponding to this pebble.
         """
         pass
 
-    def contact_count(self, *args, **kwargs) -> Any:
+    def contact_count(self, all=..., type=...) -> int:
         """
         (all=False, type=None) -> int.
         Get the number of contacts associated with this thermal pebble.
@@ -99,21 +105,21 @@ class ThermalPebble:
         """
         pass
 
-    def extra(self, *args, **kwargs) -> Any:
+    def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the thermal pebble extra data in the given slot.
         """
         pass
 
-    def group(self, *args, **kwargs) -> Any:
+    def group(self, slot: int = ...) -> str:
         """
         ([slot: int]) -> str.
         Get the thermal pebble group name in a given slot.
         """
         pass
 
-    def group_remove(self, *args, **kwargs) -> Any:
+    def group_remove(self, group_name: str) -> int:
         """
         (group_name: str ) -> int.
         Remove from the given group from the thermal pebble.
@@ -122,28 +128,28 @@ class ThermalPebble:
         """
         pass
 
-    def groups(self, *args, **kwargs) -> Any:
+    def groups(self) -> typing.Tuple[str, ...]:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this thermal pebble.
         """
         pass
 
-    def has_prop(self, *args, **kwargs) -> Any:
+    def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Returns True if the thermal pebble has the given surface property.
         """
         pass
 
-    def id(self, *args, **kwargs) -> Any:
+    def id(self) -> int:
         """
         () -> int.
         Get the thermal pebble id.
         """
         pass
 
-    def in_group(self, *args, **kwargs) -> Any:
+    def in_group(self, group_name: str) -> bool:
         """
         (group_name: str) -> bool.
         Test if the thermal pebble is part of a given group.
@@ -151,91 +157,91 @@ class ThermalPebble:
         """
         pass
 
-    def pebble(self, *args, **kwargs) -> Any:
+    def pebble(self) -> itasca.clump.pebble.Pebble:
         """
         () -> Pebble object.
         Get the pebble corresponding to this thermal pebble.
         """
         pass
 
-    def pos(self, *args, **kwargs) -> Any:
+    def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the thermal pebble location (vector).
         """
         pass
 
-    def pos_x(self, *args, **kwargs) -> Any:
+    def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the thermal pebble location.
         """
         pass
 
-    def pos_y(self, *args, **kwargs) -> Any:
+    def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the thermal pebble location.
         """
         pass
 
-    def prop(self, *args, **kwargs) -> Any:
+    def prop(self, property_name: str) -> typing.Any:
         """
         (property_name: str) -> any.
         Get a surface property value of this thermal pebble.
         """
         pass
 
-    def props(self, *args, **kwargs) -> Any:
+    def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get a dictionary of all the surface properties of this thermal pebble.
         """
         pass
 
-    def set_extra(self, *args, **kwargs) -> Any:
+    def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the thermal pebble extra data in the given slot.
         """
         pass
 
-    def set_group(self, *args, **kwargs) -> Any:
+    def set_group(self, group_name: str = ..., slot: int = ...) -> None:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the thermal pebble group name in a given slot.
         """
         pass
 
-    def set_pos(self, *args, **kwargs) -> Any:
+    def set_pos(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the thermal pebble location (vector).
         """
         pass
 
-    def set_pos_x(self, *args, **kwargs) -> Any:
+    def set_pos_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the thermal pebble location.
         """
         pass
 
-    def set_pos_y(self, *args, **kwargs) -> Any:
+    def set_pos_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the thermal pebble location.
         """
         pass
 
-    def set_prop(self, *args, **kwargs) -> Any:
+    def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a surface property of this thermal pebble.
         """
         pass
 
-    def valid(self, *args, **kwargs) -> Any:
+    def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this thermal pebble is live.

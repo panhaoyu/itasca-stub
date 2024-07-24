@@ -1,8 +1,10 @@
-from typing import Any, Iterable, Tuple, List, Union, Iterator
-from itasca import types
+import typing
+from typing import Any
+
+import itasca.contact
 
 
-def count(*args, **kwargs) -> int:
+def count(process: str, type_class: type, all: bool) -> typing.Any:
     """
     (<process: str>, <type: TypeObject>, <all=False>) -> int.
     Get the number of contacts.
@@ -15,7 +17,7 @@ def count(*args, **kwargs) -> int:
     pass
 
 
-def energy(*args, **kwargs) -> float:
+def energy(energy_name: str, process=..., type=...) -> float:
     """
     (energy_name: str, process="mechanical", type=TypeObject) -> float.
     Get energy values accumulated over contacts.
@@ -25,7 +27,7 @@ def energy(*args, **kwargs) -> float:
     pass
 
 
-def find(*args, **kwargs) -> 'Contact':
+def find(type: Any, id: typing.Union[int, typing.Tuple[typing.Any, typing.Any]]) -> itasca.contact.Contact:
     """
     (type: TypeObject, id: int or (object1, object2)) -> Contact object.
     Get the contact of the given type, the second argument is either an integer ID or a length two tuple containing two objects (for example a wall object and a ball object).
@@ -33,7 +35,7 @@ def find(*args, **kwargs) -> 'Contact':
     pass
 
 
-def list(process_name="Mechanical", type=None, all=False) -> Iterator[types.Contacts]:
+def list(process_name=..., type=..., all=...) -> itasca.contact.ContactIter:
     """
     (process_name="Mechanical", type=None, all=False) -> Contact iterator object.
     Get a contact iterator object.
@@ -41,6 +43,14 @@ def list(process_name="Mechanical", type=None, all=False) -> Iterator[types.Cont
     If the (optional) keyword argument type is given the returned contacts are limited to that type.
     The type keyword argument should be a Python type object (itasca.BallBallContact, itasca.BallFacetContact, itasca.BallPebbleContact, itasca.PebblePebbleContact or itasca.PebbleFacetContact).
     If the (optional) keyword argument all is given, virtual contacts are also returned.
+    """
+    pass
+
+
+def model_prop_index(model_name: str, property_name: str) -> int:
+    """
+    (model_name: str, property_name: str) -> int.
+    Get a contact model property index.
     """
     pass
 

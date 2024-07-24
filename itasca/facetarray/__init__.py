@@ -1,7 +1,7 @@
-from typing import Any
+import numpy
 
 
-def conveyor(*args, **kwargs) -> Any:
+def conveyor() -> numpy.ndarray:
     """
     () -> array float{facet,dim}.
     Get a numpy array of the facet conveyor velocity.
@@ -9,7 +9,7 @@ def conveyor(*args, **kwargs) -> Any:
     pass
 
 
-def extra(*args, **kwargs) -> Any:
+def extra(slot: int) -> numpy.ndarray:
     """
     (slot: int) -> array float{facet} or float{facet}.
     Get the facet extra data in the given slot as an array.
@@ -18,7 +18,7 @@ def extra(*args, **kwargs) -> Any:
     pass
 
 
-def fill_conveyor(*args, **kwargs) -> Any:
+def fill_conveyor(data: numpy.ndarray) -> None:
     """
     (data: array float{facet,dim}) -> None.
     Fill an existing array with the facet conveyor velocity.
@@ -27,7 +27,7 @@ def fill_conveyor(*args, **kwargs) -> Any:
     pass
 
 
-def fill_normal(*args, **kwargs) -> Any:
+def fill_normal(data: numpy.ndarray) -> None:
     """
     (data: array float{facet,dim}) -> None.
     Fill an existing array with the facet normal.
@@ -36,7 +36,7 @@ def fill_normal(*args, **kwargs) -> Any:
     pass
 
 
-def fill_pos(*args, **kwargs) -> Any:
+def fill_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{facet,2}) -> None.
     Fill an existing array with the facet location.
@@ -45,7 +45,7 @@ def fill_pos(*args, **kwargs) -> Any:
     pass
 
 
-def ids(*args, **kwargs) -> Any:
+def ids() -> numpy.ndarray:
     """
     () -> array int{facet}.
     Get the facet ids as an array.
@@ -53,7 +53,7 @@ def ids(*args, **kwargs) -> Any:
     pass
 
 
-def in_group(*args, **kwargs) -> Any:
+def in_group(group_name: str, slot=...) -> numpy.ndarray:
     """
     (group_name: str, slot=1) -> array bool{facet}.
     Return facet group membership as a Boolean array.
@@ -61,7 +61,7 @@ def in_group(*args, **kwargs) -> Any:
     pass
 
 
-def normal(*args, **kwargs) -> Any:
+def normal() -> numpy.ndarray:
     """
     () -> array float{facet,dim}.
     Get a numpy array of the facet normal.
@@ -69,7 +69,7 @@ def normal(*args, **kwargs) -> Any:
     pass
 
 
-def pos(*args, **kwargs) -> Any:
+def pos() -> numpy.ndarray:
     """
     () -> array float{facet,2}.
     Get a numpy array of the facet location.
@@ -77,7 +77,7 @@ def pos(*args, **kwargs) -> Any:
     pass
 
 
-def set_conveyor(*args, **kwargs) -> Any:
+def set_conveyor(data: numpy.ndarray) -> None:
     """
     ((data: array float{facet,dim}) -> None.
     Set the facet conveyor velocity from an array.
@@ -85,7 +85,7 @@ def set_conveyor(*args, **kwargs) -> Any:
     pass
 
 
-def set_extra(*args, **kwargs) -> Any:
+def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
     (slot: int, data: array float{facet} or float{facet}) -> None.
     Set the facet extra data in the given slot with an array.
@@ -94,7 +94,7 @@ def set_extra(*args, **kwargs) -> Any:
     pass
 
 
-def set_group(*args, **kwargs) -> Any:
+def set_group(membership: numpy.ndarray, group_name: str, slot=...) -> None:
     """
     (membership: array bool{facet}, group_name: str, slot=1) -> None.
     Set facet group from an array.

@@ -1,7 +1,13 @@
+import typing
 from typing import Any
 
+import numpy
+import vec
 
-def _plist(*args, **kwargs) -> Any:
+import itasca.measure
+
+
+def _plist() -> typing.Tuple[itasca.measure.Measure, ...]:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid Measure objects.
     This function is used for internal testing and is not needed for general PFC use.
@@ -9,7 +15,7 @@ def _plist(*args, **kwargs) -> Any:
     pass
 
 
-def count(*args, **kwargs) -> Any:
+def count() -> int:
     """
     () -> int.
     Get the number of measures.
@@ -17,7 +23,7 @@ def count(*args, **kwargs) -> Any:
     pass
 
 
-def find(*args, **kwargs) -> Any:
+def find(id: int) -> itasca.measure.Measure:
     """
     (id: int) -> Measure object.
     Get the measure object with the given ID number.
@@ -25,7 +31,7 @@ def find(*args, **kwargs) -> Any:
     pass
 
 
-def list(*args, **kwargs) -> Any:
+def list() -> itasca.measure.MeasureIter:
     """
     () -> Measure iterator object.
     Get a measure iterator object.
@@ -33,7 +39,7 @@ def list(*args, **kwargs) -> Any:
     pass
 
 
-def maxid(*args, **kwargs) -> Any:
+def maxid() -> int:
     """
     () -> int.
     Get the maximum measure ID.
@@ -52,126 +58,126 @@ class Measure:
         """
         pass
 
-    def coordination(self, *args, **kwargs) -> Any:
+    def coordination(self) -> float:
         """
         () -> float.
         Get the measure coordination.
         """
         pass
 
-    def delete(self, *args, **kwargs) -> Any:
+    def delete(self) -> None:
         """
         () -> None.
         Delete this measurement object.
         """
         pass
 
-    def id(self, *args, **kwargs) -> Any:
+    def id(self) -> int:
         """
         () -> int.
         Get the measure id.
         """
         pass
 
-    def porosity(self, *args, **kwargs) -> Any:
+    def porosity(self) -> float:
         """
         () -> float.
         Get the measure porosity.
         """
         pass
 
-    def pos(self, *args, **kwargs) -> Any:
+    def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the measure location (vector).
         """
         pass
 
-    def pos_x(self, *args, **kwargs) -> Any:
+    def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the measure location.
         """
         pass
 
-    def pos_y(self, *args, **kwargs) -> Any:
+    def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the measure location.
         """
         pass
 
-    def radius(self, *args, **kwargs) -> Any:
+    def radius(self) -> float:
         """
         () -> float.
         Get the measure radius.
         """
         pass
 
-    def set_pos(self, *args, **kwargs) -> Any:
+    def set_pos(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the measure location (vector).
         """
         pass
 
-    def set_pos_x(self, *args, **kwargs) -> Any:
+    def set_pos_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the measure location.
         """
         pass
 
-    def set_pos_y(self, *args, **kwargs) -> Any:
+    def set_pos_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the measure location.
         """
         pass
 
-    def set_radius(self, *args, **kwargs) -> Any:
+    def set_radius(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the measure radius.
         """
         pass
 
-    def size(self, *args, **kwargs) -> Any:
+    def size(self) -> numpy.ndarray:
         """
         () -> array float{nbin,2}.
         Get a numpy array of the cumulative size distribution falling withinthis measure object where nbin is the number of bins for the size distribution calculation (see the MEASURE CREATE or MEASURE MODIFY commands.
         """
         pass
 
-    def strainrate(self, *args, **kwargs) -> Any:
+    def strainrate(self) -> vec.tens3:
         """
         () -> tensor.
         Get the strain rate tensor calculated for this measurement object.
         """
         pass
 
-    def strainrate_full(self, *args, **kwargs) -> Any:
+    def strainrate_full(self) -> vec.tens3:
         """
         () -> tensor.
         Get the full strain rate tensor calculated for this measurement object.
         """
         pass
 
-    def stress(self, *args, **kwargs) -> Any:
+    def stress(self) -> vec.tens3:
         """
         () -> tensor.
         Get the stress tensor calculated for this measurement object.
         """
         pass
 
-    def stress_full(self, *args, **kwargs) -> Any:
+    def stress_full(self) -> vec.tens3:
         """
         () -> tensor.
         Get the full stress tensor calculated for this measurement object.
         """
         pass
 
-    def valid(self, *args, **kwargs) -> Any:
+    def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this measure is live.

@@ -1,7 +1,12 @@
+import typing
 from typing import Any
 
+import vec
 
-def _plist(*args, **kwargs) -> Any:
+import itasca.wall.facet
+
+
+def _plist() -> typing.Tuple[object, ...]:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid objects.
     This function is used for internal testing and is not needed for general PFC use.
@@ -9,7 +14,7 @@ def _plist(*args, **kwargs) -> Any:
     pass
 
 
-def count(*args, **kwargs) -> Any:
+def count() -> int:
     """
     () -> int.
     Get the number of facets.
@@ -17,7 +22,7 @@ def count(*args, **kwargs) -> Any:
     pass
 
 
-def find(*args, **kwargs) -> Any:
+def find(id: int) -> itasca.wall.facet.Facet:
     """
     (id: int) -> Facet object.
     Get the facet object with the given ID number.
@@ -25,7 +30,7 @@ def find(*args, **kwargs) -> Any:
     pass
 
 
-def inbox(*args, **kwargs) -> Any:
+def inbox(lower_bound: vec.vec, upper_bound: vec.vec, boundary=...) -> typing.Tuple[itasca.wall.facet.Facet, ...]:
     """
     (lower_bound: vec, upper_bound: vec, boundary=False) -> tuple of Facet objects.
     Get facets with extents intersecting a box.
@@ -34,7 +39,7 @@ def inbox(*args, **kwargs) -> Any:
     pass
 
 
-def list(*args, **kwargs) -> Any:
+def list() -> itasca.wall.facet.FacetIter:
     """
     () -> Facet Iterator object.
     Get a wall_facet iterator object.
@@ -42,7 +47,7 @@ def list(*args, **kwargs) -> Any:
     pass
 
 
-def maxid(*args, **kwargs) -> Any:
+def maxid() -> int:
     """
     () -> int.
     Get the maximum facet ID.
@@ -50,7 +55,7 @@ def maxid(*args, **kwargs) -> Any:
     pass
 
 
-def near(*args, **kwargs) -> Any:
+def near(point: vec.vec) -> itasca.wall.facet.Facet:
     """
     (point: vec) -> Facet object.
     Find the closest facet to a point.
@@ -69,7 +74,7 @@ class Facet:
         """
         pass
 
-    def active(self, *args, **kwargs) -> Any:
+    def active(self) -> int:
         """
         () -> int.
         Get the facet activity code.
@@ -77,7 +82,7 @@ class Facet:
         """
         pass
 
-    def contact_count(self, *args, **kwargs) -> Any:
+    def contact_count(self, all=..., type=...) -> int:
         """
         (all=False, type=None) -> int.
         Get the number of contacts associated with this Facet.
@@ -98,28 +103,28 @@ class Facet:
         """
         pass
 
-    def conveyor(self, *args, **kwargs) -> Any:
+    def conveyor(self) -> vec.vec:
         """
         () -> vec.
         Get the facet conveyor velocity (vector).
         """
         pass
 
-    def conveyor_x(self, *args, **kwargs) -> Any:
+    def conveyor_x(self) -> float:
         """
         () -> float.
         Get the x-component of the facet conveyor velocity.
         """
         pass
 
-    def conveyor_y(self, *args, **kwargs) -> Any:
+    def conveyor_y(self) -> float:
         """
         () -> float.
         Get the y-component of the facet conveyor velocity.
         """
         pass
 
-    def delete(self, *args, **kwargs) -> Any:
+    def delete(self) -> None:
         """
         () -> None.
         Delete a facet.
@@ -127,7 +132,7 @@ class Facet:
         """
         pass
 
-    def edge_neighbors(self, *args, **kwargs) -> Any:
+    def edge_neighbors(self) -> typing.Tuple[itasca.wall.facet.Facet, ...]:
         """
         () -> tuple of Facet objects.
         Get the neighboring facets.
@@ -137,30 +142,30 @@ class Facet:
         """
         pass
 
-    def extra(self, *args, **kwargs) -> Any:
+    def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the facet extra data in the given slot.
         """
         pass
 
-    def group(self, *args, **kwargs) -> Any:
+    def group(self, slot=...) -> str:
         """
-        ([slot: str]) -> str.
+        ([slot: str or int]) -> str.
         Get the facet group name in a given slot.
         """
         pass
 
-    def group_remove(self, *args, **kwargs) -> Any:
+    def group_remove(self, group_name, slot=...) -> bool:
         """
-        (group_name: str) -> bool.
+        (group_name: str or int[, slot: str or int]) -> bool.
         Remove from the given group from all group slots of the facet.
         One argument of type string, giving the group name, is required.
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
 
-    def groups(self, *args, **kwargs) -> Any:
+    def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
         Get a dictionary describing which groups this facet is part of.
@@ -168,156 +173,156 @@ class Facet:
         """
         pass
 
-    def has_prop(self, *args, **kwargs) -> Any:
+    def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Returns True if the facet has the given surface property.
         """
         pass
 
-    def id(self, *args, **kwargs) -> Any:
+    def id(self) -> int:
         """
         () -> int.
         Get the facet id.
         """
         pass
 
-    def in_group(self, *args, **kwargs) -> Any:
+    def in_group(self, group_name, slot=...) -> bool:
         """
-        (group_name: str[, slot: str]) -> bool.
+        (group_name: str or int[, slot: str or int]) -> bool.
         Test if the facet is part of a given group.
         If the optional argument slot is given, only that slot is searched.
         Otherwise, all group slots are searched.
         """
         pass
 
-    def normal(self, *args, **kwargs) -> Any:
+    def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the facet normal direction (vector).
         """
         pass
 
-    def normal_x(self, *args, **kwargs) -> Any:
+    def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the facet normal direction.
         """
         pass
 
-    def normal_y(self, *args, **kwargs) -> Any:
+    def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the facet normal direction.
         """
         pass
 
-    def point_near(self, *args, **kwargs) -> Any:
+    def point_near(self, point: vec.vec) -> vec.vec:
         """
         (point: vec) -> vec.
         Get the closest point on the facet to another point.
         """
         pass
 
-    def pos(self, *args, **kwargs) -> Any:
+    def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the facet location (vector).
         """
         pass
 
-    def pos_x(self, *args, **kwargs) -> Any:
+    def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the facet location.
         """
         pass
 
-    def pos_y(self, *args, **kwargs) -> Any:
+    def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the facet location.
         """
         pass
 
-    def prop(self, *args, **kwargs) -> Any:
+    def prop(self, property_name: str) -> typing.Any:
         """
         (property_name: str) -> any.
         Get a surface property value of this facet.
         """
         pass
 
-    def props(self, *args, **kwargs) -> Any:
+    def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get a dictionary of all the surface properties of this facet.
         """
         pass
 
-    def set_active(self, *args, **kwargs) -> Any:
+    def set_active(self, activity_code: int) -> None:
         """
         (activity_code: int) -> None.
         The following codes apply: 0 - both sides are active; 1 - the top side (e.g., in the direction of the facet normal) is active; -1 - the bottom side of the facet is active; or 2 - neither side of the facet is active.
         """
         pass
 
-    def set_conveyor(self, *args, **kwargs) -> Any:
+    def set_conveyor(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the facet conveyor velocity (vector).
         """
         pass
 
-    def set_conveyor_x(self, *args, **kwargs) -> Any:
+    def set_conveyor_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the facet conveyor velocity.
         """
         pass
 
-    def set_conveyor_y(self, *args, **kwargs) -> Any:
+    def set_conveyor_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the facet conveyor velocity.
         """
         pass
 
-    def set_extra(self, *args, **kwargs) -> Any:
+    def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the facet extra data in the given slot.
         """
         pass
 
-    def set_group(self, *args, **kwargs) -> Any:
+    def set_group(self, group_name, slot=...) -> None:
         """
-        (group_name: str[, slot: str]) -> None.
+        (group_name: str or int[, slot: str or int]) -> None.
         Set the facet group name in a given slot.
         """
         pass
 
-    def set_prop(self, *args, **kwargs) -> Any:
+    def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a surface property of this facet.
         """
         pass
 
-    def valid(self, *args, **kwargs) -> Any:
+    def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this facet is live.
         """
         pass
 
-    def vertices(self, *args, **kwargs) -> Any:
+    def vertices(self) -> typing.Tuple[itasca.wall.WallVertex, ...]:
         """
         () -> tuple of WallVertex objects.
         Get the facet vertices.
         """
         pass
 
-    def wall(self, *args, **kwargs) -> Any:
+    def wall(self) -> itasca.wall.Wall:
         """
         () -> Wall object.
         Get the facet's wall.

@@ -1,7 +1,7 @@
-from typing import Any
+import numpy
 
 
-def cutoff(*args, **kwargs) -> Any:
+def cutoff() -> numpy.ndarray:
     """
     () -> array float{wall}.
     Get a numpy array of the wall cutoff angle.
@@ -9,7 +9,7 @@ def cutoff(*args, **kwargs) -> Any:
     pass
 
 
-def disp(*args, **kwargs) -> Any:
+def disp() -> numpy.ndarray:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall displacement.
@@ -17,7 +17,7 @@ def disp(*args, **kwargs) -> Any:
     pass
 
 
-def extra(*args, **kwargs) -> Any:
+def extra(slot: int) -> numpy.ndarray:
     """
     (slot: int) -> array float{wall} or float{wall}.
     Get the wall extra data in the given slot as an array.
@@ -26,7 +26,7 @@ def extra(*args, **kwargs) -> Any:
     pass
 
 
-def fill_cutoff(*args, **kwargs) -> Any:
+def fill_cutoff(data: numpy.ndarray) -> None:
     """
     (data: array float{wall}) -> None.
     Fill an existing array with the wall cutoff angle.
@@ -35,7 +35,7 @@ def fill_cutoff(*args, **kwargs) -> Any:
     pass
 
 
-def fill_disp(*args, **kwargs) -> Any:
+def fill_disp(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
     Fill an existing array with the wall displacement.
@@ -44,7 +44,7 @@ def fill_disp(*args, **kwargs) -> Any:
     pass
 
 
-def fill_force_contact(*args, **kwargs) -> Any:
+def fill_force_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
     Fill an existing array with the wall contact force.
@@ -53,7 +53,7 @@ def fill_force_contact(*args, **kwargs) -> Any:
     pass
 
 
-def fill_moment_contact(*args, **kwargs) -> Any:
+def fill_moment_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{wall}) -> None.
     Fill an existing array with the wall contact moment.
@@ -62,7 +62,7 @@ def fill_moment_contact(*args, **kwargs) -> Any:
     pass
 
 
-def fill_pos(*args, **kwargs) -> Any:
+def fill_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
     Fill an existing array with the wall location.
@@ -71,7 +71,7 @@ def fill_pos(*args, **kwargs) -> Any:
     pass
 
 
-def fill_rotation(*args, **kwargs) -> Any:
+def fill_rotation(data: numpy.ndarray) -> None:
     """
     (data: array float{wall}) -> None.
     Fill an existing array with the wall orientation.
@@ -80,7 +80,7 @@ def fill_rotation(*args, **kwargs) -> Any:
     pass
 
 
-def fill_rotation_center(*args, **kwargs) -> Any:
+def fill_rotation_center(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,dim}) -> None.
     Fill an existing array with the wall center of rotation.
@@ -89,7 +89,7 @@ def fill_rotation_center(*args, **kwargs) -> Any:
     pass
 
 
-def fill_spin(*args, **kwargs) -> Any:
+def fill_spin(data: numpy.ndarray) -> None:
     """
     (data: array float{wall}) -> None.
     Fill an existing array with the wall angular velocity.
@@ -98,7 +98,7 @@ def fill_spin(*args, **kwargs) -> Any:
     pass
 
 
-def fill_vel(*args, **kwargs) -> Any:
+def fill_vel(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
     Fill an existing array with the wall velocity.
@@ -107,7 +107,7 @@ def fill_vel(*args, **kwargs) -> Any:
     pass
 
 
-def force_contact(*args, **kwargs) -> Any:
+def force_contact() -> numpy.ndarray:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall contact force.
@@ -115,7 +115,7 @@ def force_contact(*args, **kwargs) -> Any:
     pass
 
 
-def ids(*args, **kwargs) -> Any:
+def ids() -> numpy.ndarray:
     """
     () -> array int{wall}.
     Get the wall ids as an array.
@@ -123,7 +123,7 @@ def ids(*args, **kwargs) -> Any:
     pass
 
 
-def in_group(*args, **kwargs) -> Any:
+def in_group(group_name: str, slot=...) -> numpy.ndarray:
     """
     (group_name: str, slot=1) -> array bool{wall}.
     Return wall group membership as a Boolean array.
@@ -131,7 +131,7 @@ def in_group(*args, **kwargs) -> Any:
     pass
 
 
-def moment_contact(*args, **kwargs) -> Any:
+def moment_contact() -> numpy.ndarray:
     """
     () -> array float{wall}.
     Get a numpy array of the wall contact moment.
@@ -139,7 +139,7 @@ def moment_contact(*args, **kwargs) -> Any:
     pass
 
 
-def pos(*args, **kwargs) -> Any:
+def pos() -> numpy.ndarray:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall location.
@@ -147,7 +147,7 @@ def pos(*args, **kwargs) -> Any:
     pass
 
 
-def rotation(*args, **kwargs) -> Any:
+def rotation() -> numpy.ndarray:
     """
     () -> array float{wall}.
     Get a numpy array of the wall orientation.
@@ -155,7 +155,7 @@ def rotation(*args, **kwargs) -> Any:
     pass
 
 
-def rotation_center(*args, **kwargs) -> Any:
+def rotation_center() -> numpy.ndarray:
     """
     () -> array float{wall,dim}.
     Get a numpy array of the wall center of rotation.
@@ -163,7 +163,7 @@ def rotation_center(*args, **kwargs) -> Any:
     pass
 
 
-def set_cutoff(*args, **kwargs) -> Any:
+def set_cutoff(data: numpy.ndarray) -> None:
     """
     (data: array float{wall}) -> None.
     Set the wall cutoff angle from an array.
@@ -171,7 +171,7 @@ def set_cutoff(*args, **kwargs) -> Any:
     pass
 
 
-def set_disp(*args, **kwargs) -> Any:
+def set_disp(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
     Set the wall displacement from an array.
@@ -179,7 +179,7 @@ def set_disp(*args, **kwargs) -> Any:
     pass
 
 
-def set_extra(*args, **kwargs) -> Any:
+def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
     (slot: int, data: array float{wall} or float{wall}) -> None.
     Set the wall extra data in the given slot with an array.
@@ -188,7 +188,7 @@ def set_extra(*args, **kwargs) -> Any:
     pass
 
 
-def set_force_contact(*args, **kwargs) -> Any:
+def set_force_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
     Set the wall contact force from an array.
@@ -196,7 +196,7 @@ def set_force_contact(*args, **kwargs) -> Any:
     pass
 
 
-def set_group(*args, **kwargs) -> Any:
+def set_group(membership: numpy.ndarray, group_name: str, slot=...) -> None:
     """
     (membership: array bool{wall}, group_name: str, slot=1) -> None.
     Set wall group from an array.
@@ -205,7 +205,7 @@ def set_group(*args, **kwargs) -> Any:
     pass
 
 
-def set_moment_contact(*args, **kwargs) -> Any:
+def set_moment_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{wall}) -> None.
     Set the wall contact moment from an array.
@@ -213,7 +213,7 @@ def set_moment_contact(*args, **kwargs) -> Any:
     pass
 
 
-def set_pos(*args, **kwargs) -> Any:
+def set_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
     Set the wall location from an array.
@@ -221,7 +221,7 @@ def set_pos(*args, **kwargs) -> Any:
     pass
 
 
-def set_rotation(*args, **kwargs) -> Any:
+def set_rotation(data: numpy.ndarray) -> None:
     """
     (data: array float{wall}) -> None.
     Set the wall orientation from an array.
@@ -229,7 +229,7 @@ def set_rotation(*args, **kwargs) -> Any:
     pass
 
 
-def set_rotation_center(*args, **kwargs) -> Any:
+def set_rotation_center(data: numpy.ndarray) -> None:
     """
     ((data: array float{wall,dim}) -> None.
     Set the wall center of rotation from an array.
@@ -237,7 +237,7 @@ def set_rotation_center(*args, **kwargs) -> Any:
     pass
 
 
-def set_spin(*args, **kwargs) -> Any:
+def set_spin(data: numpy.ndarray) -> None:
     """
     (data: array float{wall}) -> None.
     Set the wall angular velocity from an array.
@@ -245,7 +245,7 @@ def set_spin(*args, **kwargs) -> Any:
     pass
 
 
-def set_vel(*args, **kwargs) -> Any:
+def set_vel(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
     Set the wall velocity from an array.
@@ -253,7 +253,7 @@ def set_vel(*args, **kwargs) -> Any:
     pass
 
 
-def spin(*args, **kwargs) -> Any:
+def spin() -> numpy.ndarray:
     """
     () -> array float{wall}.
     Get a numpy array of the wall angular velocity.
@@ -261,7 +261,7 @@ def spin(*args, **kwargs) -> Any:
     pass
 
 
-def vel(*args, **kwargs) -> Any:
+def vel() -> numpy.ndarray:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall velocity.

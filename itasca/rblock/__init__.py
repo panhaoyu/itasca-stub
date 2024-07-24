@@ -1,9 +1,13 @@
-from typing import Any, Tuple
+import typing
+from typing import Any
 
+import vec
+
+import itasca.rblock
 from . import template
 
 
-def _plist(*args, **kwargs) -> Any:
+def _plist() -> typing.Tuple[itasca.rblock.RBlock, ...]:
     """
     () -> tuple of PyObject pointers for the currenly in-scope and valid RBlock objects.
     This function is used for internal testing and is not needed for general PFC use.
@@ -11,7 +15,16 @@ def _plist(*args, **kwargs) -> Any:
     pass
 
 
-def count(*args, **kwargs) -> Any:
+def containing(point: vec.vec) -> itasca.rblock.RBlock:
+    """
+    (point: vec) -> RBlock object.
+    Find the rigid block containing the point.
+    The core shapes are used to determine if the point falls within the rigid block.
+    """
+    pass
+
+
+def count() -> int:
     """
     () -> int.
     Get the number of rblocks.
@@ -19,7 +32,7 @@ def count(*args, **kwargs) -> Any:
     pass
 
 
-def energies(*args, **kwargs) -> Any:
+def energies() -> typing.Dict[str, float]:
     """
     () -> dict {str: float}.
     Get the rblock total energy contribution as a dictionary with string keys and float values.
@@ -27,7 +40,7 @@ def energies(*args, **kwargs) -> Any:
     pass
 
 
-def energy(*args, **kwargs) -> Any:
+def energy(energy_name: str) -> float:
     """
     (energy_name: str) -> float.
     Get the rblock total energy contribution.
@@ -37,7 +50,7 @@ def energy(*args, **kwargs) -> Any:
     pass
 
 
-def find(*args, **kwargs) -> Any:
+def find(id: int) -> itasca.rblock.RBlock:
     """
     (id: int) -> RBlock object.
     Get the RBlock object with the given ID number.
@@ -45,7 +58,7 @@ def find(*args, **kwargs) -> Any:
     pass
 
 
-def inbox(*args, **kwargs) -> Any:
+def inbox(lower_bound: vec.vec, upper_bound: vec.vec, intersect=...) -> typing.Tuple[itasca.rblock.RBlock, ...]:
     """
     (lower_bound: vec, upper_bound: vec, intersect=True) -> Tuple of RBlock objects.
     Get a tuple of rblocks with extents intersecting a box.
@@ -55,7 +68,7 @@ def inbox(*args, **kwargs) -> Any:
     pass
 
 
-def list(*args, **kwargs) -> Any:
+def list() -> itasca.rblock.RBlockIter:
     """
     () -> RBlock object iterator.
     Get a rblock iterator object.
@@ -63,7 +76,7 @@ def list(*args, **kwargs) -> Any:
     pass
 
 
-def maxid(*args, **kwargs) -> Any:
+def maxid() -> int:
     """
     () -> int.
     Get the maximum rblock ID.
@@ -71,7 +84,7 @@ def maxid(*args, **kwargs) -> Any:
     pass
 
 
-def near(*args, **kwargs) -> Any:
+def near(point: vec.vec, radius=...) -> itasca.rblock.RBlock:
     """
     (point: vec, radius=0.0) -> RBlock object.
     Find the closest rblock to a point.
@@ -91,42 +104,49 @@ class RBlock:
         """
         pass
 
-    def aspect_ratio(self, *args, **kwargs) -> Any:
+    def aspect_ratio(self) -> float:
         """
         () -> float.
         Get the rblock aspect ratio..
         """
         pass
 
-    def ball_pos(self, *args, **kwargs) -> Any:
+    def ball_pos(self) -> vec.vec:
         """
         () -> vec.
         Get the rblock ball radius (vector).
         """
         pass
 
-    def ball_pos_x(self, *args, **kwargs) -> Any:
+    def ball_pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the rblock ball radius.
         """
         pass
 
-    def ball_pos_y(self, *args, **kwargs) -> Any:
+    def ball_pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the rblock ball radius.
         """
         pass
 
-    def ball_radius(self, *args, **kwargs) -> Any:
+    def ball_radius(self) -> float:
         """
         () -> float.
         Get the rblock ball radius..
         """
         pass
 
-    def contact_count(self, *args, **kwargs) -> Any:
+    def collide(self, object) -> bool:
+        """
+        (object: rblock) -> bool.
+        Get the intersection status of two rigid blocks.
+        """
+        pass
+
+    def contact_count(self, all=..., type=...) -> int:
         """
         (all=False, type=None) -> int.
         Get the number of contacts associated with this rblock.
@@ -148,56 +168,56 @@ class RBlock:
         """
         pass
 
-    def damp(self, *args, **kwargs) -> Any:
+    def damp(self) -> float:
         """
         () -> float.
         Get the rblock local damping.
         """
         pass
 
-    def delete(self, *args, **kwargs) -> Any:
+    def delete(self) -> None:
         """
         () -> None.
         Delete this rblock.
         """
         pass
 
-    def density(self, *args, **kwargs) -> Any:
+    def density(self) -> float:
         """
         () -> float.
         Get the rblock density.
         """
         pass
 
-    def disp(self, *args, **kwargs) -> Any:
+    def disp(self) -> vec.vec:
         """
         () -> vec.
         Get the rblock displacement (vector).
         """
         pass
 
-    def disp_x(self, *args, **kwargs) -> Any:
+    def disp_x(self) -> float:
         """
         () -> float.
         Get the x-component of the rblock displacement.
         """
         pass
 
-    def disp_y(self, *args, **kwargs) -> Any:
+    def disp_y(self) -> float:
         """
         () -> float.
         Get the y-component of the rblock displacement.
         """
         pass
 
-    def extra(self, *args, **kwargs) -> Any:
+    def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the rblock extra data in the given slot.
         """
         pass
 
-    def fix(self, *args, **kwargs) -> Any:
+    def fix(self, component: int) -> bool:
         """
         (component: int) -> bool.
         Get the rblock fixity condition.
@@ -207,93 +227,93 @@ class RBlock:
         """
         pass
 
-    def force_app(self, *args, **kwargs) -> Any:
+    def force_app(self) -> vec.vec:
         """
         () -> vec.
         Get the rblock applied force (vector).
         """
         pass
 
-    def force_app_x(self, *args, **kwargs) -> Any:
+    def force_app_x(self) -> float:
         """
         () -> float.
         Get the x-component of the rblock applied force.
         """
         pass
 
-    def force_app_y(self, *args, **kwargs) -> Any:
+    def force_app_y(self) -> float:
         """
         () -> float.
         Get the y-component of the rblock applied force.
         """
         pass
 
-    def force_contact(self, *args, **kwargs) -> Any:
+    def force_contact(self) -> vec.vec:
         """
         () -> vec.
         Get the rblock contact force (vector).
         """
         pass
 
-    def force_contact_x(self, *args, **kwargs) -> Any:
+    def force_contact_x(self) -> float:
         """
         () -> float.
         Get the x-component of the rblock contact force.
         """
         pass
 
-    def force_contact_y(self, *args, **kwargs) -> Any:
+    def force_contact_y(self) -> float:
         """
         () -> float.
         Get the y-component of the rblock contact force.
         """
         pass
 
-    def force_unbal(self, *args, **kwargs) -> Any:
+    def force_unbal(self) -> vec.vec:
         """
         () -> vec.
         Get the rblock unbalanced force (vector).
         """
         pass
 
-    def force_unbal_x(self, *args, **kwargs) -> Any:
+    def force_unbal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the rblock unbalanced force.
         """
         pass
 
-    def force_unbal_y(self, *args, **kwargs) -> Any:
+    def force_unbal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the rblock unbalanced force.
         """
         pass
 
-    def fragment(self, *args, **kwargs) -> Any:
+    def fragment(self) -> int:
         """
         () -> int.
         Get the rblock fragment ID.
         """
         pass
 
-    def group(self, *args, **kwargs) -> Any:
+    def group(self, slot=...) -> str:
         """
-        ([slot: str]) -> str.
+        ([slot: str or int]) -> str.
         Get the rblock group name in a given slot.
         """
         pass
 
-    def group_remove(self, *args, **kwargs) -> Any:
+    def group_remove(self, group_name, slot=...) -> bool:
         """
-        (group_name: str) -> bool.
+        (group_name: str or int[, slot: str or int]) -> bool.
         Remove from the given group from all group slots of the rblock.
         One argument of type string, giving the group name, is required.
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
 
-    def groups(self, *args, **kwargs) -> Any:
+    def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
         Get a dictionary describing which groups this rblock is part of.
@@ -301,44 +321,51 @@ class RBlock:
         """
         pass
 
-    def has_prop(self, *args, **kwargs) -> Any:
+    def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Returns True if the rblock has the given surface property.
         """
         pass
 
-    def id(self, *args, **kwargs) -> Any:
+    def id(self) -> int:
         """
         () -> int.
         Get the rblock id.
         """
         pass
 
-    def in_group(self, *args, **kwargs) -> Any:
+    def in_group(self, group_name, slot=...) -> bool:
         """
-        (group_name: str[, slot: str]) -> bool.
+        (group_name: str or int[, slot: str or int]) -> bool.
         Test if the rblock is part of a given group.
         If the optional argument slot is given, only that slot is searched.
         Otherwise, all group slots are searched.
         """
         pass
 
-    def mass(self, *args, **kwargs) -> Any:
+    def inside(self, point: vec.vec) -> bool:
+        """
+        (point: vec) -> bool.
+        Test whether a point is inside a rblock.
+        """
+        pass
+
+    def mass(self) -> float:
         """
         () -> float.
         Get the rblock inertial mass.
         """
         pass
 
-    def mass_real(self, *args, **kwargs) -> Any:
+    def mass_real(self) -> float:
         """
         () -> float.
         Get the rblock real (gravitational) mass.
         """
         pass
 
-    def moi(self, *args, **kwargs) -> Any:
+    def moi(self) -> vec.tens3:
         """
         () -> tensor.
         Get the rblock moment of intertia.
@@ -346,7 +373,7 @@ class RBlock:
         """
         pass
 
-    def moi_fix(self, *args, **kwargs) -> Any:
+    def moi_fix(self) -> bool:
         """
         () -> bool.
         Get the moment of intertia fixity state.
@@ -355,7 +382,7 @@ class RBlock:
         """
         pass
 
-    def moi_prin_real(self, *args, **kwargs) -> Any:
+    def moi_prin_real(self) -> vec.vec:
         """
         () -> vec.
         Get the rblock real principal moment of inertia.
@@ -364,7 +391,7 @@ class RBlock:
         """
         pass
 
-    def moi_prin_real_x(self, *args, **kwargs) -> Any:
+    def moi_prin_real_x(self) -> float:
         """
         () -> float.
         Get the x-component of the rblock real principal moment of inertia.
@@ -373,7 +400,7 @@ class RBlock:
         """
         pass
 
-    def moi_prin_real_y(self, *args, **kwargs) -> Any:
+    def moi_prin_real_y(self) -> float:
         """
         () -> float.
         Get the y-component of the rblock real principal moment of inertia.
@@ -382,7 +409,7 @@ class RBlock:
         """
         pass
 
-    def moi_real(self, *args, **kwargs) -> Any:
+    def moi_real(self) -> vec.tens3:
         """
         () -> tensor.
         Get the rblock real moment of intertia.
@@ -390,63 +417,63 @@ class RBlock:
         """
         pass
 
-    def moment_app(self, *args, **kwargs) -> Any:
+    def moment_app(self) -> float:
         """
         () -> float.
         Get the rblock applied moment.
         """
         pass
 
-    def moment_contact(self, *args, **kwargs) -> Any:
+    def moment_contact(self) -> float:
         """
         () -> float.
         Get the rblock contact moment.
         """
         pass
 
-    def moment_unbal(self, *args, **kwargs) -> Any:
+    def moment_unbal(self) -> float:
         """
         () -> float.
         Get the rblock unbalanced moment.
         """
         pass
 
-    def pos(self, *args, **kwargs) -> Any:
+    def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the rblock centroid location (vector).
         """
         pass
 
-    def pos_x(self, *args, **kwargs) -> Any:
+    def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the rblock centroid location.
         """
         pass
 
-    def pos_y(self, *args, **kwargs) -> Any:
+    def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the rblock centroid location.
         """
         pass
 
-    def prop(self, *args, **kwargs) -> Any:
+    def prop(self, property_name: str) -> typing.Any:
         """
         (property_name: str) -> any.
         Get a surface property value of this rblock.
         """
         pass
 
-    def props(self, *args, **kwargs) -> Any:
+    def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get a dictionary of all the surface properties of this rblock.
         """
         pass
 
-    def rotate(self, *args, **kwargs) -> Any:
+    def rotate(self, axis: vec.vec, rotation_angle: float) -> None:
         """
         (axis: vec, rotation_angle: float) -> None.
         Rotate a rblock.
@@ -454,21 +481,21 @@ class RBlock:
         """
         pass
 
-    def rotation(self, *args, **kwargs) -> Any:
+    def rotation(self) -> float:
         """
         () -> float.
         Get the rblock orientation.
         """
         pass
 
-    def rounding(self, *args, **kwargs) -> Any:
+    def rounding(self) -> float:
         """
         () -> float.
         Get the rblock rounding..
         """
         pass
 
-    def scale_sphere(self, *args, **kwargs) -> Any:
+    def scale_sphere(self, diameter: float) -> None:
         """
         (diameter: float) -> None.
         Scale the rblock to an equivalent sphere.
@@ -478,7 +505,7 @@ class RBlock:
         """
         pass
 
-    def scale_vol(self, *args, **kwargs) -> Any:
+    def scale_vol(self, volume: float) -> None:
         """
         (volume: float) -> None.
         Scale the rblock.
@@ -488,49 +515,49 @@ class RBlock:
         """
         pass
 
-    def set_damp(self, *args, **kwargs) -> Any:
+    def set_damp(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the rblock local damping.
         """
         pass
 
-    def set_density(self, *args, **kwargs) -> Any:
+    def set_density(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the rblock density.
         """
         pass
 
-    def set_disp(self, *args, **kwargs) -> Any:
+    def set_disp(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the rblock displacement (vector).
         """
         pass
 
-    def set_disp_x(self, *args, **kwargs) -> Any:
+    def set_disp_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the rblock displacement.
         """
         pass
 
-    def set_disp_y(self, *args, **kwargs) -> Any:
+    def set_disp_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the rblock displacement.
         """
         pass
 
-    def set_extra(self, *args, **kwargs) -> Any:
+    def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the rblock extra data in the given slot.
         """
         pass
 
-    def set_fix(self, *args, **kwargs) -> Any:
+    def set_fix(self, component: int, fixity: bool) -> None:
         """
         (component: int, fixity: bool) -> None.
         Get the rblock fixity condition.
@@ -540,63 +567,63 @@ class RBlock:
         """
         pass
 
-    def set_force_app(self, *args, **kwargs) -> Any:
+    def set_force_app(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the rblock applied force (vector).
         """
         pass
 
-    def set_force_app_x(self, *args, **kwargs) -> Any:
+    def set_force_app_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the rblock applied force.
         """
         pass
 
-    def set_force_app_y(self, *args, **kwargs) -> Any:
+    def set_force_app_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the rblock applied force.
         """
         pass
 
-    def set_force_contact(self, *args, **kwargs) -> Any:
+    def set_force_contact(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the rblock contact force (vector).
         """
         pass
 
-    def set_force_contact_x(self, *args, **kwargs) -> Any:
+    def set_force_contact_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the rblock contact force.
         """
         pass
 
-    def set_force_contact_y(self, *args, **kwargs) -> Any:
+    def set_force_contact_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the rblock contact force.
         """
         pass
 
-    def set_fragment(self, *args, **kwargs) -> Any:
+    def set_fragment(self, id: int) -> None:
         """
         (id: int) -> None.
         Set rblock fragment ID.
         """
         pass
 
-    def set_group(self, *args, **kwargs) -> Any:
+    def set_group(self, group_name, slot=...) -> None:
         """
-        (group_name: str[, slot: str]) -> None.
+        (group_name: str or int[, slot: str or int]) -> None.
         Set the rblock group name in a given slot.
         """
         pass
 
-    def set_moi_fix(self, *args, **kwargs) -> Any:
+    def set_moi_fix(self, fixity: bool) -> None:
         """
         (fixity: bool) -> None.
         Set the moment of intertia fixity state.
@@ -605,7 +632,7 @@ class RBlock:
         """
         pass
 
-    def set_moi_prin_real(self, *args, **kwargs) -> Any:
+    def set_moi_prin_real(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the rblock real principal moment of inertia.
@@ -614,7 +641,7 @@ class RBlock:
         """
         pass
 
-    def set_moi_prin_real_x(self, *args, **kwargs) -> Any:
+    def set_moi_prin_real_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the rblock real principal moment of inertia.
@@ -623,7 +650,7 @@ class RBlock:
         """
         pass
 
-    def set_moi_prin_real_y(self, *args, **kwargs) -> Any:
+    def set_moi_prin_real_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the rblock real principal moment of inertia.
@@ -632,7 +659,7 @@ class RBlock:
         """
         pass
 
-    def set_moi_real(self, *args, **kwargs) -> Any:
+    def set_moi_real(self) -> vec.tens3:
         """
         () -> tensor.
         Get the rblock real moment of intertia.
@@ -642,84 +669,84 @@ class RBlock:
         """
         pass
 
-    def set_moment_app(self, *args, **kwargs) -> Any:
+    def set_moment_app(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the rblock applied moment.
         """
         pass
 
-    def set_moment_contact(self, *args, **kwargs) -> Any:
+    def set_moment_contact(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the rblock contact moment.
         """
         pass
 
-    def set_pos(self, *args, **kwargs) -> Any:
+    def set_pos(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the rblock centroid location (vector).
         """
         pass
 
-    def set_pos_x(self, *args, **kwargs) -> Any:
+    def set_pos_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the rblock centroid location.
         """
         pass
 
-    def set_pos_y(self, *args, **kwargs) -> Any:
+    def set_pos_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the rblock centroid location.
         """
         pass
 
-    def set_prop(self, *args, **kwargs) -> Any:
+    def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a surface property of this rblock.
         """
         pass
 
-    def set_rotation(self, *args, **kwargs) -> Any:
+    def set_rotation(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the rblock orientation.
         """
         pass
 
-    def set_spin(self, *args, **kwargs) -> Any:
+    def set_spin(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the rblock angular velocity.
         """
         pass
 
-    def set_vel(self, *args, **kwargs) -> Any:
+    def set_vel(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the rblock velocity (vector).
         """
         pass
 
-    def set_vel_x(self, *args, **kwargs) -> Any:
+    def set_vel_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the rblock velocity.
         """
         pass
 
-    def set_vel_y(self, *args, **kwargs) -> Any:
+    def set_vel_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the rblock velocity.
         """
         pass
 
-    def set_vol(self, *args, **kwargs) -> Any:
+    def set_vol(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the rblock volume.
@@ -727,21 +754,21 @@ class RBlock:
         """
         pass
 
-    def spin(self, *args, **kwargs) -> Any:
+    def spin(self) -> float:
         """
         () -> float.
         Get the rblock angular velocity.
         """
         pass
 
-    def stress(self, *args, **kwargs) -> Any:
+    def stress(self) -> vec.tens3:
         """
         () -> tensor.
         Get the stress tensor arising from all contacts acting on the rblock.
         """
         pass
 
-    def to_global(self, *args, **kwargs) -> Any:
+    def to_global(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
         Rotate a vector from principal system.
@@ -749,42 +776,42 @@ class RBlock:
         """
         pass
 
-    def to_prin(self, *args, **kwargs) -> Any:
+    def to_prin(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
         Rotate a vector to principal system.
         """
         pass
 
-    def valid(self, *args, **kwargs) -> Any:
+    def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this rblock is live.
         """
         pass
 
-    def vel(self, *args, **kwargs) -> Any:
+    def vel(self) -> vec.vec:
         """
         () -> vec.
         Get the rblock velocity (vector).
         """
         pass
 
-    def vel_x(self, *args, **kwargs) -> Any:
+    def vel_x(self) -> float:
         """
         () -> float.
         Get the x-component of the rblock velocity.
         """
         pass
 
-    def vel_y(self, *args, **kwargs) -> Any:
+    def vel_y(self) -> float:
         """
         () -> float.
         Get the y-component of the rblock velocity.
         """
         pass
 
-    def vol(self, *args, **kwargs) -> Any:
+    def vol(self) -> float:
         """
         () -> float.
         Get the rblock volume.

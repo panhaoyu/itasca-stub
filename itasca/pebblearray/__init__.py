@@ -1,7 +1,7 @@
-from typing import Any
+import numpy
 
 
-def extra(*args, **kwargs) -> Any:
+def extra(slot: int) -> numpy.ndarray:
     """
     (slot: int) -> array float{pebble} or float{pebble}.
     Get the pebble extra data in the given slot as an array.
@@ -10,7 +10,7 @@ def extra(*args, **kwargs) -> Any:
     pass
 
 
-def fill_pos(*args, **kwargs) -> Any:
+def fill_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{pebble,2}) -> None.
     Fill an existing array with the pebble location.
@@ -19,7 +19,7 @@ def fill_pos(*args, **kwargs) -> Any:
     pass
 
 
-def fill_radius(*args, **kwargs) -> Any:
+def fill_radius(data: numpy.ndarray) -> None:
     """
     (data: array float{ball}) -> None.
     Fill an existing array with the pebble radii.
@@ -28,7 +28,7 @@ def fill_radius(*args, **kwargs) -> Any:
     pass
 
 
-def fill_vel(*args, **kwargs) -> Any:
+def fill_vel(data: numpy.ndarray) -> None:
     """
     (data: array float{pebble,2}) -> None.
     Fill an existing array with the pebble velocity.
@@ -37,7 +37,7 @@ def fill_vel(*args, **kwargs) -> Any:
     pass
 
 
-def ids(*args, **kwargs) -> Any:
+def ids() -> numpy.ndarray:
     """
     () -> array int{pebble}.
     Get the pebble ids as an array.
@@ -45,7 +45,7 @@ def ids(*args, **kwargs) -> Any:
     pass
 
 
-def in_group(*args, **kwargs) -> Any:
+def in_group(group_name: str, slot=...) -> numpy.ndarray:
     """
     (group_name: str, slot=1) -> array bool{pebble}.
     Return pebble group membership as a Boolean array.
@@ -53,7 +53,7 @@ def in_group(*args, **kwargs) -> Any:
     pass
 
 
-def pos(*args, **kwargs) -> Any:
+def pos() -> numpy.ndarray:
     """
     () -> array float{pebble,2}.
     Get a numpy array of the pebble location.
@@ -61,7 +61,7 @@ def pos(*args, **kwargs) -> Any:
     pass
 
 
-def radius(*args, **kwargs) -> Any:
+def radius() -> numpy.ndarray:
     """
     () -> array float{ball}.
     Get a numpy array of the pebble radii.
@@ -69,7 +69,7 @@ def radius(*args, **kwargs) -> Any:
     pass
 
 
-def set_extra(*args, **kwargs) -> Any:
+def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
     (slot: int, data: array float{pebble} or float{pebble}) -> None.
     Set the pebble extra data in the given slot with an array.
@@ -78,7 +78,7 @@ def set_extra(*args, **kwargs) -> Any:
     pass
 
 
-def set_group(*args, **kwargs) -> Any:
+def set_group(membership: numpy.ndarray, group_name: str, slot=...) -> None:
     """
     (membership: array bool{pebble}, group_name: str, slot=1) -> None.
     Set pebble group from an array.
@@ -87,7 +87,7 @@ def set_group(*args, **kwargs) -> Any:
     pass
 
 
-def set_pos(*args, **kwargs) -> Any:
+def set_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{pebble,2}) -> None.
     Set the pebble location from an array.
@@ -95,7 +95,7 @@ def set_pos(*args, **kwargs) -> Any:
     pass
 
 
-def set_radius(*args, **kwargs) -> Any:
+def set_radius(data: numpy.ndarray) -> None:
     """
     (data: array float{ball}) -> None.
     Set the pebble radii from an array.
@@ -103,7 +103,7 @@ def set_radius(*args, **kwargs) -> Any:
     pass
 
 
-def vel(*args, **kwargs) -> Any:
+def vel() -> numpy.ndarray:
     """
     () -> array float{pebble,2}.
     Get a numpy array of the pebble velocity.

@@ -1,39 +1,18 @@
 from typing import Any
 
-
-def _plist(*args, **kwargs) -> Any:
-    """
-    () -> tuple of PyObject pointers for the currenly in-scope and valid vertex objects.
-    This function is used for internal testing and is not needed for general PFC use.
-    """
-    pass
+import numpy
 
 
-def count(*args, **kwargs) -> Any:
+def get(name1: str, name2: str = ...) -> numpy.ndarray:
     """
-    () -> int.
-    Get the number of verticess.
+    (name1: string, name2="step": string) -> Numpy array.
+    Get a nested numpy array with values of histroies `name1` vs `name2`.
+    (`name2` default 'step').
     """
     pass
 
 
-def find(*args, **kwargs) -> Any:
-    """
-    (id: int) -> Vertex object.
-    Get the vertex object with the given ID number.
-    """
-    pass
-
-
-def maxid(*args, **kwargs) -> Any:
-    """
-    () -> int.
-    Get the maximum vertex ID.
-    """
-    pass
-
-
-class Vertex:
+class History:
     __hash__: Any = ...
 
     @classmethod
@@ -41,34 +20,6 @@ class Vertex:
         """
         Create and return a new object.
          See help(type) for accurate signature.
-        """
-        pass
-
-    def id(self, *args, **kwargs) -> Any:
-        """
-        () -> int.
-        Get the vertex id.
-        """
-        pass
-
-    def pos(self, *args, **kwargs) -> Any:
-        """
-        () -> vec.
-        Get the vertex location (vector).
-        """
-        pass
-
-    def pos_x(self, *args, **kwargs) -> Any:
-        """
-        () -> float.
-        Get the x-component of the vertex location.
-        """
-        pass
-
-    def pos_y(self, *args, **kwargs) -> Any:
-        """
-        () -> float.
-        Get the y-component of the vertex location.
         """
         pass
 
@@ -109,7 +60,7 @@ class Vertex:
         pass
 
 
-class VertexIter:
+class HistoryIter:
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
