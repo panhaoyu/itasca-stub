@@ -116,6 +116,37 @@ def is_c_type(obj: object) -> bool:
     return inspect.isclass(obj) or type(obj) is type(int)
 
 
+def get_type_str(type_str):
+    return_type_dict = {
+        '': 'None',
+        'none': 'None',
+        'any': 'typing.Any',
+        'numpy array': 'numpy.ndarray',
+        'int': 'int',
+        'float': 'float',
+        'double': 'float',
+        'bool': 'bool',
+        'boolean': 'bool',
+        'string': 'str',
+        'str': 'str',
+        'vec': 'vec.vec',
+        'tens3': 'vec.tens3',
+        'float or str': 'typing.Union[float, str]',
+        'int or str': 'typing.Union[int, str]',
+        'facet object': 'itasca.wall.facet.Facet',
+    #     todo 参照，来猜测其他的 类型，并补全这里的类型对应关系
+    }
+    type_str = type_str.lower().strip()
+    if type_str in return_type_dict:
+        ret_type = return_type_dict[type_str]
+    elif type_str.startswith('array '):
+        ret_type = 'numpy.ndarray'
+    else:
+        print(f'Unknown type: {type_str}')
+        return None
+    return ret_type
+
+
 def generate_c_function_stub(module: ModuleType,
                              name: str,
                              obj: object,
@@ -151,6 +182,27 @@ def generate_c_function_stub(module: ModuleType,
                 inferred = [FunctionSig(name, args=infer_method_sig(name), ret_type=ret_type)]
             else:
                 args = infer_arg_sig_from_anon_docstring(sigs.get(name, '(*args, **kwargs)'))
+                match = re.match(r'^\((.*?)\) *-> *(.*?)\. (.*?)', docstr)
+                if match:
+                    args_str, return_str, _ = match.groups()
+                    args_str_list = args_str.split(', ')
+                    args_list = []
+                    all_known = True
+                    for arg_str in args_str_list:
+                        if ': ' in arg_str and '=' not in arg_str:
+                            arg_name, arg_type = arg_str.split(': ', maxsplit=1)
+                            arg_type = get_type_str(arg_type)
+                            if arg_type is None:
+                                all_known = False
+                                break
+                            args_list.append(ArgSig(name=arg_name, type=arg_type))
+                        else:
+                            all_known = False
+                    if all_known is True:
+                        args = args_list
+                    parsed_return_type = get_type_str(return_str)
+                    if parsed_return_type is not None:
+                        ret_type = parsed_return_type
                 inferred = [FunctionSig(name=name, args=args, ret_type=ret_type)]
 
     is_overloaded = len(inferred) > 1 if inferred else False

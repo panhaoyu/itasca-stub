@@ -54,11 +54,15 @@ class PackageGenerator:
         self.all_packages['itasca'] = self.package
         self.find_package('itasca', self.package)
         self.all_packages = {k: v for k, v in self.all_packages.items() if v is not None}
-        list(map(print, self.all_packages))
         for name, module in self.all_packages.items():
             path = Path(name.replace('.', '/')) / '__init__.py'
+            other_imports = [key.replace(name + '.', '')
+                             for key in self.all_packages.keys()
+                             if key.startswith(name + '.')]
+            other_imports = [other_import for other_import in other_imports if other_import]
+            other_imports = [other_import for other_import in other_imports if '/' not in other_import]
             try:
-                stubgenc.generate_stub_for_c_module(module, str(path))
+                stubgenc.generate_stub_for_c_module(module, str(path), other_import=other_imports)
             except (AssertionError, TypeError):
                 traceback.print_exc()
                 print('Error: ', name)
