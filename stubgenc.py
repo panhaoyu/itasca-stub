@@ -134,7 +134,73 @@ def get_type_str(type_str):
         'float or str': 'typing.Union[float, str]',
         'int or str': 'typing.Union[int, str]',
         'facet object': 'itasca.wall.facet.Facet',
-    #     todo 参照，来猜测其他的 类型，并补全这里的类型对应关系
+        'qaction': 'PySide2.QtWidgets.QAction',
+        'qdialog pointer': 'PySide2.QtWidgets.QDialog',
+        'pointer to qdockwidget': 'PySide2.QtWidgets.QDockWidget',
+        'qmainwindow': 'PySide2.QtWidgets.QMainWindow',
+        'dict {any: tuple of str}': 'typing.Dict[typing.Any, typing.Tuple[str, ...]]',
+        'typeobject': 'type',
+        'contact object': 'itasca.contact.Contact',
+        'contact iterator object': 'itasca.contact.ContactIter',
+        'ball object': 'itasca.ball.Ball',
+        'ball iterator object': 'itasca.ball.BallIter',
+        'thermal ball object': 'itasca.ball.thermal.ThermalBall',
+        'thermal ball iterator object': 'itasca.ball.thermal.ThermalBallIter',
+        'clump object': 'itasca.clump.Clump',
+        'clump object iterator': 'itasca.clump.ClumpIter',
+        'template object': 'itasca.template.Template',
+        'pebble object': 'itasca.clump.pebble.Pebble',
+        'pebble iterator object': 'itasca.clump.pebble.PebbleIter',
+        'thermal clump object': 'itasca.clump.thermal.ThermalClump',
+        'thermal clump iterator object': 'itasca.clump.thermal.ThermalClumpIter',
+        'thermal pebble object': 'itasca.clump.pebble.thermal.ThermalPebble',
+        'thermal pebble iterator object': 'itasca.clump.pebble.thermal.ThermalPebbleIter',
+        'wall object': 'itasca.wall.Wall',
+        'wall object iterator': 'itasca.wall.WallIter',
+        'facet iterator object': 'itasca.wall.facet.FacetIter',
+        'wallvertex object': 'itasca.wall.WallVertex',
+        'wallvertex iterator': 'itasca.wall.WallVertexIter',
+        'thermal wall object': 'itasca.wall.thermal.ThermalWall',
+        'thermal wall iterator object': 'itasca.wall.thermal.ThermalWallIter',
+        'thermal facet object': 'itasca.wall.thermal.ThermalFacet',
+        'thermal facet iterator object': 'itasca.wall.thermal.ThermalFacetIter',
+        'measure object': 'itasca.measure.Measure',
+        'measure iterator object': 'itasca.measure.MeasureIter',
+        'rblock object': 'itasca.rblock.RBlock',
+        'rblock object iterator': 'itasca.rblock.RBlockIter',
+        'rblock template pebble object': 'itasca.rblock.template.RBlockTemplatePebble',
+        'rblock template iterator object': 'itasca.rblock.template.RBlockTemplateIter',
+        'tuple of pyobject pointers for the currenly in-scope and valid objects': 'typing.Tuple[object, ...]',
+        'tuple of str': 'typing.Tuple[str, ...]',
+        'str>': 'str',
+        'int or (object1': 'typing.Union[int, object]',
+        'any)]': 'typing.Any',
+        'tuple of pyobject pointers for the currenly in-scope and valid ball objects': 'typing.Tuple[itasca.ball.Ball, ...]',
+        'vec [,id: int]': 'typing.Tuple[vec.vec, int]',
+        'tuple of ball objects': 'typing.Tuple[itasca.ball.Ball, ...]',
+        'tuple of pyobject pointers for the currenly in-scope and valid thermal ball objects': 'typing.Tuple[itasca.ball.thermal.ThermalBall, ...]',
+        'tuple of thermal ball objects': 'typing.Tuple[itasca.ball.thermal.ThermalBall, ...]',
+        'tuple of pyobject pointers for the currenly in-scope and valid clump objects': 'typing.Tuple[itasca.clump.Clump, ...]',
+        'dict {str: float}': 'typing.Dict[str, float]',
+        'tuple of clump objects': 'typing.Tuple[itasca.clump.Clump, ...]',
+        'clump template pebble object': 'itasca.rblock.template.RBlockTemplatePebble',
+        'clump template iterator object': 'itasca.rblock.template.RBlockTemplateIter',
+        'clump template object': 'itasca.rblock.template.RBlockTemplate',
+        'tuple of pebble objects': 'typing.Tuple[itasca.clump.pebble.Pebble, ...]',
+        'tuple of pyobject pointers for the currenly in-scope and valid thermal clump objects': 'typing.Tuple[itasca.clump.thermal.ThermalClump, ...]',
+        'tuple of thermal clump objects': 'typing.Tuple[itasca.clump.thermal.ThermalClump, ...]',
+        'tuple of pyobject pointers for the currenly in-scope and valid thermal pebble objects': 'typing.Tuple[itasca.clump.pebble.thermal.ThermalPebble, ...]',
+        'tuple of thermal pebble objects': 'typing.Tuple[itasca.clump.pebble.thermal.ThermalPebble, ...]',
+        'tuple of wall objects': 'typing.Tuple[itasca.wall.Wall, ...]',
+        'tuple of facet objects': 'typing.Tuple[itasca.wall.facet.Facet, ...]',
+        'tuple of wallvertex objects': 'typing.Tuple[itasca.wall.WallVertex, ...]',
+        'tuple of pyobject pointers for the currenly in-scope and valid thermal wall objects': 'typing.Tuple[itasca.wall.thermal.ThermalWall, ...]',
+        'tuple of thermal wall objects': 'typing.Tuple[itasca.wall.thermal.ThermalWall, ...]',
+        'tuple of pyobject pointers for the currenly in-scope and valid thermal facet objects': 'typing.Tuple[itasca.wall.thermal.ThermalFacet, ...]',
+        'tuple of thermal facet objects': 'typing.Tuple[itasca.wall.thermal.ThermalFacet, ...]',
+        'tuple of pyobject pointers for the currenly in-scope and valid measure objects': 'typing.Tuple[itasca.measure.Measure, ...]',
+        'tuple of pyobject pointers for the currenly in-scope and valid rblock objects': 'typing.Tuple[itasca.rblock.RBlock, ...]',
+        'tuple of rblock objects': 'typing.Tuple[itasca.rblock.RBlock, ...]',
     }
     type_str = type_str.lower().strip()
     if type_str in return_type_dict:
@@ -195,11 +261,17 @@ def generate_c_function_stub(module: ModuleType,
                             if arg_type is None:
                                 all_known = False
                                 break
+                            if '(' in arg_name:
+                                all_known = False
+                                break
+                            arg_name = arg_name.replace(' ', '_')
                             args_list.append(ArgSig(name=arg_name, type=arg_type))
                         else:
                             all_known = False
                     if all_known is True:
                         args = args_list
+                    if not args_str:
+                        args = []
                     parsed_return_type = get_type_str(return_str)
                     if parsed_return_type is not None:
                         ret_type = parsed_return_type
@@ -251,15 +323,18 @@ def strip_or_import(typ: str, module: ModuleType, imports: List[str]) -> str:
         module: in which this type is used
         imports: list of import statements (may be modified during the call)
     """
-    stripped_type = typ
-    if module and typ.startswith(module.__name__ + '.'):
-        stripped_type = typ[len(module.__name__) + 1:]
-    elif '.' in typ:
-        arg_module = typ[:typ.rindex('.')]
-        if arg_module == 'builtins':
-            stripped_type = typ[len('builtins') + 1:]
-        else:
-            imports.append('import %s' % (arg_module,))
+    for sub_typ in re.findall(r'\b[a-zA-Z0-9_.]+', typ):
+        if sub_typ in ('...', ''):
+            continue
+        stripped_type = sub_typ
+        if module and sub_typ.startswith(module.__name__ + '.'):
+            stripped_type = sub_typ[len(module.__name__) + 1:]
+        elif '.' in sub_typ:
+            arg_module = sub_typ[:sub_typ.rindex('.')]
+            if arg_module == 'builtins':
+                stripped_type = sub_typ[len('builtins') + 1:]
+            else:
+                imports.append('import %s' % (arg_module,))
     return stripped_type
 
 

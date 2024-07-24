@@ -60,7 +60,7 @@ class PackageGenerator:
                              for key in self.all_packages.keys()
                              if key.startswith(name + '.')]
             other_imports = [other_import for other_import in other_imports if other_import]
-            other_imports = [other_import for other_import in other_imports if '/' not in other_import]
+            other_imports = [other_import for other_import in other_imports if '.' not in other_import]
             try:
                 stubgenc.generate_stub_for_c_module(module, str(path), other_import=other_imports)
             except (AssertionError, TypeError):
