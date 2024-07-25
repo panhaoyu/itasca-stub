@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "itasca-stub-pfc7"
-version = "1.0.1"
+version = "1.0.2"
 description = "Itasca PFC python stub"
 authors = [ "panhaoyu <panhaoyu.china@outlook.com>",]
 license = "MIT"
@@ -17,7 +17,7 @@ keywords = [ "itasca", "stub", "pfc",]
 include = "itasca"
 
 [tool.poetry.dependencies]
-python = ">=3.6,<4"
+python = "^3.6"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.3.0"
