@@ -228,7 +228,7 @@ def infer_func_args_return_types_from_docstring(docstr):
             'None'),
         ('func: string, [(tuple: any)]', 'Any'): (
             [ArgSig('func', 'str'),
-             ArgSig('args', 'typing.Tuple')],
+             ArgSig('args', 'typing.Tuple', default=True)],
             'typing.Any'),
         ('<process: str>, <type: TypeObject>, <all=False>', 'int'): (
             [ArgSig('process', 'str'),

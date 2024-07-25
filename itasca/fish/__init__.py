@@ -1,7 +1,7 @@
 import typing
 
 
-def call_function(func: str, args: typing.Tuple) -> typing.Any:
+def call_function(func: str, args: typing.Tuple = ...) -> typing.Any:
     """
     (func: string, [(tuple: any)]) -> Any.
     Call FISH function func return result.
