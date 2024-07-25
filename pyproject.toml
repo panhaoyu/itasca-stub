@@ -1,18 +1,18 @@
 [build-system]
-requires = [ "poetry-core",]
+requires = ["poetry-core", ]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "itasca-stub"
-version = "1.0.18"
+name = "itasca-stub-pfc7"
+version = "1.0.0"
 description = "Itasca PFC python stub"
-authors = [ "panhaoyu <panhaoyu.china@outlook.com>",]
+authors = ["panhaoyu <panhaoyu.china@outlook.com>", ]
 license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/panhaoyu/itasca-stub"
 repository = "https://github.com/panhaoyu/itasca-stub"
 documentation = "https://github.com/panhaoyu/itasca-stub"
-keywords = [ "itasca", "stub", "pfc",]
+keywords = ["itasca", "stub", "pfc", ]
 [[tool.poetry.packages]]
 include = "itasca"
 
