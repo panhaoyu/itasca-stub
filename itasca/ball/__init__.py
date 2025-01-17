@@ -87,7 +87,7 @@ class Ball:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def contact_count(self, all = ..., type = ...) -> int:
         """
         (all=False, type=None) -> int.
@@ -97,7 +97,7 @@ class Ball:
         If the optional keyword argument all is True the count includes virtual contacts.
         """
         pass
-    
+
     def contacts(self, *args, **kwargs) -> Any:
         """
         ([piece: ball], all=False, type=None) -> tuple of Contact objects.
@@ -108,56 +108,56 @@ class Ball:
         If the (optional) keyword argument all is True the returned list includes virtual contacts.
         """
         pass
-    
+
     def damp(self) -> float:
         """
         () -> float.
         Get the ball local damping.
         """
         pass
-    
+
     def delete(self) -> None:
         """
         () -> None.
         Delete this ball.
         """
         pass
-    
+
     def density(self) -> float:
         """
         () -> float.
         Get the ball density.
         """
         pass
-    
+
     def disp(self) -> vec.vec:
         """
         () -> vec.
         Get the ball displacement (vector).
         """
         pass
-    
+
     def disp_x(self) -> float:
         """
         () -> float.
         Get the x-component of the ball displacement.
         """
         pass
-    
+
     def disp_y(self) -> float:
         """
         () -> float.
         Get the y-component of the ball displacement.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the ball extra data in the given slot.
         """
         pass
-    
+
     def fix(self, component: int) -> bool:
         """
         (component: int) -> bool.
@@ -165,84 +165,84 @@ class Ball:
         The first argument is the vector component.
         """
         pass
-    
+
     def force_app(self) -> vec.vec:
         """
         () -> vec.
         Get the ball applied force (vector).
         """
         pass
-    
+
     def force_app_x(self) -> float:
         """
         () -> float.
         Get the x-component of the ball applied force.
         """
         pass
-    
+
     def force_app_y(self) -> float:
         """
         () -> float.
         Get the y-component of the ball applied force.
         """
         pass
-    
+
     def force_contact(self) -> vec.vec:
         """
         () -> vec.
         Get the ball contact force (vector).
         """
         pass
-    
+
     def force_contact_x(self) -> float:
         """
         () -> float.
         Get the x-component of the ball contact force.
         """
         pass
-    
+
     def force_contact_y(self) -> float:
         """
         () -> float.
         Get the y-component of the ball contact force.
         """
         pass
-    
+
     def force_unbal(self) -> vec.vec:
         """
         () -> vec.
         Get the ball unbalanced force (vector).
         """
         pass
-    
+
     def force_unbal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the ball unbalanced force.
         """
         pass
-    
+
     def force_unbal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the ball unbalanced force.
         """
         pass
-    
+
     def fragment(self) -> int:
         """
         () -> int.
         Get the ball fragment ID.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the ball group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -251,7 +251,7 @@ class Ball:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
@@ -259,21 +259,21 @@ class Ball:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Returns True if the ball has the given surface property.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the ball id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -282,154 +282,154 @@ class Ball:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inside(self, point: vec.vec) -> bool:
         """
         (point: vec) -> bool.
         Test whether a point is inside a ball.
         """
         pass
-    
+
     def mass(self) -> float:
         """
         () -> float.
         Get the ball inertial mass.
         """
         pass
-    
+
     def mass_real(self) -> float:
         """
         () -> float.
         Get the ball real (gravitational) mass.
         """
         pass
-    
+
     def moi(self) -> float:
         """
         () -> float.
         Get the ball moment of inertia.
         """
         pass
-    
+
     def moi_real(self) -> float:
         """
         () -> float.
         Get the ball real (gravitational) moment of inertia.
         """
         pass
-    
+
     def moment_app(self) -> float:
         """
         () -> float.
         Get the ball applied moment.
         """
         pass
-    
+
     def moment_contact(self) -> float:
         """
         () -> float.
         Get the ball contact moment.
         """
         pass
-    
+
     def moment_unbal(self) -> float:
         """
         () -> float.
         Get the ball unbalanced moment.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the ball centroid location (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the ball centroid location.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the ball centroid location.
         """
         pass
-    
+
     def prop(self, property_name: str) -> typing.Any:
         """
         (property_name: str) -> any.
         Get a surface property value of this ball.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get a dictionary of all the surface properties of this ball.
         """
         pass
-    
+
     def radius(self) -> float:
         """
         () -> float.
         Get the ball radius.
         """
         pass
-    
+
     def rotation(self) -> float:
         """
         () -> float.
         Get the ball orientation.
         """
         pass
-    
+
     def set_damp(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the ball local damping.
         """
         pass
-    
+
     def set_density(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the ball density.
         """
         pass
-    
+
     def set_disp(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the ball displacement (vector).
         """
         pass
-    
+
     def set_disp_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the ball displacement.
         """
         pass
-    
+
     def set_disp_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the ball displacement.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the ball extra data in the given slot.
         """
         pass
-    
+
     def set_fix(self, component: int, fix: bool) -> None:
         """
         (component: int, fix: bool) -> None.
@@ -437,225 +437,225 @@ class Ball:
         The first argument is the vector component to set and the second components is a the fixity flag.
         """
         pass
-    
+
     def set_force_app(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the ball applied force (vector).
         """
         pass
-    
+
     def set_force_app_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the ball applied force.
         """
         pass
-    
+
     def set_force_app_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the ball applied force.
         """
         pass
-    
+
     def set_force_contact(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the ball contact force (vector).
         """
         pass
-    
+
     def set_force_contact_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the ball contact force.
         """
         pass
-    
+
     def set_force_contact_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the ball contact force.
         """
         pass
-    
+
     def set_fragment(self, id: int) -> None:
         """
         (id: int) -> None.
         Set ball fragment ID.
         """
         pass
-    
+
     def set_group(self, group_name, slot = ...) -> None:
         """
         (group_name: str or int[, slot: str or int]) -> None.
         Set the ball group name in a given slot.
         """
         pass
-    
+
     def set_moment_app(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the ball applied moment.
         """
         pass
-    
+
     def set_moment_contact(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the ball contact moment.
         """
         pass
-    
+
     def set_pos(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the ball centroid location (vector).
         """
         pass
-    
+
     def set_pos_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the ball centroid location.
         """
         pass
-    
+
     def set_pos_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the ball centroid location.
         """
         pass
-    
+
     def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a surface property of this ball.
         """
         pass
-    
+
     def set_radius(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the ball radius.
         """
         pass
-    
+
     def set_rotation(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the ball orientation.
         """
         pass
-    
+
     def set_spin(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the ball angular velocity.
         """
         pass
-    
+
     def set_vel(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the ball velocity (vector).
         """
         pass
-    
+
     def set_vel_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the ball velocity.
         """
         pass
-    
+
     def set_vel_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the ball velocity.
         """
         pass
-    
+
     def spin(self) -> float:
         """
         () -> float.
         Get the ball angular velocity.
         """
         pass
-    
+
     def stress(self) -> vec.tens3:
         """
         () -> tensor.
         Get the stress tensor arising from all contacts acting on the ball.
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this ball is live.
         """
         pass
-    
+
     def vel(self) -> vec.vec:
         """
         () -> vec.
         Get the ball velocity (vector).
         """
         pass
-    
+
     def vel_x(self) -> float:
         """
         () -> float.
         Get the x-component of the ball velocity.
         """
         pass
-    
+
     def vel_y(self) -> float:
         """
         () -> float.
         Get the y-component of the ball velocity.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallIter:
     @classmethod
@@ -665,16 +665,16 @@ class BallIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+

@@ -58,43 +58,43 @@ class Contact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class ContactIter:
     @classmethod
@@ -104,16 +104,16 @@ class ContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+

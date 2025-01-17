@@ -56,7 +56,7 @@ class Template:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def delete(self) -> None:
         """
         () -> None.
@@ -64,14 +64,14 @@ class Template:
         All rblocks that referred to this rblock template no longer refer to any rblock template.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the rblock template id.
         """
         pass
-    
+
     def moi(self) -> vec.tens3:
         """
         () -> tensor.
@@ -79,35 +79,35 @@ class Template:
         In 2D the polar moment of intertial is used so the return value is a float.
         """
         pass
-    
+
     def moi_prin(self) -> vec.vec:
         """
         () -> vec.
         Get the rblock template principal moment of inertia (vector).
         """
         pass
-    
+
     def moi_prin_x(self) -> float:
         """
         () -> float.
         Get the x-component of the rblock template principal moment of inertia.
         """
         pass
-    
+
     def moi_prin_y(self) -> float:
         """
         () -> float.
         Get the y-component of the rblock template principal moment of inertia.
         """
         pass
-    
+
     def name(self) -> str:
         """
         () -> str.
         Get the rblock template name.
         """
         pass
-    
+
     def set_moi(self) -> vec.tens3:
         """
         () -> tensor.
@@ -117,28 +117,28 @@ class Template:
         The specification of the moment of inertia in this way results in the principal moments of inertia being in a fixed state so that they will not be automatically updated when scaling a rblock unless the user changes the fix state (see the RBlock moi_fix() method).
         """
         pass
-    
+
     def set_moi_prin(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the rblock template principal moment of inertia (vector).
         """
         pass
-    
+
     def set_moi_prin_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the rblock template principal moment of inertia.
         """
         pass
-    
+
     def set_moi_prin_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the rblock template principal moment of inertia.
         """
         pass
-    
+
     def set_vol(self, value: float) -> None:
         """
         (value: float) -> None.
@@ -146,14 +146,14 @@ class Template:
         In 2D this is the volume per unit thickness.
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True of this object is a live rblock template.
         """
         pass
-    
+
     def vol(self) -> float:
         """
         () -> float.
@@ -161,43 +161,43 @@ class Template:
         In 2D this is the volume per unit thickness.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class TemplateIter:
     @classmethod
@@ -207,16 +207,16 @@ class TemplateIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+

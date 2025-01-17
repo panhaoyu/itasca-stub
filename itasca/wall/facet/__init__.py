@@ -64,7 +64,7 @@ class Facet:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def active(self) -> int:
         """
         () -> int.
@@ -72,7 +72,7 @@ class Facet:
         The following codes apply: 0 - both sides are active; 1 - the top side (e.g., in the direction of the facet normal) is active; -1 - the bottom side of the facet is active; or 2 - neither side of the facet is active.
         """
         pass
-    
+
     def contact_count(self, all = ..., type = ...) -> int:
         """
         (all=False, type=None) -> int.
@@ -82,7 +82,7 @@ class Facet:
         If the (optional) keyword argument all is True the count includes virtual contacts.
         """
         pass
-    
+
     def contacts(self, *args, **kwargs) -> Any:
         """
         ([piece: object], all=False, type=None) -> tuple of Contact objects.
@@ -93,28 +93,28 @@ class Facet:
         If the (optional) keyword argument all is True the returned list includes virtual contacts.
         """
         pass
-    
+
     def conveyor(self) -> vec.vec:
         """
         () -> vec.
         Get the facet conveyor velocity (vector).
         """
         pass
-    
+
     def conveyor_x(self) -> float:
         """
         () -> float.
         Get the x-component of the facet conveyor velocity.
         """
         pass
-    
+
     def conveyor_y(self) -> float:
         """
         () -> float.
         Get the y-component of the facet conveyor velocity.
         """
         pass
-    
+
     def delete(self) -> None:
         """
         () -> None.
@@ -122,7 +122,7 @@ class Facet:
         The wall position is automatically updated.
         """
         pass
-    
+
     def edge_neighbors(self) -> typing.Tuple[itasca.wall.facet.Facet, ...]:
         """
         () -> tuple of Facet objects.
@@ -132,21 +132,21 @@ class Facet:
         Each position in the tuple contains either a Facet object or None if no facet is adjacent to that edge (point in 2d).
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the facet extra data in the given slot.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the facet group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -155,7 +155,7 @@ class Facet:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
@@ -163,21 +163,21 @@ class Facet:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Returns True if the facet has the given surface property.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the facet id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -186,176 +186,176 @@ class Facet:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the facet normal direction (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the facet normal direction.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the facet normal direction.
         """
         pass
-    
+
     def point_near(self, point: vec.vec) -> vec.vec:
         """
         (point: vec) -> vec.
         Get the closest point on the facet to another point.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the facet location (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the facet location.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the facet location.
         """
         pass
-    
+
     def prop(self, property_name: str) -> typing.Any:
         """
         (property_name: str) -> any.
         Get a surface property value of this facet.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get a dictionary of all the surface properties of this facet.
         """
         pass
-    
+
     def set_active(self, activity_code: int) -> None:
         """
         (activity_code: int) -> None.
         The following codes apply: 0 - both sides are active; 1 - the top side (e.g., in the direction of the facet normal) is active; -1 - the bottom side of the facet is active; or 2 - neither side of the facet is active.
         """
         pass
-    
+
     def set_conveyor(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the facet conveyor velocity (vector).
         """
         pass
-    
+
     def set_conveyor_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the facet conveyor velocity.
         """
         pass
-    
+
     def set_conveyor_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the facet conveyor velocity.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the facet extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, group_name, slot = ...) -> None:
         """
         (group_name: str or int[, slot: str or int]) -> None.
         Set the facet group name in a given slot.
         """
         pass
-    
+
     def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a surface property of this facet.
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this facet is live.
         """
         pass
-    
+
     def vertices(self) -> typing.Tuple[itasca.wall.WallVertex, ...]:
         """
         () -> tuple of WallVertex objects.
         Get the facet vertices.
         """
         pass
-    
+
     def wall(self) -> itasca.wall.Wall:
         """
         () -> Wall object.
         Get the facet's wall.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class FacetIter:
     @classmethod
@@ -365,16 +365,16 @@ class FacetIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+

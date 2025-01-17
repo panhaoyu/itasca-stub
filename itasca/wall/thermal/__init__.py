@@ -67,7 +67,7 @@ class ThermalWall:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def contact_count(self, all = ..., type = ...) -> int:
         """
         (all=False, type=None) -> int.
@@ -77,7 +77,7 @@ class ThermalWall:
         If the optional keyword argument all is True the count includes virtual contacts.
         """
         pass
-    
+
     def contacts(self, *args, **kwargs) -> Any:
         """
         ([piece], all=False, type=None) -> tuple of Contact objects.
@@ -88,28 +88,28 @@ class ThermalWall:
         If the (optional) keyword argument all is True the returned list includes virtual contacts.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the thermal wall extra data in the given slot.
         """
         pass
-    
+
     def facets(self) -> itasca.wall.thermal.ThermalFacetIter:
         """
         () -> Thermal facet iterator object.
         Get the thermal facets of this thermal wall.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the thermal wall group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> int:
         """
         (group_name: str or int[, slot: str or int]) -> int.
@@ -118,21 +118,21 @@ class ThermalWall:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self) -> typing.Tuple[str, ...]:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this thermal wall.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the thermal wall id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -140,127 +140,127 @@ class ThermalWall:
         All group slots are searched.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the thermal wall location (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the thermal wall location.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the thermal wall location.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the thermal wall extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, group_name: typing.Union[str, int] = ..., slot: typing.Union[str, int] = ...) -> None:
         """
         ([group_name:  str or int[, slot: str or int]]) -> None.
         Set the thermal wall group name in a given slot.
         """
         pass
-    
+
     def set_pos(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the thermal wall location (vector).
         """
         pass
-    
+
     def set_pos_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the thermal wall location.
         """
         pass
-    
+
     def set_pos_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the thermal wall location.
         """
         pass
-    
+
     def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a surface property of all thermal facets.
         """
         pass
-    
+
     def set_temp(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the thermal wall facet temperatures of this wall.
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this thermal wall is live.
         """
         pass
-    
+
     def wall(self) -> itasca.wall.Wall:
         """
         () -> Wall object.
         Get the wall corresponding to this thermal wall.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class ThermalWallIter:
     @classmethod
@@ -270,16 +270,16 @@ class ThermalWallIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+

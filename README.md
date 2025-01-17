@@ -15,12 +15,12 @@ Thus, the project is developed, and here's a preview.
 Copy the `itasca` directory to your python `site-packages` directory.
 Make sure to copy to your current environment.
 If the internal Python of PFC is used, then you should copy to the path like:
-`Itasca\PFC700\exe64\python36\Lib\site-packages`.
+`Itasca\pfc900\exe64\python36\Lib\site-packages`.
 
 ### pip
 
 ```cmd
-pip install itasca-stub-pfc7
+pip install itasca-stub-pfc9
 ```
 
 Best wishes!

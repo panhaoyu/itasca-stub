@@ -66,14 +66,14 @@ class ThermalPebble:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def clump(self) -> itasca.clump.thermal.ThermalClump:
         """
         () -> Thermal clump object.
         Get the thermal clump corresponding to this pebble.
         """
         pass
-    
+
     def contact_count(self, all = ..., type = ...) -> int:
         """
         (all=False, type=None) -> int.
@@ -83,7 +83,7 @@ class ThermalPebble:
         If the optional keyword argument all is True the count includes virtual contacts.
         """
         pass
-    
+
     def contacts(self, *args, **kwargs) -> Any:
         """
         ([piece], all=False, type=None) -> tuple of Contact objects.
@@ -94,21 +94,21 @@ class ThermalPebble:
         If the (optional) keyword argument all is True the returned list includes virtual contacts.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the thermal pebble extra data in the given slot.
         """
         pass
-    
+
     def group(self, slot: int = ...) -> str:
         """
         ([slot: int]) -> str.
         Get the thermal pebble group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name: str) -> int:
         """
         (group_name: str ) -> int.
@@ -117,28 +117,28 @@ class ThermalPebble:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self) -> typing.Tuple[str, ...]:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this thermal pebble.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Returns True if the thermal pebble has the given surface property.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the thermal pebble id.
         """
         pass
-    
+
     def in_group(self, group_name: str) -> bool:
         """
         (group_name: str) -> bool.
@@ -146,134 +146,134 @@ class ThermalPebble:
         All group slots are searched.
         """
         pass
-    
+
     def pebble(self) -> itasca.clump.pebble.Pebble:
         """
         () -> Pebble object.
         Get the pebble corresponding to this thermal pebble.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the thermal pebble location (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the thermal pebble location.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the thermal pebble location.
         """
         pass
-    
+
     def prop(self, property_name: str) -> typing.Any:
         """
         (property_name: str) -> any.
         Get a surface property value of this thermal pebble.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get a dictionary of all the surface properties of this thermal pebble.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the thermal pebble extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, group_name: str = ..., slot: int = ...) -> None:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the thermal pebble group name in a given slot.
         """
         pass
-    
+
     def set_pos(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
         Set the thermal pebble location (vector).
         """
         pass
-    
+
     def set_pos_x(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the x-component of the thermal pebble location.
         """
         pass
-    
+
     def set_pos_y(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the y-component of the thermal pebble location.
         """
         pass
-    
+
     def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a surface property of this thermal pebble.
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this thermal pebble is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class ThermalPebbleIter:
     @classmethod
@@ -283,16 +283,16 @@ class ThermalPebbleIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+

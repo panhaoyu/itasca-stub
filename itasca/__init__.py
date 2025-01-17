@@ -554,7 +554,7 @@ class BallBallContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -562,7 +562,7 @@ class BallBallContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -570,154 +570,154 @@ class BallBallContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self) -> bool:
         """
         () -> bool.
         Get the contact bonded flag.
         """
         pass
-    
+
     def branch(self) -> vec.vec:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self) -> typing.Dict[str, float]:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, energy_name: str) -> float:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self) -> int:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self) -> float:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self) -> float:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -726,7 +726,7 @@ class BallBallContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
@@ -734,7 +734,7 @@ class BallBallContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -742,14 +742,14 @@ class BallBallContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -758,28 +758,28 @@ class BallBallContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, energy_name: str) -> bool:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -788,140 +788,140 @@ class BallBallContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, property_name_or_index) -> typing.Any:
         """
         (property_name or index: str or int) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def prop_index(self, property_name: str) -> int:
         """
         (property_name: str) -> int.
         Get a contact model property index.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_force(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
@@ -929,70 +929,70 @@ class BallBallContact:
         This operation is contact model specific.
         """
         pass
-    
+
     def set_group(self, group_name, slot = ...) -> None:
         """
         (group_name: str or int[, slot: str or int]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, property_name: str, inherit_flag: bool) -> None:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, property_name_or_index, value: typing.Any) -> None:
         """
         (property_name or index: str or int, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -1000,7 +1000,7 @@ class BallBallContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -1008,50 +1008,50 @@ class BallBallContact:
         (vector).
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallBallContactIter:
     @classmethod
@@ -1061,19 +1061,19 @@ class BallBallContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallBallThermalContact:
     __hash__: Any = ...
@@ -1084,7 +1084,7 @@ class BallBallThermalContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -1092,7 +1092,7 @@ class BallBallThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -1100,49 +1100,49 @@ class BallBallThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot: int = ...) -> str:
         """
         ([slot: int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name: str) -> int:
         """
         (group_name: str ) -> int.
@@ -1151,14 +1151,14 @@ class BallBallThermalContact:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self) -> typing.Tuple[str, ...]:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this contact.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -1166,14 +1166,14 @@ class BallBallThermalContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name: str) -> bool:
         """
         (group_name: str) -> bool.
@@ -1181,14 +1181,14 @@ class BallBallThermalContact:
         All group slots are searched.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -1197,218 +1197,218 @@ class BallBallThermalContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def power(self) -> float:
         """
         () -> float.
         Get the contact power.
         """
         pass
-    
+
     def prop(self, property_name: str) -> typing.Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, group_name: str = ..., slot: int = ...) -> None:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_power(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the contact power.
         """
         pass
-    
+
     def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallBallThermalContactIter:
     @classmethod
@@ -1418,19 +1418,19 @@ class BallBallThermalContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallFacetContact:
     __hash__: Any = ...
@@ -1441,7 +1441,7 @@ class BallFacetContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -1449,7 +1449,7 @@ class BallFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -1457,154 +1457,154 @@ class BallFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self) -> bool:
         """
         () -> bool.
         Get the contact bonded flag.
         """
         pass
-    
+
     def branch(self) -> vec.vec:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self) -> typing.Dict[str, float]:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, energy_name: str) -> float:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self) -> int:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self) -> float:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self) -> float:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -1613,7 +1613,7 @@ class BallFacetContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
@@ -1621,7 +1621,7 @@ class BallFacetContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -1629,14 +1629,14 @@ class BallFacetContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -1645,28 +1645,28 @@ class BallFacetContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, energy_name: str) -> bool:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -1675,140 +1675,140 @@ class BallFacetContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, property_name_or_index) -> typing.Any:
         """
         (property_name or index: str or int) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def prop_index(self, property_name: str) -> int:
         """
         (property_name: str) -> int.
         Get a contact model property index.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_force(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
@@ -1816,70 +1816,70 @@ class BallFacetContact:
         This operation is contact model specific.
         """
         pass
-    
+
     def set_group(self, group_name, slot = ...) -> None:
         """
         (group_name: str or int[, slot: str or int]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, property_name: str, inherit_flag: bool) -> None:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, property_name_or_index, value: typing.Any) -> None:
         """
         (property_name or index: str or int, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -1887,7 +1887,7 @@ class BallFacetContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -1895,50 +1895,50 @@ class BallFacetContact:
         (vector).
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallFacetContactIter:
     @classmethod
@@ -1948,19 +1948,19 @@ class BallFacetContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallFacetThermalContact:
     __hash__: Any = ...
@@ -1971,7 +1971,7 @@ class BallFacetThermalContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -1979,7 +1979,7 @@ class BallFacetThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -1987,49 +1987,49 @@ class BallFacetThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot: int = ...) -> str:
         """
         ([slot: int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name: str) -> int:
         """
         (group_name: str ) -> int.
@@ -2038,14 +2038,14 @@ class BallFacetThermalContact:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self) -> typing.Tuple[str, ...]:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this contact.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -2053,14 +2053,14 @@ class BallFacetThermalContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name: str) -> bool:
         """
         (group_name: str) -> bool.
@@ -2068,14 +2068,14 @@ class BallFacetThermalContact:
         All group slots are searched.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -2084,218 +2084,218 @@ class BallFacetThermalContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def power(self) -> float:
         """
         () -> float.
         Get the contact power.
         """
         pass
-    
+
     def prop(self, property_name: str) -> typing.Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, group_name: str = ..., slot: int = ...) -> None:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_power(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the contact power.
         """
         pass
-    
+
     def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallFacetThermalContactIter:
     @classmethod
@@ -2305,19 +2305,19 @@ class BallFacetThermalContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallPebbleContact:
     __hash__: Any = ...
@@ -2328,7 +2328,7 @@ class BallPebbleContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -2336,7 +2336,7 @@ class BallPebbleContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -2344,154 +2344,154 @@ class BallPebbleContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self) -> bool:
         """
         () -> bool.
         Get the contact bonded flag.
         """
         pass
-    
+
     def branch(self) -> vec.vec:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self) -> typing.Dict[str, float]:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, energy_name: str) -> float:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self) -> int:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self) -> float:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self) -> float:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -2500,7 +2500,7 @@ class BallPebbleContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
@@ -2508,7 +2508,7 @@ class BallPebbleContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -2516,14 +2516,14 @@ class BallPebbleContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -2532,28 +2532,28 @@ class BallPebbleContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, energy_name: str) -> bool:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -2562,140 +2562,140 @@ class BallPebbleContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, property_name_or_index) -> typing.Any:
         """
         (property_name or index: str or int) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def prop_index(self, property_name: str) -> int:
         """
         (property_name: str) -> int.
         Get a contact model property index.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_force(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
@@ -2703,70 +2703,70 @@ class BallPebbleContact:
         This operation is contact model specific.
         """
         pass
-    
+
     def set_group(self, group_name, slot = ...) -> None:
         """
         (group_name: str or int[, slot: str or int]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, property_name: str, inherit_flag: bool) -> None:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, property_name_or_index, value: typing.Any) -> None:
         """
         (property_name or index: str or int, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -2774,7 +2774,7 @@ class BallPebbleContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -2782,50 +2782,50 @@ class BallPebbleContact:
         (vector).
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallPebbleContactIter:
     @classmethod
@@ -2835,19 +2835,19 @@ class BallPebbleContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallPebbleThermalContact:
     __hash__: Any = ...
@@ -2858,7 +2858,7 @@ class BallPebbleThermalContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -2866,7 +2866,7 @@ class BallPebbleThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -2874,49 +2874,49 @@ class BallPebbleThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot: int = ...) -> str:
         """
         ([slot: int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name: str) -> int:
         """
         (group_name: str ) -> int.
@@ -2925,14 +2925,14 @@ class BallPebbleThermalContact:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self) -> typing.Tuple[str, ...]:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this contact.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -2940,14 +2940,14 @@ class BallPebbleThermalContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name: str) -> bool:
         """
         (group_name: str) -> bool.
@@ -2955,14 +2955,14 @@ class BallPebbleThermalContact:
         All group slots are searched.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -2971,218 +2971,218 @@ class BallPebbleThermalContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def power(self) -> float:
         """
         () -> float.
         Get the contact power.
         """
         pass
-    
+
     def prop(self, property_name: str) -> typing.Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, group_name: str = ..., slot: int = ...) -> None:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_power(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the contact power.
         """
         pass
-    
+
     def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallPebbleThermalContactIter:
     @classmethod
@@ -3192,19 +3192,19 @@ class BallPebbleThermalContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class BallRBlockContact:
     __hash__: Any = ...
@@ -3215,7 +3215,7 @@ class BallRBlockContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -3223,7 +3223,7 @@ class BallRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -3231,154 +3231,154 @@ class BallRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self) -> bool:
         """
         () -> bool.
         Get the contact bonded flag.
         """
         pass
-    
+
     def branch(self) -> vec.vec:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self) -> typing.Dict[str, float]:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, energy_name: str) -> float:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self) -> int:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self) -> float:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self) -> float:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -3387,7 +3387,7 @@ class BallRBlockContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
@@ -3395,7 +3395,7 @@ class BallRBlockContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -3403,14 +3403,14 @@ class BallRBlockContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -3419,28 +3419,28 @@ class BallRBlockContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, energy_name: str) -> bool:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -3449,140 +3449,140 @@ class BallRBlockContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, property_name_or_index) -> typing.Any:
         """
         (property_name or index: str or int) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def prop_index(self, property_name: str) -> int:
         """
         (property_name: str) -> int.
         Get a contact model property index.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_force(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
@@ -3590,70 +3590,70 @@ class BallRBlockContact:
         This operation is contact model specific.
         """
         pass
-    
+
     def set_group(self, group_name, slot = ...) -> None:
         """
         (group_name: str or int[, slot: str or int]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, property_name: str, inherit_flag: bool) -> None:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, property_name_or_index, value: typing.Any) -> None:
         """
         (property_name or index: str or int, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -3661,7 +3661,7 @@ class BallRBlockContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -3669,50 +3669,50 @@ class BallRBlockContact:
         (vector).
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class BallRBlockContactIter:
     @classmethod
@@ -3722,19 +3722,19 @@ class BallRBlockContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class PebbleFacetContact:
     __hash__: Any = ...
@@ -3745,7 +3745,7 @@ class PebbleFacetContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -3753,7 +3753,7 @@ class PebbleFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -3761,154 +3761,154 @@ class PebbleFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self) -> bool:
         """
         () -> bool.
         Get the contact bonded flag.
         """
         pass
-    
+
     def branch(self) -> vec.vec:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self) -> typing.Dict[str, float]:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, energy_name: str) -> float:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self) -> int:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self) -> float:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self) -> float:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -3917,7 +3917,7 @@ class PebbleFacetContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
@@ -3925,7 +3925,7 @@ class PebbleFacetContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -3933,14 +3933,14 @@ class PebbleFacetContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -3949,28 +3949,28 @@ class PebbleFacetContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, energy_name: str) -> bool:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -3979,140 +3979,140 @@ class PebbleFacetContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, property_name_or_index) -> typing.Any:
         """
         (property_name or index: str or int) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def prop_index(self, property_name: str) -> int:
         """
         (property_name: str) -> int.
         Get a contact model property index.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_force(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
@@ -4120,70 +4120,70 @@ class PebbleFacetContact:
         This operation is contact model specific.
         """
         pass
-    
+
     def set_group(self, group_name, slot = ...) -> None:
         """
         (group_name: str or int[, slot: str or int]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, property_name: str, inherit_flag: bool) -> None:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, property_name_or_index, value: typing.Any) -> None:
         """
         (property_name or index: str or int, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -4191,7 +4191,7 @@ class PebbleFacetContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -4199,50 +4199,50 @@ class PebbleFacetContact:
         (vector).
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class PebbleFacetContactIter:
     @classmethod
@@ -4252,19 +4252,19 @@ class PebbleFacetContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class PebbleFacetThermalContact:
     __hash__: Any = ...
@@ -4275,7 +4275,7 @@ class PebbleFacetThermalContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -4283,7 +4283,7 @@ class PebbleFacetThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -4291,49 +4291,49 @@ class PebbleFacetThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot: int = ...) -> str:
         """
         ([slot: int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name: str) -> int:
         """
         (group_name: str ) -> int.
@@ -4342,14 +4342,14 @@ class PebbleFacetThermalContact:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self) -> typing.Tuple[str, ...]:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this contact.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -4357,14 +4357,14 @@ class PebbleFacetThermalContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name: str) -> bool:
         """
         (group_name: str) -> bool.
@@ -4372,14 +4372,14 @@ class PebbleFacetThermalContact:
         All group slots are searched.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -4388,218 +4388,218 @@ class PebbleFacetThermalContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def power(self) -> float:
         """
         () -> float.
         Get the contact power.
         """
         pass
-    
+
     def prop(self, property_name: str) -> typing.Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, group_name: str = ..., slot: int = ...) -> None:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_power(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the contact power.
         """
         pass
-    
+
     def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class PebbleFacetThermalContactIter:
     @classmethod
@@ -4609,19 +4609,19 @@ class PebbleFacetThermalContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class PebblePebbleContact:
     __hash__: Any = ...
@@ -4632,7 +4632,7 @@ class PebblePebbleContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -4640,7 +4640,7 @@ class PebblePebbleContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -4648,154 +4648,154 @@ class PebblePebbleContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self) -> bool:
         """
         () -> bool.
         Get the contact bonded flag.
         """
         pass
-    
+
     def branch(self) -> vec.vec:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self) -> typing.Dict[str, float]:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, energy_name: str) -> float:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self) -> int:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self) -> float:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self) -> float:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -4804,7 +4804,7 @@ class PebblePebbleContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
@@ -4812,7 +4812,7 @@ class PebblePebbleContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -4820,14 +4820,14 @@ class PebblePebbleContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -4836,28 +4836,28 @@ class PebblePebbleContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, energy_name: str) -> bool:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -4866,140 +4866,140 @@ class PebblePebbleContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, property_name_or_index) -> typing.Any:
         """
         (property_name or index: str or int) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def prop_index(self, property_name: str) -> int:
         """
         (property_name: str) -> int.
         Get a contact model property index.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_force(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
@@ -5007,70 +5007,70 @@ class PebblePebbleContact:
         This operation is contact model specific.
         """
         pass
-    
+
     def set_group(self, group_name, slot = ...) -> None:
         """
         (group_name: str or int[, slot: str or int]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, property_name: str, inherit_flag: bool) -> None:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, property_name_or_index, value: typing.Any) -> None:
         """
         (property_name or index: str or int, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -5078,7 +5078,7 @@ class PebblePebbleContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -5086,50 +5086,50 @@ class PebblePebbleContact:
         (vector).
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class PebblePebbleContactIter:
     @classmethod
@@ -5139,19 +5139,19 @@ class PebblePebbleContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class PebblePebbleThermalContact:
     __hash__: Any = ...
@@ -5162,7 +5162,7 @@ class PebblePebbleThermalContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -5170,7 +5170,7 @@ class PebblePebbleThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -5178,49 +5178,49 @@ class PebblePebbleThermalContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot: int = ...) -> str:
         """
         ([slot: int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name: str) -> int:
         """
         (group_name: str ) -> int.
@@ -5229,14 +5229,14 @@ class PebblePebbleThermalContact:
         The return value is an integer which is the first slot in which the group name was found or -1 if not found.
         """
         pass
-    
+
     def groups(self) -> typing.Tuple[str, ...]:
         """
         () -> tuple of strings.
         Get a tuple of group names assigned to this contact.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -5244,14 +5244,14 @@ class PebblePebbleThermalContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name: str) -> bool:
         """
         (group_name: str) -> bool.
@@ -5259,14 +5259,14 @@ class PebblePebbleThermalContact:
         All group slots are searched.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -5275,218 +5275,218 @@ class PebblePebbleThermalContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def power(self) -> float:
         """
         () -> float.
         Get the contact power.
         """
         pass
-    
+
     def prop(self, property_name: str) -> typing.Any:
         """
         (property_name: str) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_group(self, group_name: str = ..., slot: int = ...) -> None:
         """
         ([group_name: str[, slot: int]]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_power(self, value: float) -> None:
         """
         (value: float) -> None.
         Set the contact power.
         """
         pass
-    
+
     def set_prop(self, property_name: str, value: typing.Any) -> None:
         """
         (property_name: str, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class PebblePebbleThermalContactIter:
     @classmethod
@@ -5496,19 +5496,19 @@ class PebblePebbleThermalContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class PebbleRBlockContact:
     __hash__: Any = ...
@@ -5519,7 +5519,7 @@ class PebbleRBlockContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -5527,7 +5527,7 @@ class PebbleRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -5535,154 +5535,154 @@ class PebbleRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self) -> bool:
         """
         () -> bool.
         Get the contact bonded flag.
         """
         pass
-    
+
     def branch(self) -> vec.vec:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self) -> typing.Dict[str, float]:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, energy_name: str) -> float:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self) -> int:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self) -> float:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self) -> float:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -5691,7 +5691,7 @@ class PebbleRBlockContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
@@ -5699,7 +5699,7 @@ class PebbleRBlockContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -5707,14 +5707,14 @@ class PebbleRBlockContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -5723,28 +5723,28 @@ class PebbleRBlockContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, energy_name: str) -> bool:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -5753,140 +5753,140 @@ class PebbleRBlockContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, property_name_or_index) -> typing.Any:
         """
         (property_name or index: str or int) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def prop_index(self, property_name: str) -> int:
         """
         (property_name: str) -> int.
         Get a contact model property index.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_force(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
@@ -5894,70 +5894,70 @@ class PebbleRBlockContact:
         This operation is contact model specific.
         """
         pass
-    
+
     def set_group(self, group_name, slot = ...) -> None:
         """
         (group_name: str or int[, slot: str or int]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, property_name: str, inherit_flag: bool) -> None:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, property_name_or_index, value: typing.Any) -> None:
         """
         (property_name or index: str or int, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -5965,7 +5965,7 @@ class PebbleRBlockContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -5973,50 +5973,50 @@ class PebbleRBlockContact:
         (vector).
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class PebbleRBlockContactIter:
     @classmethod
@@ -6026,19 +6026,19 @@ class PebbleRBlockContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class RBlockFacetContact:
     __hash__: Any = ...
@@ -6049,7 +6049,7 @@ class RBlockFacetContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -6057,7 +6057,7 @@ class RBlockFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -6065,154 +6065,154 @@ class RBlockFacetContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self) -> bool:
         """
         () -> bool.
         Get the contact bonded flag.
         """
         pass
-    
+
     def branch(self) -> vec.vec:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self) -> typing.Dict[str, float]:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, energy_name: str) -> float:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self) -> int:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self) -> float:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self) -> float:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -6221,7 +6221,7 @@ class RBlockFacetContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
@@ -6229,7 +6229,7 @@ class RBlockFacetContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -6237,14 +6237,14 @@ class RBlockFacetContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -6253,28 +6253,28 @@ class RBlockFacetContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, energy_name: str) -> bool:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -6283,140 +6283,140 @@ class RBlockFacetContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, property_name_or_index) -> typing.Any:
         """
         (property_name or index: str or int) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def prop_index(self, property_name: str) -> int:
         """
         (property_name: str) -> int.
         Get a contact model property index.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_force(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
@@ -6424,70 +6424,70 @@ class RBlockFacetContact:
         This operation is contact model specific.
         """
         pass
-    
+
     def set_group(self, group_name, slot = ...) -> None:
         """
         (group_name: str or int[, slot: str or int]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, property_name: str, inherit_flag: bool) -> None:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, property_name_or_index, value: typing.Any) -> None:
         """
         (property_name or index: str or int, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -6495,7 +6495,7 @@ class RBlockFacetContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -6503,50 +6503,50 @@ class RBlockFacetContact:
         (vector).
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class RBlockFacetContactIter:
     @classmethod
@@ -6556,19 +6556,19 @@ class RBlockFacetContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+
 
 class RBlockRBlockContact:
     __hash__: Any = ...
@@ -6579,7 +6579,7 @@ class RBlockRBlockContact:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def activate(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
@@ -6587,7 +6587,7 @@ class RBlockRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def activated(self) -> bool:
         """
         () -> bool.
@@ -6595,154 +6595,154 @@ class RBlockRBlockContact:
         If a contact has been activated it is always active.
         """
         pass
-    
+
     def active(self) -> bool:
         """
         () -> bool.
         Get the contact activity state.
         """
         pass
-    
+
     def bonded(self) -> bool:
         """
         () -> bool.
         Get the contact bonded flag.
         """
         pass
-    
+
     def branch(self) -> vec.vec:
         """
         () -> vec.
         Get the contact branch vector in the global coordinate system (vector).
         """
         pass
-    
+
     def branch_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def branch_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact branch vector in the global coordinate system.
         """
         pass
-    
+
     def end1(self) -> typing.Any:
         """
         () -> any.
         Get the object at the first end of this contact.
         """
         pass
-    
+
     def end2(self) -> typing.Any:
         """
         () -> any.
         Get the object at the second end of this contact.
         """
         pass
-    
+
     def energies(self) -> typing.Dict[str, float]:
         """
         () -> dict {str: float}.
         Get the energy partitions as a dictionary.
         """
         pass
-    
+
     def energy(self, energy_name: str) -> float:
         """
         (energy_name: str) -> float.
         Get the current value of an energy partition.
         """
         pass
-    
+
     def extra(self, slot: int) -> typing.Any:
         """
         (slot: int) -> any.
         Get the contact extra data in the given slot.
         """
         pass
-    
+
     def fid(self) -> int:
         """
         () -> int.
         Get the contact fracture ID.
         """
         pass
-    
+
     def force_global(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the global coordinate system (vector).
         """
         pass
-    
+
     def force_global_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_global_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the global coordinate system.
         """
         pass
-    
+
     def force_local(self) -> vec.vec:
         """
         () -> vec.
         Get the contact force in the local coordinate system (vector).
         """
         pass
-    
+
     def force_local_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_local_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact force in the local coordinate system.
         """
         pass
-    
+
     def force_normal(self) -> float:
         """
         () -> float.
         Get the contact signed magnitude of the normal force.
         """
         pass
-    
+
     def force_shear(self) -> float:
         """
         () -> float.
         Get the contact magnitude of the shear force.
         """
         pass
-    
+
     def gap(self) -> float:
         """
         () -> float.
         Get the contact gap.
         """
         pass
-    
+
     def group(self, slot = ...) -> str:
         """
         ([slot: str or int]) -> str.
         Get the contact group name in a given slot.
         """
         pass
-    
+
     def group_remove(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -6751,7 +6751,7 @@ class RBlockRBlockContact:
         The return value is a bool which is True if the group was removed from any slot, otherwise False.
         """
         pass
-    
+
     def groups(self) -> typing.Dict[typing.Union[str, int], str]:
         """
         () -> {slot: group_name}.
@@ -6759,7 +6759,7 @@ class RBlockRBlockContact:
         The keys of the dictionary are the slot names and the values are the group names.
         """
         pass
-    
+
     def has_prop(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
@@ -6767,14 +6767,14 @@ class RBlockRBlockContact:
         A single string argument is required.
         """
         pass
-    
+
     def id(self) -> int:
         """
         () -> int.
         Get the contact id.
         """
         pass
-    
+
     def in_group(self, group_name, slot = ...) -> bool:
         """
         (group_name: str or int[, slot: str or int]) -> bool.
@@ -6783,28 +6783,28 @@ class RBlockRBlockContact:
         Otherwise, all group slots are searched.
         """
         pass
-    
+
     def inherit(self, property_name: str) -> bool:
         """
         (property_name: str) -> bool.
         Get the property inheritance.
         """
         pass
-    
+
     def inhibit(self) -> bool:
         """
         () -> bool.
         Get the contact inhibit flag.
         """
         pass
-    
+
     def is_energy(self, energy_name: str) -> bool:
         """
         (energy_name: str) -> bool.
         Query the existence of a contact model energy.
         """
         pass
-    
+
     def method(self, method_name: str, args = ...) -> None:
         """
         (method_name: str <, args: dict {str: any}>) -> None.
@@ -6813,140 +6813,140 @@ class RBlockRBlockContact:
         The optional second argument should be a dictionary with string keys which give the contact model method arguments (the values associated with the string keys are the arguments).
         """
         pass
-    
+
     def model(self) -> str:
         """
         () -> str.
         Get the contact model name.
         """
         pass
-    
+
     def moment1_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the global coordinate system.
         """
         pass
-    
+
     def moment1_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end1 in the local coordinate system.
         """
         pass
-    
+
     def moment2_global(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the global coordinate system.
         """
         pass
-    
+
     def moment2_local(self) -> float:
         """
         () -> float.
         Get the contact moment acting on end2 in the local coordinate system.
         """
         pass
-    
+
     def normal(self) -> vec.vec:
         """
         () -> vec.
         Get the contact unit normal (vector).
         """
         pass
-    
+
     def normal_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact unit normal.
         """
         pass
-    
+
     def normal_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact unit normal.
         """
         pass
-    
+
     def offset(self) -> vec.vec:
         """
         () -> vec.
         Get the contact offset (vector).
         """
         pass
-    
+
     def offset_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact offset.
         """
         pass
-    
+
     def offset_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact offset.
         """
         pass
-    
+
     def persist(self) -> bool:
         """
         () -> bool.
         Get the contact persistence flag.
         """
         pass
-    
+
     def pos(self) -> vec.vec:
         """
         () -> vec.
         Get the contact position (vector).
         """
         pass
-    
+
     def pos_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact position.
         """
         pass
-    
+
     def pos_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact position.
         """
         pass
-    
+
     def prop(self, property_name_or_index) -> typing.Any:
         """
         (property_name or index: str or int) -> any.
         Get a contact model property.
         """
         pass
-    
+
     def prop_index(self, property_name: str) -> int:
         """
         (property_name: str) -> int.
         Get a contact model property index.
         """
         pass
-    
+
     def props(self) -> typing.Dict[str, typing.Any]:
         """
         () -> dict {str: any}.
         Get the contact model properties as a dictionary.
         """
         pass
-    
+
     def set_extra(self, slot: int, value: typing.Any) -> None:
         """
         (slot: int, value: any) -> None.
         Set the contact extra data in the given slot.
         """
         pass
-    
+
     def set_force(self, value: vec.vec) -> None:
         """
         (value: vec) -> None.
@@ -6954,70 +6954,70 @@ class RBlockRBlockContact:
         This operation is contact model specific.
         """
         pass
-    
+
     def set_group(self, group_name, slot = ...) -> None:
         """
         (group_name: str or int[, slot: str or int]) -> None.
         Set the contact group name in a given slot.
         """
         pass
-    
+
     def set_inherit(self, property_name: str, inherit_flag: bool) -> None:
         """
         (property_name: str, inherit_flag: bool) -> None.
         Set the property inheritance.
         """
         pass
-    
+
     def set_inhibit(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact inhibit flag.
         """
         pass
-    
+
     def set_model(self, model_name: str = ...) -> None:
         """
         ([model_name: str]) -> None.
         Set the contact model for this contact.
         """
         pass
-    
+
     def set_persist(self, flag: bool) -> None:
         """
         (flag: bool) -> None.
         Set the contact persistence flag.
         """
         pass
-    
+
     def set_prop(self, property_name_or_index, value: typing.Any) -> None:
         """
         (property_name or index: str or int, value: any) -> None.
         Set a contact model property.
         """
         pass
-    
+
     def shear(self) -> vec.vec:
         """
         () -> vec.
         Get the contact shear direction (vector).
         """
         pass
-    
+
     def shear_x(self) -> float:
         """
         () -> float.
         Get the x-component of the contact shear direction.
         """
         pass
-    
+
     def shear_y(self) -> float:
         """
         () -> float.
         Get the y-component of the contact shear direction.
         """
         pass
-    
+
     def to_global(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -7025,7 +7025,7 @@ class RBlockRBlockContact:
         (vector).
         """
         pass
-    
+
     def to_local(self, value: vec.vec) -> vec.vec:
         """
         (value: vec) -> vec.
@@ -7033,50 +7033,50 @@ class RBlockRBlockContact:
         (vector).
         """
         pass
-    
+
     def valid(self) -> bool:
         """
         () -> bool.
         Returns True if this contact is live.
         """
         pass
-    
+
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-    
+
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-    
+
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-    
+
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-    
+
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-    
+
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-    
+
 
 class RBlockRBlockContactIter:
     @classmethod
@@ -7086,16 +7086,16 @@ class RBlockRBlockContactIter:
          See help(type) for accurate signature.
         """
         pass
-    
+
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-    
+
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
-    
+

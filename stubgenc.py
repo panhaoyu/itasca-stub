@@ -213,6 +213,8 @@ def get_type_str(type_str):
 
 
 def infer_func_args_return_types_from_docstring(docstr):
+    if docstr is None:
+        return None
     match = re.match(r'^\((.*?)\) *-> *(.*?)(?:\.|$)', docstr)
     if not match:
         return None
@@ -369,8 +371,9 @@ def generate_c_function_stub(module: ModuleType,
                 ret=strip_or_import(signature.ret_type, module, imports)
             ))
             output.append('    """')
-            for line in getattr(obj, '__doc__').split('. '):
-                output.append('    {}.'.format(line).replace('..', '.'))
+            if docstr := getattr(obj, '__doc__', None):
+                for line in docstr.split('. '):
+                    output.append('    {}.'.format(line).replace('..', '.'))
             output.append('    """')
             output.append('    pass')
             output.append('')
