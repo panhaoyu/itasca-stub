@@ -1,8 +1,7 @@
-import typing
-from typing import Any
+from typing import Any, Union, Tuple
 
 import itasca.contact
-
+import typing
 
 def count(process: str, type_class: type, all: bool) -> typing.Any:
     """
@@ -16,8 +15,7 @@ def count(process: str, type_class: type, all: bool) -> typing.Any:
     """
     pass
 
-
-def energy(energy_name: str, process=..., type=...) -> float:
+def energy(energy_name: str, process = ..., type = ...) -> float:
     """
     (energy_name: str, process="mechanical", type=TypeObject) -> float.
     Get energy values accumulated over contacts.
@@ -26,7 +24,6 @@ def energy(energy_name: str, process=..., type=...) -> float:
     """
     pass
 
-
 def find(type: Any, id: typing.Union[int, typing.Tuple[typing.Any, typing.Any]]) -> itasca.contact.Contact:
     """
     (type: TypeObject, id: int or (object1, object2)) -> Contact object.
@@ -34,8 +31,7 @@ def find(type: Any, id: typing.Union[int, typing.Tuple[typing.Any, typing.Any]])
     """
     pass
 
-
-def list(process_name=..., type=..., all=...) -> itasca.contact.ContactIter:
+def list(process_name = ..., type = ..., all = ...) -> itasca.contact.ContactIter:
     """
     (process_name="Mechanical", type=None, all=False) -> Contact iterator object.
     Get a contact iterator object.
@@ -46,7 +42,6 @@ def list(process_name=..., type=..., all=...) -> itasca.contact.ContactIter:
     """
     pass
 
-
 def model_prop_index(model_name: str, property_name: str) -> int:
     """
     (model_name: str, property_name: str) -> int.
@@ -54,10 +49,8 @@ def model_prop_index(model_name: str, property_name: str) -> int:
     """
     pass
 
-
 class Contact:
     __hash__: Any = ...
-
     @classmethod
     def __init__(self, *args, **kwargs) -> None:
         """
@@ -65,43 +58,43 @@ class Contact:
          See help(type) for accurate signature.
         """
         pass
-
+    
     def __eq__(self, other) -> Any:
         """
         Return self==value.
         """
         pass
-
+    
     def __ge__(self, other) -> Any:
         """
         Return self>=value.
         """
         pass
-
+    
     def __gt__(self, other) -> Any:
         """
         Return self>value.
         """
         pass
-
+    
     def __le__(self, other) -> Any:
         """
         Return self<=value.
         """
         pass
-
+    
     def __lt__(self, other) -> Any:
         """
         Return self<value.
         """
         pass
-
+    
     def __ne__(self, other) -> Any:
         """
         Return self!=value.
         """
         pass
-
+    
 
 class ContactIter:
     @classmethod
@@ -111,15 +104,16 @@ class ContactIter:
          See help(type) for accurate signature.
         """
         pass
-
+    
     def __iter__(self) -> Any:
         """
         Implement iter(self).
         """
         pass
-
+    
     def __next__(self) -> Any:
         """
         Implement next(self).
         """
         pass
+    

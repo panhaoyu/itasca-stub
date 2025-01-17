@@ -1,5 +1,6 @@
-import typing
+from typing import Any, Tuple
 
+import typing
 
 def call_function(func: str, args: typing.Tuple = ...) -> typing.Any:
     """
@@ -8,14 +9,12 @@ def call_function(func: str, args: typing.Tuple = ...) -> typing.Any:
     """
     pass
 
-
 def get(var: str) -> typing.Any:
     """
     (var: string) -> any.
     Return value of the FISH variable var.
     """
     pass
-
 
 def has(var: str) -> bool:
     """
@@ -24,14 +23,12 @@ def has(var: str) -> bool:
     """
     pass
 
-
 def is_function(var: str) -> bool:
     """
     (var: string) -> Boolean.
     Return True if the FISH variable var is defined and is a function, False otherwise.
     """
     pass
-
 
 def set(var: str, value: typing.Any) -> None:
     """
@@ -40,3 +37,4 @@ def set(var: str, value: typing.Any) -> None:
     If no FISH variable with name var exists, then it is created.
     """
     pass
+

@@ -1,6 +1,5 @@
 import numpy
 
-
 def cutoff() -> numpy.ndarray:
     """
     () -> array float{wall}.
@@ -8,14 +7,12 @@ def cutoff() -> numpy.ndarray:
     """
     pass
 
-
 def disp() -> numpy.ndarray:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall displacement.
     """
     pass
-
 
 def extra(slot: int) -> numpy.ndarray:
     """
@@ -25,7 +22,6 @@ def extra(slot: int) -> numpy.ndarray:
     """
     pass
 
-
 def fill_cutoff(data: numpy.ndarray) -> None:
     """
     (data: array float{wall}) -> None.
@@ -33,7 +29,6 @@ def fill_cutoff(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_disp(data: numpy.ndarray) -> None:
     """
@@ -43,7 +38,6 @@ def fill_disp(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_force_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
@@ -51,7 +45,6 @@ def fill_force_contact(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_moment_contact(data: numpy.ndarray) -> None:
     """
@@ -61,7 +54,6 @@ def fill_moment_contact(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
@@ -69,7 +61,6 @@ def fill_pos(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_rotation(data: numpy.ndarray) -> None:
     """
@@ -79,7 +70,6 @@ def fill_rotation(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_rotation_center(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,dim}) -> None.
@@ -87,7 +77,6 @@ def fill_rotation_center(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_spin(data: numpy.ndarray) -> None:
     """
@@ -97,7 +86,6 @@ def fill_spin(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_vel(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
@@ -106,14 +94,12 @@ def fill_vel(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def force_contact() -> numpy.ndarray:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall contact force.
     """
     pass
-
 
 def ids() -> numpy.ndarray:
     """
@@ -122,14 +108,12 @@ def ids() -> numpy.ndarray:
     """
     pass
 
-
-def in_group(group_name: str, slot=...) -> numpy.ndarray:
+def in_group(group_name: str, slot = ...) -> numpy.ndarray:
     """
     (group_name: str, slot=1) -> array bool{wall}.
     Return wall group membership as a Boolean array.
     """
     pass
-
 
 def moment_contact() -> numpy.ndarray:
     """
@@ -138,14 +122,12 @@ def moment_contact() -> numpy.ndarray:
     """
     pass
 
-
 def pos() -> numpy.ndarray:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall location.
     """
     pass
-
 
 def rotation() -> numpy.ndarray:
     """
@@ -154,14 +136,12 @@ def rotation() -> numpy.ndarray:
     """
     pass
 
-
 def rotation_center() -> numpy.ndarray:
     """
     () -> array float{wall,dim}.
     Get a numpy array of the wall center of rotation.
     """
     pass
-
 
 def set_cutoff(data: numpy.ndarray) -> None:
     """
@@ -170,14 +150,12 @@ def set_cutoff(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_disp(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
     Set the wall displacement from an array.
     """
     pass
-
 
 def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
@@ -187,7 +165,6 @@ def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_force_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
@@ -195,15 +172,13 @@ def set_force_contact(data: numpy.ndarray) -> None:
     """
     pass
 
-
-def set_group(membership: numpy.ndarray, group_name: str, slot=...) -> None:
+def set_group(membership: numpy.ndarray, group_name: str, slot = ...) -> None:
     """
     (membership: array bool{wall}, group_name: str, slot=1) -> None.
     Set wall group from an array.
     Where membership True set the corresponding wall to be a member of group group_name in the given slot.
     """
     pass
-
 
 def set_moment_contact(data: numpy.ndarray) -> None:
     """
@@ -212,14 +187,12 @@ def set_moment_contact(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
     Set the wall location from an array.
     """
     pass
-
 
 def set_rotation(data: numpy.ndarray) -> None:
     """
@@ -228,14 +201,12 @@ def set_rotation(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_rotation_center(data: numpy.ndarray) -> None:
     """
     ((data: array float{wall,dim}) -> None.
     Set the wall center of rotation from an array.
     """
     pass
-
 
 def set_spin(data: numpy.ndarray) -> None:
     """
@@ -244,14 +215,12 @@ def set_spin(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_vel(data: numpy.ndarray) -> None:
     """
     (data: array float{wall,2}) -> None.
     Set the wall velocity from an array.
     """
     pass
-
 
 def spin() -> numpy.ndarray:
     """
@@ -260,10 +229,10 @@ def spin() -> numpy.ndarray:
     """
     pass
 
-
 def vel() -> numpy.ndarray:
     """
     () -> array float{wall,2}.
     Get a numpy array of the wall velocity.
     """
     pass
+

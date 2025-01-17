@@ -1,13 +1,11 @@
 import numpy
 
-
 def conveyor() -> numpy.ndarray:
     """
     () -> array float{facet,dim}.
     Get a numpy array of the facet conveyor velocity.
     """
     pass
-
 
 def extra(slot: int) -> numpy.ndarray:
     """
@@ -17,7 +15,6 @@ def extra(slot: int) -> numpy.ndarray:
     """
     pass
 
-
 def fill_conveyor(data: numpy.ndarray) -> None:
     """
     (data: array float{facet,dim}) -> None.
@@ -25,7 +22,6 @@ def fill_conveyor(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_normal(data: numpy.ndarray) -> None:
     """
@@ -35,7 +31,6 @@ def fill_normal(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{facet,2}) -> None.
@@ -44,7 +39,6 @@ def fill_pos(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def ids() -> numpy.ndarray:
     """
     () -> array int{facet}.
@@ -52,14 +46,12 @@ def ids() -> numpy.ndarray:
     """
     pass
 
-
-def in_group(group_name: str, slot=...) -> numpy.ndarray:
+def in_group(group_name: str, slot = ...) -> numpy.ndarray:
     """
     (group_name: str, slot=1) -> array bool{facet}.
     Return facet group membership as a Boolean array.
     """
     pass
-
 
 def normal() -> numpy.ndarray:
     """
@@ -68,7 +60,6 @@ def normal() -> numpy.ndarray:
     """
     pass
 
-
 def pos() -> numpy.ndarray:
     """
     () -> array float{facet,2}.
@@ -76,14 +67,12 @@ def pos() -> numpy.ndarray:
     """
     pass
 
-
 def set_conveyor(data: numpy.ndarray) -> None:
     """
     ((data: array float{facet,dim}) -> None.
     Set the facet conveyor velocity from an array.
     """
     pass
-
 
 def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
@@ -93,11 +82,11 @@ def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
     pass
 
-
-def set_group(membership: numpy.ndarray, group_name: str, slot=...) -> None:
+def set_group(membership: numpy.ndarray, group_name: str, slot = ...) -> None:
     """
     (membership: array bool{facet}, group_name: str, slot=1) -> None.
     Set facet group from an array.
     Where membership True set the corresponding facet to be a member of group group_name in the given slot.
     """
     pass
+

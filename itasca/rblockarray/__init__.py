@@ -1,13 +1,11 @@
 import numpy
 
-
 def damp() -> numpy.ndarray:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock local damping.
     """
     pass
-
 
 def density() -> numpy.ndarray:
     """
@@ -16,14 +14,12 @@ def density() -> numpy.ndarray:
     """
     pass
 
-
 def disp() -> numpy.ndarray:
     """
     () -> array float{rblock,2}.
     Get a numpy array of the rblock displacement.
     """
     pass
-
 
 def extra(slot: int) -> numpy.ndarray:
     """
@@ -33,7 +29,6 @@ def extra(slot: int) -> numpy.ndarray:
     """
     pass
 
-
 def fill_damp(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock}) -> None.
@@ -41,7 +36,6 @@ def fill_damp(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_density(data: numpy.ndarray) -> None:
     """
@@ -51,7 +45,6 @@ def fill_density(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_disp(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock,2}) -> None.
@@ -59,7 +52,6 @@ def fill_disp(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_force_app(data: numpy.ndarray) -> None:
     """
@@ -69,7 +61,6 @@ def fill_force_app(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_force_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock,2}) -> None.
@@ -77,7 +68,6 @@ def fill_force_contact(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_force_unbal(data: numpy.ndarray) -> None:
     """
@@ -87,7 +77,6 @@ def fill_force_unbal(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_mass(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock}) -> None.
@@ -95,7 +84,6 @@ def fill_mass(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_mass_real(data: numpy.ndarray) -> None:
     """
@@ -105,7 +93,6 @@ def fill_mass_real(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_moi_prin_real(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock,dim}) -> None.
@@ -113,7 +100,6 @@ def fill_moi_prin_real(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_moment_app(data: numpy.ndarray) -> None:
     """
@@ -123,7 +109,6 @@ def fill_moment_app(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_moment_contact(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock}) -> None.
@@ -131,7 +116,6 @@ def fill_moment_contact(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_moment_unbal(data: numpy.ndarray) -> None:
     """
@@ -141,7 +125,6 @@ def fill_moment_unbal(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock,2}) -> None.
@@ -149,7 +132,6 @@ def fill_pos(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_rotation(data: numpy.ndarray) -> None:
     """
@@ -159,7 +141,6 @@ def fill_rotation(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_spin(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock}) -> None.
@@ -167,7 +148,6 @@ def fill_spin(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_vel(data: numpy.ndarray) -> None:
     """
@@ -177,7 +157,6 @@ def fill_vel(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_vol(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock}) -> None.
@@ -186,14 +165,12 @@ def fill_vol(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def force_app() -> numpy.ndarray:
     """
     () -> array float{rblock,2}.
     Get a numpy array of the rblock applied force.
     """
     pass
-
 
 def force_contact() -> numpy.ndarray:
     """
@@ -202,14 +179,12 @@ def force_contact() -> numpy.ndarray:
     """
     pass
 
-
 def force_unbal() -> numpy.ndarray:
     """
     () -> array float{rblock,2}.
     Get a numpy array of the rblock unbalanced force.
     """
     pass
-
 
 def ids() -> numpy.ndarray:
     """
@@ -218,14 +193,12 @@ def ids() -> numpy.ndarray:
     """
     pass
 
-
-def in_group(group_name: str, slot=...) -> numpy.ndarray:
+def in_group(group_name: str, slot = ...) -> numpy.ndarray:
     """
     (group_name: str, slot=1) -> array bool{rblock}.
     Return rblock group membership as a Boolean array.
     """
     pass
-
 
 def mass() -> numpy.ndarray:
     """
@@ -234,14 +207,12 @@ def mass() -> numpy.ndarray:
     """
     pass
 
-
 def mass_real() -> numpy.ndarray:
     """
     () -> array float{rblock}.
     Get a numpy array of the real (gravitational) rblock mass.
     """
     pass
-
 
 def moi_prin_real() -> numpy.ndarray:
     """
@@ -250,14 +221,12 @@ def moi_prin_real() -> numpy.ndarray:
     """
     pass
 
-
 def moment_app() -> numpy.ndarray:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock applied moment.
     """
     pass
-
 
 def moment_contact() -> numpy.ndarray:
     """
@@ -266,14 +235,12 @@ def moment_contact() -> numpy.ndarray:
     """
     pass
 
-
 def moment_unbal() -> numpy.ndarray:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock unbalanced moment.
     """
     pass
-
 
 def pos() -> numpy.ndarray:
     """
@@ -282,14 +249,12 @@ def pos() -> numpy.ndarray:
     """
     pass
 
-
 def rotation() -> numpy.ndarray:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock orientation.
     """
     pass
-
 
 def set_damp(data: numpy.ndarray) -> None:
     """
@@ -298,7 +263,6 @@ def set_damp(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_density(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock}) -> None.
@@ -306,14 +270,12 @@ def set_density(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_disp(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock,2}) -> None.
     Set the rblock displacement from an array.
     """
     pass
-
 
 def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
@@ -323,14 +285,12 @@ def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_force_app(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock,2}) -> None.
     Set the rblock applied force from an array.
     """
     pass
-
 
 def set_force_contact(data: numpy.ndarray) -> None:
     """
@@ -339,15 +299,13 @@ def set_force_contact(data: numpy.ndarray) -> None:
     """
     pass
 
-
-def set_group(membership: numpy.ndarray, group_name: str, slot=...) -> None:
+def set_group(membership: numpy.ndarray, group_name: str, slot = ...) -> None:
     """
     (membership: array bool{rblock}, group_name: str, slot=1) -> None.
     Set rblock group from an array.
     Where membership True set the corresponding rblock to be a member of group group_name in the given slot.
     """
     pass
-
 
 def set_moi_prin_real(data: numpy.ndarray) -> None:
     """
@@ -358,14 +316,12 @@ def set_moi_prin_real(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_moment_app(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock}) -> None.
     Set the rblock applied moment from an array.
     """
     pass
-
 
 def set_moment_contact(data: numpy.ndarray) -> None:
     """
@@ -374,14 +330,12 @@ def set_moment_contact(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_pos(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock,2}) -> None.
     Set the rblock centroid location from an array.
     """
     pass
-
 
 def set_rotation(data: numpy.ndarray) -> None:
     """
@@ -390,7 +344,6 @@ def set_rotation(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_spin(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock}) -> None.
@@ -398,14 +351,12 @@ def set_spin(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_vel(data: numpy.ndarray) -> None:
     """
     (data: array float{rblock,2}) -> None.
     Set the rblock velocity from an array.
     """
     pass
-
 
 def set_vol(data: numpy.ndarray) -> None:
     """
@@ -417,14 +368,12 @@ def set_vol(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def spin() -> numpy.ndarray:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock angular velocity.
     """
     pass
-
 
 def vel() -> numpy.ndarray:
     """
@@ -433,10 +382,10 @@ def vel() -> numpy.ndarray:
     """
     pass
 
-
 def vol() -> numpy.ndarray:
     """
     () -> array float{rblock}.
     Get a numpy array of the rblock volume.
     """
     pass
+

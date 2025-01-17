@@ -1,6 +1,5 @@
 import numpy
 
-
 def extra(slot: int) -> numpy.ndarray:
     """
     (slot: int) -> array float{pebble} or float{pebble}.
@@ -8,7 +7,6 @@ def extra(slot: int) -> numpy.ndarray:
     Extra variables accessed by array must be of type float or vec.
     """
     pass
-
 
 def fill_pos(data: numpy.ndarray) -> None:
     """
@@ -18,7 +16,6 @@ def fill_pos(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def fill_radius(data: numpy.ndarray) -> None:
     """
     (data: array float{ball}) -> None.
@@ -26,7 +23,6 @@ def fill_radius(data: numpy.ndarray) -> None:
     The array must be the correct shape.
     """
     pass
-
 
 def fill_vel(data: numpy.ndarray) -> None:
     """
@@ -36,7 +32,6 @@ def fill_vel(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def ids() -> numpy.ndarray:
     """
     () -> array int{pebble}.
@@ -44,14 +39,12 @@ def ids() -> numpy.ndarray:
     """
     pass
 
-
-def in_group(group_name: str, slot=...) -> numpy.ndarray:
+def in_group(group_name: str, slot = ...) -> numpy.ndarray:
     """
     (group_name: str, slot=1) -> array bool{pebble}.
     Return pebble group membership as a Boolean array.
     """
     pass
-
 
 def pos() -> numpy.ndarray:
     """
@@ -60,14 +53,12 @@ def pos() -> numpy.ndarray:
     """
     pass
 
-
 def radius() -> numpy.ndarray:
     """
     () -> array float{ball}.
     Get a numpy array of the pebble radii.
     """
     pass
-
 
 def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
@@ -77,15 +68,13 @@ def set_extra(slot: int, data: numpy.ndarray) -> None:
     """
     pass
 
-
-def set_group(membership: numpy.ndarray, group_name: str, slot=...) -> None:
+def set_group(membership: numpy.ndarray, group_name: str, slot = ...) -> None:
     """
     (membership: array bool{pebble}, group_name: str, slot=1) -> None.
     Set pebble group from an array.
     Where membership True set the corresponding pebble to be a member of group group_name in the given slot.
     """
     pass
-
 
 def set_pos(data: numpy.ndarray) -> None:
     """
@@ -94,7 +83,6 @@ def set_pos(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def set_radius(data: numpy.ndarray) -> None:
     """
     (data: array float{ball}) -> None.
@@ -102,10 +90,10 @@ def set_radius(data: numpy.ndarray) -> None:
     """
     pass
 
-
 def vel() -> numpy.ndarray:
     """
     () -> array float{pebble,2}.
     Get a numpy array of the pebble velocity.
     """
     pass
+
