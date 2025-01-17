@@ -2,6 +2,7 @@ from typing import Any
 
 import numpy
 
+
 def get(name1: str, name2: str = ...) -> numpy.ndarray:
     """
     (name1: string, name2="step": string) -> Numpy array.
@@ -77,4 +78,3 @@ class HistoryIter:
         Implement next(self).
         """
         pass
-

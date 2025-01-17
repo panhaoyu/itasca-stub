@@ -1,9 +1,10 @@
-from typing import Any, Union, Tuple
-
-import itasca.clump.template
-import itasca.rblock.template
 import typing
+from typing import Any
+
 import vec
+
+import itasca.rblock.template
+
 
 def _plist() -> typing.Tuple[object, ...]:
     """
@@ -219,4 +220,3 @@ class TemplateIter:
         Implement next(self).
         """
         pass
-

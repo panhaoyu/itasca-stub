@@ -1,9 +1,10 @@
-from typing import Any, Union, Tuple, Dict
-
-import itasca.wall
-import itasca.wall.facet
 import typing
+from typing import Any
+
 import vec
+
+import itasca.wall.facet
+
 
 def _plist() -> typing.Tuple[object, ...]:
     """
@@ -377,4 +378,3 @@ class FacetIter:
         Implement next(self).
         """
         pass
-

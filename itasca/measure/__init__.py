@@ -1,9 +1,11 @@
-from typing import Any, Tuple
+import typing
+from typing import Any
+
+import numpy
+import vec
 
 import itasca.measure
-import numpy
-import typing
-import vec
+
 
 def _plist() -> typing.Tuple[itasca.measure.Measure, ...]:
     """
@@ -233,4 +235,3 @@ class MeasureIter:
         Implement next(self).
         """
         pass
-

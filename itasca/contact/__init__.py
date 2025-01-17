@@ -1,7 +1,8 @@
-from typing import Any, Union, Tuple
+import typing
+from typing import Any
 
 import itasca.contact
-import typing
+
 
 def count(process: str, type_class: type, all: bool) -> typing.Any:
     """
@@ -116,4 +117,3 @@ class ContactIter:
         Implement next(self).
         """
         pass
-

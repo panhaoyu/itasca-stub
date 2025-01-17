@@ -1,9 +1,10 @@
-from typing import Any, Tuple
-
-import itasca.wall
-import itasca.wall.facet
 import typing
+from typing import Any
+
 import vec
+
+import itasca.wall.facet
+
 
 def _plist() -> typing.Tuple[object, ...]:
     """
@@ -235,4 +236,3 @@ class VertexIter:
         Implement next(self).
         """
         pass
-

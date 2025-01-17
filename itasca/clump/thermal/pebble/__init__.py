@@ -1,9 +1,10 @@
-from typing import Any, Tuple, Dict
-
-import itasca.clump.pebble
-import itasca.clump.thermal
 import typing
+from typing import Any
+
 import vec
+
+import itasca.clump.thermal
+
 
 def _plist() -> typing.Tuple[itasca.clump.thermal.ThermalPebble, ...]:
     """
@@ -295,4 +296,3 @@ class ThermalPebbleIter:
         Implement next(self).
         """
         pass
-

@@ -1,32 +1,34 @@
-from typing import Any, Union, Tuple, Dict
+import typing
+from typing import Any
 
+import PySide2.QtWidgets
+import vec
+
+from . import ball
+from . import ballarray
+from . import ballballarray
+from . import ballfacetarray
+from . import ballpebblearray
+from . import ballrblockarray
+from . import clump
+from . import clumparray
 from . import contact
+from . import facetarray
 from . import fish
 from . import history
-from . import ballarray
-from . import clumparray
-from . import pebblearray
-from . import wallarray
-from . import facetarray
-from . import vertexarray
-from . import ballballarray
-from . import ballpebblearray
-from . import ballfacetarray
-from . import pebblepebblearray
-from . import pebblefacetarray
-from . import ball
-from . import clump
-from . import wall
 from . import measure
-from . import rblockarray
-from . import rblockrblockarray
-from . import ballrblockarray
+from . import pebblearray
+from . import pebblefacetarray
+from . import pebblepebblearray
 from . import pebblerblockarray
-from . import rblockfacetarray
 from . import rblock
-import PySide2.QtWidgets
-import typing
-import vec
+from . import rblockarray
+from . import rblockfacetarray
+from . import rblockrblockarray
+from . import vertexarray
+from . import wall
+from . import wallarray
+
 
 def _add_control_action(QDockWidget_Pointer_created_by_dockWidget_method, QAction_Pointer) -> None:
     """
@@ -7098,4 +7100,3 @@ class RBlockRBlockContactIter:
         Implement next(self).
         """
         pass
-

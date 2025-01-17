@@ -1,10 +1,10 @@
-from typing import Any, Tuple, Dict
-
-import itasca.clump.pebble
-import itasca.clump.thermal
-import itasca.wall.thermal
 import typing
+from typing import Any
+
 import vec
+
+import itasca.wall.thermal
+
 
 def _plist() -> typing.Tuple[itasca.wall.thermal.ThermalFacet, ...]:
     """
@@ -289,4 +289,3 @@ class ThermalFacetIter:
         Implement next(self).
         """
         pass
-

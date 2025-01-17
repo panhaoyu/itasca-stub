@@ -1,9 +1,11 @@
-from typing import Any, Union, Tuple, Dict
-
-from . import template
-import itasca.rblock
 import typing
+from typing import Any
+
 import vec
+
+import itasca.rblock
+from . import template
+
 
 def _plist() -> typing.Tuple[itasca.rblock.RBlock, ...]:
     """
@@ -863,4 +865,3 @@ class RBlockIter:
         Implement next(self).
         """
         pass
-

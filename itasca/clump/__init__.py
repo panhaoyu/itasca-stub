@@ -1,12 +1,14 @@
-from typing import Any, Union, Tuple, Dict
+import typing
+from typing import Any
 
-from . import template
-from . import pebble
-from . import thermal
+import vec
+
 import itasca.clump
 import itasca.clump.pebble
-import typing
-import vec
+from . import pebble
+from . import template
+from . import thermal
+
 
 def _plist() -> typing.Tuple[itasca.clump.Clump, ...]:
     """
@@ -845,4 +847,3 @@ class ClumpIter:
         Implement next(self).
         """
         pass
-

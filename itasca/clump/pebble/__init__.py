@@ -1,11 +1,11 @@
-from typing import Any, Union, Tuple, Dict
-
-import itasca.clump
-import itasca.clump.pebble
-import itasca.clump.template
-import itasca.rblock.template
 import typing
+from typing import Any
+
 import vec
+
+import itasca.clump.pebble
+import itasca.rblock.template
+
 
 def _plist() -> typing.Tuple[itasca.clump.Clump, ...]:
     """
@@ -332,4 +332,3 @@ class PebbleIter:
         Implement next(self).
         """
         pass
-

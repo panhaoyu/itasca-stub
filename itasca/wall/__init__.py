@@ -1,12 +1,14 @@
-from typing import Any, Union, Tuple, Dict
+import typing
+from typing import Any
 
-from . import facet
-from . import vertex
-from . import thermal
+import vec
+
 import itasca.wall
 import itasca.wall.facet
-import typing
-import vec
+from . import facet
+from . import thermal
+from . import vertex
+
 
 def _plist() -> typing.Tuple[object, ...]:
     """
@@ -642,4 +644,3 @@ class WallIter:
         Implement next(self).
         """
         pass
-
